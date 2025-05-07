@@ -1,0 +1,111 @@
+{
+  "project": "eden",
+  "component_system": {
+    "version": "1.0.0",
+    "structure": {
+      "directories": {
+        "layout": "components/layout",
+        "features": "components/features",
+        "common": "components/common",
+        "forms": "components/forms",
+        "sections": "components/sections",
+        "navigation": "components/navigation",
+        "ui": "components/ui"
+      },
+      "registry": "components/component-registry.ts"
+    },
+    "naming": {
+      "files": "kebab-case.tsx",
+      "components": "PascalCase",
+      "props_interfaces": "ComponentNameProps"
+    },
+    "documentation": {
+      "required_tags": [
+        "@component",
+        "@description",
+        "@category",
+        "@usedIn"
+      ],
+      "optional_tags": [
+        "@example",
+        "@param",
+        "@returns",
+        "@deprecated"
+      ],
+      "categories": [
+        "Layout",
+        "Feature",
+        "Common",
+        "Form",
+        "Section",
+        "Navigation",
+        "UI"
+      ]
+    },
+    "scripts": {
+      "check_jsdoc": "npm run jsdoc:check",
+      "add_jsdoc": "npm run jsdoc:add components/path/to/component.tsx",
+      "generate_docs": "npm run jsdoc:generate",
+      "check_imports": "node scripts/check-component-imports.js",
+      "migrate_imports": "node scripts/migrate-component-imports.js --update",
+      "cleanup_reexports": "node scripts/cleanup-component-reexports.js --force"
+    },
+    "import_rules": {
+      "correct": [
+        "import { ComponentName } from \"@/components/category/component-name\""
+      ],
+      "incorrect": [
+        "import ComponentName from \"@/components/component-name\"",
+        "import { ComponentName } from \"@/components/component-name\""
+      ]
+    },
+    "component_structure": {
+      "template": "/**\n * @component ComponentName\n * @description Description\n * \n * @example\n * ```tsx\n * <ComponentName prop1=\"value\" />\n * ```\n * \n * @category Category\n * @usedIn Usage locations\n */\n\ninterface ComponentNameProps {\n  /** Prop description */\n  prop1: string;\n}\n\nexport function ComponentName({ prop1 }: ComponentNameProps) {\n  // Implementation\n}"
+    },
+    "registry_structure": {
+      "entry_template": "{\n  name: 'ComponentName',\n  path: 'components/category/component-name.tsx',\n  category: ComponentCategory.CATEGORY,\n  description: 'Description',\n  usedIn: ['Page1', 'Page2']\n}"
+    }
+  },
+  "component_workflows": {
+    "creation": [
+      "Determine component category",
+      "Create file in appropriate directory with kebab-case name",
+      "Implement component with PascalCase name",
+      "Add JSDoc documentation with required tags",
+      "Add entry to component registry",
+      "Import using category path"
+    ],
+    "modification": [
+      "Update JSDoc if functionality changes",
+      "Maintain backward compatibility",
+      "Update component registry if needed",
+      "Document new props"
+    ],
+    "removal": [
+      "Check if component is used with cleanup script",
+      "Mark as deprecated in registry",
+      "Add @deprecated JSDoc tag",
+      "Remove file after migration period"
+    ]
+  },
+  "patterns": {
+    "react": {
+      "component_type": "functional",
+      "state_management": "hooks",
+      "callback_naming": {
+        "internal": "handleEventName",
+        "props": "onEventName"
+      },
+      "composition": "preferred over inheritance",
+      "components": "controlled preferred"
+    },
+    "special_considerations": [
+      "Mobile-first responsive design using Tailwind",
+      "Accessibility compliance required",
+      "Theme awareness via ThemeProvider",
+      "Use Radix primitives where possible",
+      "Navigation uses navigationData from lib/navigation.ts",
+      "Forms use React Hook Form with Zod validation"
+    ]
+  }
+} 

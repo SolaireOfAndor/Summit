@@ -1,0 +1,65 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "default",
+  "rsc": true,
+  "tsx": true,
+  "tailwind": {
+    "config": "tailwind.config.ts",
+    "css": "app/globals.css",
+    "baseColor": "neutral",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui",
+    "lib": "@/lib",
+    "hooks": "@/hooks"
+  },
+  "iconLibrary": "lucide",
+  "components": {
+    "button": {
+      "path": "components/ui/button",
+      "used": true
+    },
+    "accordion": {
+      "path": "components/ui/accordion",
+      "used": true
+    },
+    "collapsible": {
+      "path": "components/ui/collapsible",
+      "used": true
+    },
+    "card": {
+      "path": "components/ui/card",
+      "used": true
+    },
+    "badge": {
+      "path": "components/ui/badge",
+      "used": true
+    },
+    "avatar": {
+      "path": "components/ui/avatar",
+      "used": true
+    },
+    "dialog": {
+      "path": "components/ui/dialog",
+      "used": true
+    },
+    "navigation-menu": {
+      "path": "components/ui/navigation-menu",
+      "used": true
+    }
+  },
+  "componentConfig": {
+    "lazy": true,
+    "ssr": true,
+    "treeshake": true
+  },
+  "build": {
+    "target": ["chrome", "firefox", "safari", "edge"],
+    "minify": true,
+    "sourcemap": true
+  }
+}
