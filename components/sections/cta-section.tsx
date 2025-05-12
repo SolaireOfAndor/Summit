@@ -24,7 +24,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, FileText } from "lucide-react"
-import { SummitButton } from "@/components/ui/eden-button"
+import { SummitButton } from "@/components/ui/summit-button"
 import { useEffect, useState } from "react"
 
 /**

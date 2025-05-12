@@ -1,7 +1,7 @@
 import { Hero } from "@/components/sections/hero"
-import { EdenIndependenceSection } from "@/components/sections/eden-independence-section"
-import { EdenHousingSection } from "@/components/sections/eden-housing-section"
-import { EdenLifestyleSection } from "@/components/sections/eden-lifestyle-section"
+import { SummitIndependenceSection } from "@/components/sections/eden-independence-section"
+import { SummitHousingSection } from "@/components/sections/eden-housing-section"
+import { SummitLifestyleSection } from "@/components/sections/eden-lifestyle-section"
 import { SectionSeparator } from "@/components/ui/section-separator"
 
 export default function Home() {
@@ -30,14 +30,14 @@ export default function Home() {
         <div className="absolute inset-0 bg-[linear-gradient(45deg,#692b74_1px,transparent_1px),linear-gradient(-45deg,#692b74_1px,transparent_1px)] [background-size:60px_60px] opacity-[0.02]" />
         <SectionSeparator variant="secondary" className="top-0" />
         <SectionSeparator variant="secondary" className="bottom-0" />
-        <EdenIndependenceSection />
+        <SummitIndependenceSection />
       </div>
 
       {/* Housing section with gold accents */}
       <div className="relative bg-gradient-to-b from-white to-accent/[0.02] py-16">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#caae3a_1px,transparent_1px),linear-gradient(to_bottom,#caae3a_1px,transparent_1px)] [background-size:40px_40px] opacity-[0.02]" />
         <SectionSeparator variant="accent" className="top-0" />
-        <EdenHousingSection />
+        <SummitHousingSection />
       </div>
 
       {/* Lifestyle section with teal accents */}
@@ -45,7 +45,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[linear-gradient(45deg,#4dc2c4_1px,transparent_1px),linear-gradient(-45deg,#4dc2c4_1px,transparent_1px)] [background-size:60px_60px] opacity-[0.02]" />
         <SectionSeparator variant="accent" className="top-0" />
         <SectionSeparator variant="accent" className="bottom-0" />
-        <EdenLifestyleSection />
+        <SummitLifestyleSection />
       </div>
     </>
   )

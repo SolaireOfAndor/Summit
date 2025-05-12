@@ -17,7 +17,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-import { SummitButton } from "@/components/ui/eden-button";
+import { SummitButton } from "@/components/ui/summit-button";
 import { 
   Wallet, 
   ChevronRight, 

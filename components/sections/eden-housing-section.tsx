@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
-import { SummitButton } from "@/components/ui/eden-button"
+import { SummitButton } from "@/components/ui/summit-button"
 
 /**
  * @component SummitHousingSection

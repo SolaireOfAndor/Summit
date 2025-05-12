@@ -1,7 +1,7 @@
 import { PageHero } from "@/components/sections/page-hero"
 import { FeedbackForm } from "@/components/forms/feedback-form"
 import { Card, CardContent } from "@/components/ui/card"
-import { EdenButton } from "@/components/ui/eden-button"
+import { EdenButton } from "@/components/ui/summit-button"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Mail, Phone, Clock, MessageSquare, FileText, ShieldCheck, ArrowRight, HelpCircle } from "lucide-react"
 import Link from "next/link"

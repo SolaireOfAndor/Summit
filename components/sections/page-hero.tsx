@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils"
 import Link from "next/link"
 import Image from "next/image"
-import { SummitButton } from "@/components/ui/eden-button"
+import { SummitButton } from "@/components/ui/summit-button"
 import { ChevronRight } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 
