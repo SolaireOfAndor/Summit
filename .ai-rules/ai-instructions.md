@@ -1,4 +1,4 @@
-# AI Instructions for Eden Component System
+# AI Instructions for Summit Component System
 
 ## IMPORTANT RULES
 - ALWAYS place components in correct category directories, not root
@@ -83,7 +83,7 @@ export function ComponentName({ prop1, prop2 = defaultValue }: ComponentNameProp
 ## When Modifying Components
 1. Preserve existing JSDoc documentation and update it
 2. Maintain backward compatibility with existing props
-3. Update component registry if functionality changes
+3. Update component registry if functionality changes - ensure it reflects Summit's services.
 4. Document new props with JSDoc comments
 
 ## When Removing Components

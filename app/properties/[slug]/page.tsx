@@ -1,47 +1,13 @@
-import { properties } from "@/lib/properties"
-import { notFound } from "next/navigation"
-import { PropertyPage as PropertyPageTemplate } from "@/components/features/property-page"
-import { Metadata } from "next"
+import { useParams } from "next/navigation"
 
-// Generate metadata for each property page
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const property = properties.find((p) => p.slug === params.slug)
-  
-  if (!property) {
-    return {
-      title: "Property Not Found",
-      description: "The requested property could not be found."
-    }
-  }
-  
-  return {
-    title: `${property.title} | Eden Ability`,
-    description: property.description.substring(0, 155) + (property.description.length > 155 ? '...' : ''),
-    openGraph: {
-      title: property.title,
-      description: property.description,
-      images: [property.images?.[0] || "/placeholder.svg"]
-    }
-  }
+export default function PropertySlugPage() {
+  const params = useParams();
+  const slug = params?.slug || "[slug]";
+  return (
+    <main className="p-8">
+      <h1 className="text-3xl font-bold mb-4">Property: {slug}</h1>
+      <p className="text-lg text-muted-foreground">This is the dynamic property page for <span className="font-mono">{slug}</span>.</p>
+    </main>
+  )
 }
-
-export default function PropertyPage({ params }: { params: { slug: string } }) {
-  const property = properties.find((p) => p.slug === params.slug)
-
-  if (!property) {
-    notFound()
-  }
-
-  return <PropertyPageTemplate property={property} />
-}
-
-// Static paths for pre-rendering at build time
-export async function generateStaticParams() {
-  return properties.map((property) => ({
-    slug: property.slug,
-  }))
-}
-
-// Revalidate every 24 hours
-export const revalidate = 86400 // 24 hours
 

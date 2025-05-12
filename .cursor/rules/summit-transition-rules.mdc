@@ -1,0 +1,128 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# SummitSDA Codebase Modification & Development Rule Guide
+
+## 1. Overview
+
+This guide provides comprehensive rules and best practices for modifying the codebase originally designed for EdenAbility to fit the needs of SummitSDA (Summit). It ensures all aspects of the website—content, branding, structure, and technical implementation—are aligned with Summit’s business profile, mission, and operational requirements.
+
+---
+
+## 2. SummitSDA Business Profile & Needs
+
+**Business Type:**  
+Registered NDIS service provider, focused on participant-centered support, empowerment, and high-quality, individualized care.
+
+**Key Service Areas:**  
+- Supported Independent Living (SIL)
+- Specialist Disability Accommodation (SDA)
+- Medium Term Accommodation (MTA)
+- Short Term Accommodation (STA) & Respite
+- General Housing Solutions
+- Personal Support & Daily Living
+- Community Access & Engagement
+- NDIS Education, Guidance, and Planning
+
+**Core Values:**  
+- Participant empowerment and choice
+- Exceeding industry standards
+- Staff education and ongoing training
+- Individualized, flexible support
+- NSW-wide service reach
+
+---
+
+## 3. General Modification Principles
+
+- **Every change must align with Summit’s mission, values, and service offerings.**
+- **No references to Eden/EdenAbility should remain.**
+- **All content, visuals, and technical elements must reflect Summit’s branding and business model.**
+- **Accessibility, SEO, and modern web best practices must be maintained or improved.**
+
+---
+
+## 4. Codebase Modification Checklist
+
+### 4.1. Content & Copy
+
+- Replace all instances of “Eden” or “EdenAbility” with “Summit” or “SummitSDA”.
+- Update all business descriptions, mission statements, and service details to match Summit’s profile.
+- Ensure all service pages reflect Summit’s actual offerings and terminology.
+- Review and update all legal, privacy, and compliance statements as per Summit’s requirements.
+
+### 4.2. Branding & Visuals
+
+- Replace all logos, icons, and images with Summit’s branding assets.
+- Update color schemes, fonts, and design elements to match Summit’s brand guidelines.
+- Remove or replace any Eden-specific imagery or visual cues.
+
+### 4.3. Metadata & SEO
+
+- Update all page titles, meta descriptions, and Open Graph data to reflect Summit’s branding and services.
+- Ensure all alt text, ARIA labels, and accessibility metadata are accurate and relevant.
+- Update sitemap and robots.txt if necessary.
+
+### 4.4. Routing & Navigation
+
+- Update all navigation menus, links, and breadcrumbs to match the new Summit sitemap.
+- Remove, rename, or redirect any Eden-specific routes.
+- Ensure all new/renamed pages are accessible and user journeys are logical.
+
+### 4.5. Components & Structure
+
+- Review all components for Eden-specific logic, naming, or content.
+- Refactor component names, props, and documentation to use Summit terminology.
+- Ensure all components are placed in the correct directories as per project conventions.
+- Update or remove any components that are no longer relevant to Summit’s business.
+
+### 4.6. Code Quality & Best Practices
+
+- Maintain DRY (Don’t Repeat Yourself) principles and clean, readable code.
+- Use TypeScript for type safety and maintainability.
+- Use TailwindCSS for styling; avoid inline styles or external CSS unless necessary.
+- Ensure all components have proper JSDoc documentation.
+- Use descriptive, accessible variable and function names.
+- Implement accessibility features (tabindex, aria-labels, keyboard navigation, etc.).
+
+### 4.7. Internationalization & Language
+
+- Ensure all user-facing text is clear, professional, and in the correct language (English, unless otherwise specified).
+- Prepare for future internationalization if Summit plans to support multiple languages.
+
+### 4.8. Data & API Integration
+
+- Update any API endpoints, data models, or integrations to match Summit’s data and business logic.
+- Remove or refactor any Eden-specific data handling.
+
+### 4.9. Testing & Validation
+
+- Test all user flows for Summit’s core services (accommodation search, contact, information, etc.).
+- Check for broken links, missing content, or navigation issues.
+- Validate accessibility (WCAG compliance), SEO, and performance.
+
+### 4.10. Documentation
+
+- Update README, internal docs, and developer guides to reflect Summit’s branding and structure.
+- Document all major changes and migration steps.
+- Save the new sitemap and business description in the `docs` or `.ai-rules` directory.
+
+---
+
+## 5. Special Considerations
+
+- **Scalability:** Structure code and content to allow for future expansion of Summit’s services or geographic reach.
+
+
+---
+
+## 7. Summary
+
+This guide must be followed for all modifications to ensure the website fully represents SummitSDA’s business, values, and services. Every change should be intentional, complete, and in line with best practices for modern, accessible, and maintainable web development.
+
+---
+
+
+**For any uncertainty, consult Summit’s business profile and mission, or escalate to the project lead for clarification.**
