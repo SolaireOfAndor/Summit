@@ -7,7 +7,7 @@ import { Menu } from "lucide-react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { MobileNav } from "@/components/navigation/mobile-nav"
 import { useCallback, useEffect, useRef, useState } from "react"
-import { EdenButton } from "@/components/ui/eden-button"
+import { SummitButton } from "@/components/ui/summit-button"
 import { MainNav } from "@/components/navigation/main-nav"
 import { useNavigation } from "@/hooks/useNavigation"
 import { usePathname } from "next/navigation"
@@ -15,16 +15,16 @@ import { navigationData } from "@/lib/navigation"
 
 /**
  * @component Header
- * @description The main navigation header component that appears at the top of all pages.
- * Contains the logo, main navigation links, and mobile menu for responsive design.
- * 
+ * @description The main navigation header component for SummitSDA. Appears at the top of all pages. Contains the Summit logo, main navigation links, and mobile menu for responsive design.
+ *
  * @example
  * ```tsx
  * <Header />
  * ```
- * 
+ *
  * @category Layout
  * @usedIn All pages via the RootLayout
+ * @returns {JSX.Element}
  */
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -84,11 +84,11 @@ export function Header() {
             href="/" 
             onClick={handleNavigation}
             className="h-16 w-44 relative"
-            aria-label="EDEN ABILITY - Return to homepage"
+            aria-label="SummitSDA - Return to homepage"
           >
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Eden%20Ability%20logo%20large%20no%20background-upFC342AXP8I5xXBDcZzobJ6geDjaT.png"
-              alt="EDEN ABILITY"
+              src="/header/summit-logo.svg"
+              alt="SummitSDA logo"
               fill
               className="object-contain"
               priority
@@ -108,7 +108,7 @@ export function Header() {
 
           {/* Contact Button and Mobile Menu */}
           <div className="flex items-center h-full gap-2">
-            <EdenButton
+            <SummitButton
               variant="contact"
               asChild
               className="hidden lg:flex h-16 items-center px-8 text-lg font-semibold rounded-md shadow-sm transition-shadow"
@@ -116,7 +116,7 @@ export function Header() {
               <Link href="/contact" onClick={handleNavigation}>
                 Contact
               </Link>
-            </EdenButton>
+            </SummitButton>
 
             {/* Mobile Menu */}
             <div className="lg:hidden">

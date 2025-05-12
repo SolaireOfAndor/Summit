@@ -15,22 +15,26 @@ interface ServiceCardProps {
 
 /**
  * @component ServiceCard
- * @description A card component that displays information about a specific service offered.
- * Features an icon, title, description, and optional link. Used to showcase
- * various disability support services in a consistent, visually appealing format.
- * 
+ * @description A card component that displays information about a specific Summit service offering. Features an icon, title, description, and link. Used to showcase SummitSDA's NDIS support services in a consistent, accessible format.
+ *
  * @example
  * ```tsx
  * <ServiceCard
- *   icon={<HomeIcon />}
+ *   icon={HomeIcon}
  *   title="Supported Independent Living"
- *   description="Support services to help you live independently"
+ *   description="Support services to help you live independently."
  *   href="/services/sil"
  * />
  * ```
- * 
+ *
  * @category Feature
  * @usedIn Services page, homepage, and service category pages
+ * @param {string} title - Service name
+ * @param {string} description - Service summary
+ * @param {LucideIcon} icon - Icon representing the service
+ * @param {string} href - Link to service details
+ * @param {string} [className] - Optional additional class names
+ * @returns {JSX.Element}
  */
 export function ServiceCard({ title, description, icon: Icon, href, className }: ServiceCardProps) {
   return (

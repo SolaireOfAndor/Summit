@@ -4,23 +4,21 @@ import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
-import { EdenButton } from "@/components/ui/eden-button"
+import { SummitButton } from "@/components/ui/eden-button"
 
 /**
- * @component EdenLifestyleSection
- * @description A feature-rich section highlighting Eden's lifestyle support services.
- * Showcases the organization's approach to promoting community engagement, social activities,
- * and personalized lifestyle support with visual elements and descriptions.
+ * @component SummitLifestyleSection
+ * @description A feature-rich section highlighting SummitSDA's lifestyle and community support services. Showcases Summit's approach to promoting community engagement, social activities, and personalized lifestyle support with visual elements and descriptions.
  * 
  * @example
  * ```tsx
- * <EdenLifestyleSection />
+ * <SummitLifestyleSection />
  * ```
  * 
  * @category Section
  * @usedIn Homepage, Services overview page
  */
-export function EdenLifestyleSection() {
+export function SummitLifestyleSection() {
   const sectionRef = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
 
@@ -64,7 +62,7 @@ export function EdenLifestyleSection() {
           >
             <Image
               src="/45.webp"
-              alt="Eden Lifestyle"
+              alt="Summit Lifestyle"
               fill
               className="object-cover z-0"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -86,7 +84,7 @@ export function EdenLifestyleSection() {
                 <span className="text-sm font-medium uppercase tracking-wider">Community & Lifestyle</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold tracking-tight lg:text-4xl bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent">
-                Eden Lifestyle
+                Summit Lifestyle
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground">Enriching lives through community engagement and personalized support</p>
             </div>
@@ -114,17 +112,17 @@ export function EdenLifestyleSection() {
                 isVisible && "opacity-100 translate-y-0",
               )}
             >
-              <EdenButton asChild size="lg" className="bg-accent hover:bg-accent/90">
+              <SummitButton asChild size="lg" className="bg-accent hover:bg-accent/90">
                 <Link href="/services/community-packs">Explore Community Packs</Link>
-              </EdenButton>
-              <EdenButton
+              </SummitButton>
+              <SummitButton
                 asChild
                 variant="outline"
                 size="lg"
                 className="border-accent/20 hover:bg-accent/5 transition-colors"
               >
                 <Link href="/services/eden-lifestyle">Learn More</Link>
-              </EdenButton>
+              </SummitButton>
             </div>
           </div>
         </div>

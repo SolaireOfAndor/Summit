@@ -4,7 +4,7 @@ import { useState } from "react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
-import { Button } from "@/components/ui/button"
+import { SummitButton } from "@/components/ui/summit-button"
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -55,20 +55,16 @@ const formSchema = z.object({
 
 /**
  * @component FeedbackForm
- * @description A form component for collecting user feedback about services, experiences,
- * and satisfaction. Includes rating options, comment fields, and structured feedback categories.
- * Helps improve service quality through direct user input.
- * 
+ * @description A Summit form component for collecting user feedback about services, experiences, and satisfaction. Includes rating options, comment fields, and structured feedback categories. Helps improve service quality through direct user input.
+ *
  * @example
  * ```tsx
- * <FeedbackForm 
- *   serviceId="sil-123" 
- *   onSubmitSuccess={handleSuccess} 
- * />
+ * <FeedbackForm />
  * ```
- * 
+ *
  * @category Form
  * @usedIn Service pages, after-service follow-ups, and client portal
+ * @returns {JSX.Element}
  */
 export function FeedbackForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -327,21 +323,21 @@ export function FeedbackForm() {
           />
         </div>
 
-        <Button 
-          type="submit" 
-          className="w-full" 
+        <SummitButton
+          type="submit"
+          className="w-full"
           disabled={isSubmitting}
-          aria-label={isSubmitting ? "Submitting feedback..." : "Submit feedback"}
+          aria-label={isSubmitting ? "Sending feedback..." : "Send feedback"}
         >
           {isSubmitting ? (
             <>
               <span className="animate-spin mr-2">⏳</span>
-              Submitting...
+              Sending...
             </>
           ) : (
-            "Submit Feedback"
+            "Send Feedback"
           )}
-        </Button>
+        </SummitButton>
       </form>
     </Form>
   )

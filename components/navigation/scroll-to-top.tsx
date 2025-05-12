@@ -7,17 +7,16 @@ import { cn } from "@/lib/utils"
 
 /**
  * @component ScrollToTop
- * @description A utility navigation component that provides a button to smoothly scroll
- * back to the top of the page. Appears once the user has scrolled down a certain distance
- * and includes animation effects for smooth appearance and disappearance.
- * 
+ * @description SummitSDA utility navigation component that provides a button to smoothly scroll back to the top of the page. Appears once the user has scrolled down a certain distance and includes animation effects for smooth appearance and disappearance.
+ *
  * @example
  * ```tsx
  * <ScrollToTop />
  * ```
- * 
+ *
  * @category Navigation
  * @usedIn All pages with scrollable content via the main layout
+ * @returns {JSX.Element}
  */
 export function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false)

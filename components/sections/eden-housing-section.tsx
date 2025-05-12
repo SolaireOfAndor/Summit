@@ -4,23 +4,21 @@ import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
-import { EdenButton } from "@/components/ui/eden-button"
+import { SummitButton } from "@/components/ui/eden-button"
 
 /**
- * @component EdenHousingSection
- * @description A comprehensive section showcasing Eden's housing services and options.
- * Features property highlights, accommodation types, eligibility information,
- * and visual elements. Designed to inform visitors about SDA and SIL housing options.
+ * @component SummitHousingSection
+ * @description A comprehensive section showcasing SummitSDA's housing services and options. Features property highlights, accommodation types, eligibility information, and visual elements. Designed to inform visitors about SDA and SIL housing options in NSW.
  * 
  * @example
  * ```tsx
- * <EdenHousingSection />
+ * <SummitHousingSection />
  * ```
  * 
  * @category Section
  * @usedIn Homepage, Housing services page, and SDA information pages
  */
-export function EdenHousingSection() {
+export function SummitHousingSection() {
   const sectionRef = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
 
@@ -53,7 +51,7 @@ export function EdenHousingSection() {
     <section 
       ref={sectionRef} 
       className="py-12 md:py-24 overflow-hidden"
-      aria-label="Eden Housing services section"
+      aria-label="Summit Housing services section"
     >
       <div className="container px-4 md:px-6">
         <div className="grid gap-8 lg:grid-cols-2 items-center">
@@ -71,7 +69,7 @@ export function EdenHousingSection() {
                 <span className="text-sm font-medium uppercase tracking-wider">Specialist Housing</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold tracking-tight lg:text-4xl bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent">
-                Eden Housing
+                Summit Housing
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground">
                 Specialist Disability Accommodation designed for your needs
@@ -87,13 +85,10 @@ export function EdenHousingSection() {
               )}
             >
               <p className="text-base md:text-lg text-muted-foreground">
-                Eden Housing provides high-quality Specialist Disability Accommodation (SDA) that goes beyond just a
-                place to live. Our properties are thoughtfully designed to support independence, comfort, and dignity
-                for NDIS participants.
+                SummitSDA provides high-quality Specialist Disability Accommodation (SDA) that goes beyond just a place to live. Our properties are thoughtfully designed to support independence, comfort, and dignity for NDIS participants across NSW.
               </p>
               <p className="text-base md:text-lg text-muted-foreground">
-                Whether you're looking for short-term stays or a permanent home, our range of accommodation options
-                ensures that you'll find the perfect match for your requirements and lifestyle preferences.
+                Whether you're looking for short-term stays or a permanent home, our range of accommodation options ensures that you'll find the perfect match for your requirements and lifestyle preferences.
               </p>
             </div>
 
@@ -104,15 +99,15 @@ export function EdenHousingSection() {
                 isVisible && "opacity-100 translate-y-0",
               )}
             >
-              <EdenButton 
+              <SummitButton 
                 asChild 
                 size="lg" 
                 className="bg-accent hover:bg-accent/90"
                 aria-label="View available SDA vacancies"
               >
                 <Link href="/services/sda-vacancies">View SDA Vacancies</Link>
-              </EdenButton>
-              <EdenButton
+              </SummitButton>
+              <SummitButton
                 asChild
                 variant="outline"
                 size="lg"
@@ -120,7 +115,7 @@ export function EdenHousingSection() {
                 aria-label="Explore short term accommodation options"
               >
                 <Link href="/services/sta">Explore Short Term Options</Link>
-              </EdenButton>
+              </SummitButton>
             </div>
           </div>
 
@@ -135,7 +130,7 @@ export function EdenHousingSection() {
           >
             <Image
               src="/2.webp"
-              alt="Eden Housing specialist disability accommodation showing accessible living spaces"
+              alt="SummitSDA specialist disability accommodation showing accessible living spaces"
               fill
               className="object-cover z-0"
               sizes="(min-width: 1024px) 50vw, (min-width: 768px) 75vw, 100vw"

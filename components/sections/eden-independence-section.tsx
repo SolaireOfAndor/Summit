@@ -4,23 +4,21 @@ import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
-import { EdenButton } from "@/components/ui/eden-button"
+import { SummitButton } from "@/components/ui/eden-button"
 
 /**
- * @component EdenIndependenceSection
- * @description A feature-rich section highlighting Eden's independence support services.
- * Showcases the organization's approach to promoting client independence, available
- * support programs, and service benefits with visual elements and testimonials.
+ * @component SummitIndependenceSection
+ * @description A feature-rich section highlighting SummitSDA's independence support services. Showcases Summit's approach to promoting client independence, available support programs, and service benefits with visual elements and testimonials.
  * 
  * @example
  * ```tsx
- * <EdenIndependenceSection />
+ * <SummitIndependenceSection />
  * ```
  * 
  * @category Section
  * @usedIn Homepage, Services overview page, and About page
  */
-export function EdenIndependenceSection() {
+export function SummitIndependenceSection() {
   const sectionRef = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
 
@@ -64,7 +62,7 @@ export function EdenIndependenceSection() {
           >
             <Image
               src="/71.webp"
-              alt="Eden Independence"
+              alt="Summit Independence"
               fill
               className="object-cover z-0"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -86,7 +84,7 @@ export function EdenIndependenceSection() {
                 <span className="text-sm font-medium uppercase tracking-wider">Independence Living</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold tracking-tight lg:text-4xl bg-gradient-to-r from-secondary via-primary to-secondary bg-clip-text text-transparent">
-                Eden Independence
+                Summit Independence
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground">Supporting your journey to independent living</p>
             </div>
@@ -100,13 +98,10 @@ export function EdenIndependenceSection() {
               )}
             >
               <p className="text-base md:text-lg text-muted-foreground">
-                At Eden Independence, we believe everyone deserves the opportunity to live life on their own terms. Our
-                comprehensive supported independent living services are designed to empower NDIS participants to achieve
-                their goals and maintain their independence.
+                At SummitSDA, we believe everyone deserves the opportunity to live life on their own terms. Our comprehensive supported independent living services are designed to empower NDIS participants to achieve their goals and maintain their independence.
               </p>
               <p className="text-base md:text-lg text-muted-foreground">
-                From shared accommodations to personalized support packages, we work closely with each individual to
-                create a living environment that meets their unique needs and aspirations.
+                From shared accommodations to personalized support packages, we work closely with each individual to create a living environment that meets their unique needs and aspirations.
               </p>
             </div>
 
@@ -117,17 +112,17 @@ export function EdenIndependenceSection() {
                 isVisible && "opacity-100 translate-y-0",
               )}
             >
-              <EdenButton asChild size="lg" className="bg-secondary hover:bg-secondary/90">
+              <SummitButton asChild size="lg" className="bg-secondary hover:bg-secondary/90">
                 <Link href="/services/sil-vacancies">View SIL Vacancies</Link>
-              </EdenButton>
-              <EdenButton
+              </SummitButton>
+              <SummitButton
                 asChild
                 variant="outline"
                 size="lg"
                 className="border-secondary/20 hover:bg-secondary/5 transition-colors"
               >
                 <Link href="/services/sil-models">Learn More</Link>
-              </EdenButton>
+              </SummitButton>
             </div>
           </div>
         </div>

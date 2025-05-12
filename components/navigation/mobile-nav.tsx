@@ -12,19 +12,17 @@ interface MobileNavProps {
 
 /**
  * @component MobileNav
- * @description Responsive navigation component optimized for mobile and tablet devices.
- * Features a hamburger menu, slide-out navigation panel, accordion-style submenus,
- * and touch-friendly interactive elements for easy mobile navigation.
- * 
+ * @description Responsive navigation component for SummitSDA, optimized for mobile and tablet devices. Features a hamburger menu, slide-out navigation panel, accordion-style submenus, and touch-friendly interactive elements for easy mobile navigation.
+ *
  * @example
  * ```tsx
- * <MobileNav
- *   onNavigate={handleNavigation}
- * />
+ * <MobileNav onNavigate={handleNavigation} />
  * ```
- * 
+ *
  * @category Navigation
  * @usedIn Header component for mobile and tablet navigation
+ * @param {() => void} onNavigate - Callback for navigation actions
+ * @returns {JSX.Element}
  */
 export function MobileNav({ onNavigate }: MobileNavProps) {
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({})

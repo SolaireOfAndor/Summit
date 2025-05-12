@@ -5,12 +5,23 @@ import { cn } from "@/lib/utils"
 import { forwardRef } from "react"
 import type { ButtonProps } from "@/components/ui/button"
 
-interface EdenButtonProps extends Omit<ButtonProps, "variant"> {
+/**
+ * @component SummitButton
+ * @description Summit-branded button component with custom variants and sizes. Use for all Summit actions and navigation.
+ * @example
+ * <SummitButton variant="primary" size="lg">Click me</SummitButton>
+ * @category UI
+ * @usedIn Throughout the application
+ * @param {React.ReactNode} children - Button content
+ * @param {string} variant - Button style variant
+ * @param {string} size - Button size
+ */
+interface SummitButtonProps extends Omit<ButtonProps, "variant"> {
   variant?: "default" | "secondary" | "outline" | "ghost" | "link" | "contact"
   size?: "sm" | "default" | "lg"
 }
 
-export const EdenButton = forwardRef<HTMLButtonElement, EdenButtonProps>(
+export const SummitButton = forwardRef<HTMLButtonElement, SummitButtonProps>(
   ({ className, variant = "default", size = "default", children, ...props }, ref) => {
     const sizes = {
       sm: "h-9 px-3 text-sm",
@@ -75,5 +86,5 @@ export const EdenButton = forwardRef<HTMLButtonElement, EdenButtonProps>(
   },
 )
 
-EdenButton.displayName = "EdenButton"
+SummitButton.displayName = "SummitButton"
 

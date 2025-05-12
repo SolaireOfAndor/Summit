@@ -21,17 +21,16 @@ interface MainNavProps {
 
 /**
  * @component MainNav
- * @description The primary navigation component for desktop viewports.
- * Provides links to main site sections, dropdown menus for sub-pages, 
- * and interactive elements for a complete navigation experience.
- * 
+ * @description The primary navigation component for SummitSDA desktop viewports. Provides links to main site sections, dropdown menus for sub-pages, and interactive elements for a complete navigation experience.
+ *
  * @example
  * ```tsx
  * <MainNav />
  * ```
- * 
+ *
  * @category Navigation
  * @usedIn Header component for desktop navigation
+ * @returns {JSX.Element}
  */
 export function MainNav({ onNavigate }: MainNavProps) {
   return (

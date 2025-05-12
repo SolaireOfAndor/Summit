@@ -158,17 +158,20 @@ const FilterPopover = memo(function FilterPopover({
 
 /**
  * @component PropertyFilters
- * @description A component that provides filtering options for property listings.
- * Allows users to filter properties by location, type, features, and other
- * criteria to find suitable accommodations.
- * 
+ * @description A component that provides filtering options for Summit property listings. Allows users to filter properties by location, type, features, and other criteria to find suitable NDIS accommodation solutions.
+ *
  * @example
  * ```tsx
  * <PropertyFilters onFilterChange={handleFilterChange} />
  * ```
- * 
+ *
  * @category Feature
  * @usedIn Property listing pages and search results
+ * @param {PropertyOption[]} buildingTypes - List of available building types
+ * @param {PropertyOption[]} [designCategories] - Optional list of SDA design categories
+ * @param {(filters: any) => void} onFilterChange - Callback when filters change
+ * @param {string} [className] - Optional additional class names
+ * @returns {JSX.Element}
  */
 export const PropertyFilters = memo(function PropertyFilters({
   buildingTypes,

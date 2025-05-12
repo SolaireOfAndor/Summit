@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils"
 import Link from "next/link"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
+import { SummitButton } from "@/components/ui/eden-button"
 import { ChevronRight } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 
@@ -200,11 +200,11 @@ export function PageHero({
             {/* CTA Button */}
             {ctaText && ctaHref && (
               <div className="pt-4">
-                <Button asChild size="lg">
+                <SummitButton asChild size="lg">
                   <Link href={ctaHref}>
                     {ctaText}
                   </Link>
-                </Button>
+                </SummitButton>
               </div>
             )}
           </div>

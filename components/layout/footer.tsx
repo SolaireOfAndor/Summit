@@ -3,24 +3,24 @@ import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react
 
 /**
  * @component Footer
- * @description The main site footer containing contact information, navigation links, service details, 
- * accessibility information, and social media links. Appears at the bottom of all pages.
- * 
+ * @description The main site footer for SummitSDA, containing contact information, navigation links, service details, accessibility information, and social media links. Appears at the bottom of all pages.
+ *
  * @example
  * ```tsx
  * <Footer />
  * ```
- * 
+ *
  * @category Layout
  * @usedIn All pages via the RootLayout
+ * @returns {JSX.Element}
  */
 export function Footer() {
   return (
     <footer className="border-t border-secondary/30 py-12 bg-gradient-to-b from-secondary/95 to-secondary text-white">
       <div className="container grid gap-8 md:grid-cols-2 lg:grid-cols-4">
         <div className="space-y-4">
-          <h3 className="font-bold text-accent">EDENABILITY</h3>
-          <p className="text-sm text-white/80">Creating cleaner, healthier spaces for NDIS participants across NSW.</p>
+          <h3 className="font-bold text-accent">SummitSDA</h3>
+          <p className="text-sm text-white/80">Empowering NDIS participants across NSW with high-quality, participant-centered support and accommodation.</p>
           <div className="space-y-2 text-sm text-white/80">
             <div className="flex items-center gap-2">
               <MapPin className="h-4 w-4 text-accent" />
@@ -28,21 +28,21 @@ export function Footer() {
             </div>
             <div className="flex items-center gap-2">
               <Phone className="h-4 w-4 text-accent" />
-              <p>1300 123 456</p>
+              <p>1300 000 000</p>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="h-4 w-4 text-accent" />
-              <p>contact@edenability.com.au</p>
+              <p>contact@summitsda.com.au</p>
             </div>
           </div>
           <div className="flex gap-4 pt-2">
-            <Link href="https://www.facebook.com/EdenAbility.ltd" className="text-white/70 hover:text-accent transition-colors">
+            <Link href="https://www.facebook.com/SummitSDA" className="text-white/70 hover:text-accent transition-colors" aria-label="SummitSDA Facebook">
               <Facebook className="h-5 w-5" />
             </Link>
-            <Link href="https://www.instagram.com/edenability/" className="text-white/70 hover:text-accent transition-colors">
+            <Link href="https://www.instagram.com/summitsda/" className="text-white/70 hover:text-accent transition-colors" aria-label="SummitSDA Instagram">
               <Instagram className="h-5 w-5" />
             </Link>
-            <Link href="https://www.linkedin.com/company/edenability/?originalSubdomain=au" className="text-white/70 hover:text-accent transition-colors">
+            <Link href="https://www.linkedin.com/company/summitsda/" className="text-white/70 hover:text-accent transition-colors" aria-label="SummitSDA LinkedIn">
               <Linkedin className="h-5 w-5" />
             </Link>
           </div>
@@ -57,18 +57,18 @@ export function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/services/eden-housing" className="text-white/80 transition-colors hover:text-accent">
-                Eden Housing
+              <Link href="/services/summit-housing" className="text-white/80 transition-colors hover:text-accent">
+                Summit Housing
               </Link>
             </li>
             <li>
-              <Link href="/services/eden-independence" className="text-white/80 transition-colors hover:text-accent">
-                Eden Independence
+              <Link href="/services/summit-independence" className="text-white/80 transition-colors hover:text-accent">
+                Summit Independence
               </Link>
             </li>
             <li>
-              <Link href="/services/eden-lifestyle" className="text-white/80 transition-colors hover:text-accent">
-                Eden Lifestyle
+              <Link href="/services/summit-lifestyle" className="text-white/80 transition-colors hover:text-accent">
+                Summit Lifestyle
               </Link>
             </li>
             <li>
@@ -209,7 +209,7 @@ export function Footer() {
       <div className="container mt-8 pt-8 border-t border-white/10">
         <div className="text-center text-sm text-white/70">
           <p>Registered NDIS Provider | ABN 12 345 678 901</p>
-          <p className="mt-2">&copy; {new Date().getFullYear()} EDENABILITY. All rights reserved.</p>
+          <p className="mt-2">&copy; {new Date().getFullYear()} SummitSDA. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -17,7 +17,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-import { EdenButton } from "@/components/ui/eden-button";
+import { SummitButton } from "@/components/ui/eden-button";
 import { 
   Wallet, 
   ChevronRight, 
@@ -132,10 +132,10 @@ export function SdaPathwaySelector({ className }: SdaPathwaySelectorProps) {
                           </div>
                           
                           <Link href="/services/sda-vacancies">
-                            <EdenButton className="mt-4 w-full sm:w-auto">
+                            <SummitButton className="mt-4 w-full sm:w-auto">
                               View Available Properties
                               <ArrowRightCircle className="ml-2 h-4 w-4" />
-                            </EdenButton>
+                            </SummitButton>
                           </Link>
                         </div>
                         
@@ -202,10 +202,10 @@ export function SdaPathwaySelector({ className }: SdaPathwaySelectorProps) {
                       
                       <div className="flex justify-center">
                         <Link href="/resources/sda-eligibility">
-                          <EdenButton variant="secondary" className="mt-2">
+                          <SummitButton variant="secondary" className="mt-2">
                             Check Your Eligibility
                             <ArrowRightCircle className="ml-2 h-4 w-4" />
-                          </EdenButton>
+                          </SummitButton>
                         </Link>
                       </div>
                     </div>

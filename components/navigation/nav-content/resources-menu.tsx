@@ -9,6 +9,16 @@ interface ResourcesMenuProps {
   onNavigate?: () => void
 }
 
+/**
+ * @component ResourcesMenu
+ * @description SummitSDA menu for Learn/Resources. Lists all learning and resource pages with descriptions and preview.
+ * @example
+ * <ResourcesMenu onNavigate={handleNavigate} />
+ * @category Navigation
+ * @usedIn MainNav, MobileNav
+ * @param {() => void} [onNavigate] - Callback for navigation actions
+ * @returns {JSX.Element}
+ */
 export function ResourcesMenu({ onNavigate }: ResourcesMenuProps) {
   const [activeItem, setActiveItem] = useState<NavigationItem>(navigationData.learn[0])
 

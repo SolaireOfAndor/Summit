@@ -4,7 +4,7 @@ import { useState } from "react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
-import { Button } from "@/components/ui/button"
+import { SummitButton } from "@/components/ui/summit-button"
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -34,17 +34,16 @@ const formSchema = z.object({
 
 /**
  * @component ContactForm
- * @description A comprehensive contact form component that collects user information
- * and query details. Features form validation, error handling, and submission
- * feedback. Used for general inquiries, support requests, and service information.
- * 
+ * @description A comprehensive Summit contact form component that collects user information and enquiry details. Features validation, error handling, and submission feedback. Used for general enquiries, support requests, and NDIS service information.
+ *
  * @example
  * ```tsx
- * <ContactForm redirectUrl="/thank-you" />
+ * <ContactForm />
  * ```
- * 
+ *
  * @category Form
- * @usedIn Contact page, service inquiry sections, and support pages
+ * @usedIn Contact page, service enquiry sections, and support pages
+ * @returns {JSX.Element}
  */
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -203,7 +202,7 @@ export function ContactForm() {
             )}
           />
 
-          <Button 
+          <SummitButton 
             type="submit" 
             className="w-full"
             disabled={isSubmitting}
@@ -217,7 +216,7 @@ export function ContactForm() {
             ) : (
               "Send Message"
             )}
-          </Button>
+          </SummitButton>
         </form>
       </Form>
     </div>

@@ -13,6 +13,16 @@ interface AboutMenuProps {
   onNavigate?: () => void
 }
 
+/**
+ * @component AboutMenu
+ * @description SummitSDA menu for About section. Lists all about pages with descriptions and preview.
+ * @example
+ * <AboutMenu onNavigate={handleNavigate} />
+ * @category Navigation
+ * @usedIn MainNav, MobileNav
+ * @param {() => void} [onNavigate] - Callback for navigation actions
+ * @returns {JSX.Element}
+ */
 export function AboutMenu({ onNavigate }: AboutMenuProps) {
   const [activeItem, setActiveItem] = useState<NavigationItem>(navigationData.about[0])
 

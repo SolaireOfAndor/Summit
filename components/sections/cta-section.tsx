@@ -24,7 +24,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, FileText } from "lucide-react"
-import { EdenButton } from "@/components/ui/eden-button"
+import { SummitButton } from "@/components/ui/eden-button"
 import { useEffect, useState } from "react"
 
 /**
@@ -65,14 +65,14 @@ export interface CTASectionProps {
  */
 export default function CTASection({
   title = "Ready to Take the Next Step?",
-  description = "We believe that everyone is different, and no two support plans are the same. Let us help you maintain your independence through EDEN tailored support services.",
+  description = "We believe that everyone is different, and no two support plans are the same. Let us help you maintain your independence through SummitSDA tailored support services.",
   primaryButtonText = "Contact Us Now",
   primaryButtonLink = "/contact",
   secondaryButtonText = "View SIL Vacancies",
   secondaryButtonLink = "/services/sil-vacancies",
   imageSrc = "/png/1.webp",
   mobileImageSrc = "/png/2.webp",
-  imageAlt = "EDEN Independence staff member helping a client",
+  imageAlt = "SummitSDA staff member helping a client",
   footerText = "Want to learn more about disability accommodation? Check our",
   footerLinkText = "SDA Guide",
   footerLinkHref = "/resources/about-sda",
@@ -134,15 +134,15 @@ export default function CTASection({
                 {description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                <EdenButton asChild size="lg">
+                <SummitButton asChild size="lg">
                   <Link href={primaryButtonLink}>
                     {primaryButtonText}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
-                </EdenButton>
-                <EdenButton asChild variant="outline" size="lg">
+                </SummitButton>
+                <SummitButton asChild variant="outline" size="lg">
                   <Link href={secondaryButtonLink}>{secondaryButtonText}</Link>
-                </EdenButton>
+                </SummitButton>
               </div>
             </div>
             

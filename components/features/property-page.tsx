@@ -5,7 +5,7 @@ import type React from "react"
 import type { PropertyData } from "@/lib/properties"
 import { PageHero } from "@/components/sections/page-hero"
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+import { SummitButton } from "@/components/ui/summit-button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import { cn } from "@/lib/utils"
@@ -233,7 +233,7 @@ function PropertyGallery({ images, title }: { images: string[], title: string })
               
               {/* Fullscreen button */}
               <div className="absolute bottom-4 right-4 z-10">
-                <Button 
+                <SummitButton 
                   size="icon" 
                   variant="secondary" 
                   className="rounded-full bg-white/80 backdrop-blur-sm hover:bg-white shadow-md"
@@ -241,7 +241,7 @@ function PropertyGallery({ images, title }: { images: string[], title: string })
                   aria-label="View fullscreen gallery"
                 >
                   <Maximize2 className="h-4 w-4 text-gray-800" />
-                </Button>
+                </SummitButton>
               </div>
         
               {/* Image counter */}
@@ -517,20 +517,17 @@ function SimilarPropertyCard({ property }: { property: PropertyData }) {
 
 /**
  * @component PropertyPage
- * @description A comprehensive page component for displaying detailed property information.
- * Includes property images, details, amenities, location information, and vacancy status.
- * This component serves as the main content for individual property listings.
- * 
+ * @description Displays detailed information about a Summit property, including images, features, activities, and enquiry options. Used for NDIS accommodation detail pages.
+ *
  * @example
  * ```tsx
- * <PropertyPage 
- *   property={propertyData} 
- *   similarProperties={similarPropertiesData} 
- * />
+ * <PropertyPage property={propertyData} />
  * ```
- * 
+ *
  * @category Feature
- * @usedIn Individual property detail pages
+ * @usedIn Property detail pages
+ * @param {PropertyData} property - The property data to display
+ * @returns {JSX.Element}
  */
 export function PropertyPage({ property }: PropertyPageProps) {
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
@@ -688,14 +685,14 @@ export function PropertyPage({ property }: PropertyPageProps) {
                       )}
                     </div>
                     {detailedDescription.length > 180 && (
-                      <Button 
+                      <SummitButton 
                         variant="ghost" 
                         size="sm" 
                         className="text-xs text-primary hover:text-primary/80 p-0 h-auto font-medium"
                         onClick={() => setIsDescriptionExpanded(!isDescriptionExpanded)}
                       >
                         {isDescriptionExpanded ? "Read Less" : "Read More"}
-                      </Button>
+                      </SummitButton>
                     )}
                   </div>
                 </CardContent>
@@ -790,12 +787,12 @@ export function PropertyPage({ property }: PropertyPageProps) {
                   {/* Contact */}
                   <div className="space-y-4">
                     <h3 className="font-semibold">Expression of Interest</h3>
-                    <Button asChild className="w-full" size="lg">
+                    <SummitButton asChild className="w-full" size="lg">
                       <Link href="/contact">
                         Enquire Now
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
-                    </Button>
+                    </SummitButton>
                   </div>
                 </div>
               </CardContent>
@@ -844,12 +841,12 @@ export function PropertyPage({ property }: PropertyPageProps) {
               </div>
               
               <div className="mt-10 text-center">
-                <Button asChild size="lg">
+                <SummitButton asChild size="lg">
                   <Link href="/properties">
                     View All Properties
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
-                </Button>
+                </SummitButton>
               </div>
             </div>
           </div>

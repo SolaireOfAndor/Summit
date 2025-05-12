@@ -1,7 +1,7 @@
 /**
  * @component Hero
  * @description Main hero section displayed on the homepage. Features a prominent call-to-action,
- * descriptive text about Eden's services, and visual elements with a gradient background.
+ * descriptive text about SummitSDA's services, and visual elements with a gradient background.
  * 
  * @example
  * ```tsx
@@ -13,7 +13,7 @@
  */
 import Link from "next/link"
 import Image from "next/image"
-import { EdenButton } from "@/components/ui/eden-button"
+import { SummitButton } from "@/components/ui/eden-button"
 
 export function Hero() {
   return (
@@ -39,21 +39,20 @@ export function Hero() {
           <div className="lg:col-span-4 space-y-8">
             <div className="space-y-6">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-secondary">
-                EDENABILITY
+                SummitSDA
               </h1>
               <p className="text-xl sm:text-2xl font-medium text-secondary/90 max-w-xl">
-                Empowering independence through thoughtfully designed living spaces and comprehensive NDIS support
-                services.
+                Empowering independence through thoughtfully designed living spaces and comprehensive NDIS support services across NSW.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <EdenButton asChild size="lg">
+              <SummitButton asChild size="lg">
                 <Link href="/services/sil-vacancies">Explore Vacancies</Link>
-              </EdenButton>
-              <EdenButton asChild variant="outline" size="lg">
+              </SummitButton>
+              <SummitButton asChild variant="outline" size="lg">
                 <Link href="/contact">Contact Us</Link>
-              </EdenButton>
+              </SummitButton>
             </div>
 
             <div className="pt-4">
@@ -78,7 +77,7 @@ export function Hero() {
           <div className="relative lg:col-span-8 lg:h-[600px] h-[400px]">
             <Image
               src="/nurse-walking-with-senior-patient-wheelchair.webp"
-              alt="A joyful moment showing care and support at EDENABILITY"
+              alt="A joyful moment showing care and support at SummitSDA"
               fill
               className="object-cover object-bottom rounded-2xl shadow-2xl"
               priority

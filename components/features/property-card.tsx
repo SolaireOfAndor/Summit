@@ -27,7 +27,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
-import { EdenButton } from "@/components/ui/eden-button"
+import { SummitButton } from "@/components/ui/summit-button"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Bed, Bath, Users, MapPin } from "lucide-react"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
@@ -200,11 +200,11 @@ export function PropertyCard({
       </CardContent>
 
       <CardFooter className="mt-auto">
-        <EdenButton asChild className="w-full">
+        <SummitButton asChild className="w-full">
           <Link href={href} onClick={handleNavigation}>
             View Details
           </Link>
-        </EdenButton>
+        </SummitButton>
       </CardFooter>
     </Card>
   )
