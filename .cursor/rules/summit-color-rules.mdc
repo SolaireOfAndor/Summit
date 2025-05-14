@@ -1,0 +1,126 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Summit Website Color Palette Usage Guide
+
+This guide explains **when and where to use each color** in the Summit website palette. It ensures a consistent, accessible, and branded user experience for all developers and designers.
+
+---
+
+## 1. Primary Brand Colors
+
+| Variable                | Hex       | Usage
+|-------------------------|-----------|-------------------------------------------------------------|
+| `--primary`             | #ff7e32   | **Main brand color.** Use for primary buttons, CTAs, icons, navigation highlights, and all interactive elements. This is the color for anything you want to draw attention to or encourage user action. |
+| `--deep-brown`          | #663300   | **Headings, important text, footer background, and logo.** Use for all major headings (`h1`, `h2`, `h3`), the “Summit” part of the logo, and the footer background. Provides strong contrast and a sense of stability. |
+| `--medium-brown`        | #996633   | **Body and secondary text.** Use for paragraph text, secondary information, and less prominent UI elements. Ensures readability while maintaining warmth. |
+
+---
+
+## 2. Background Colors
+
+| Variable                | Hex       | Usage
+|-------------------------|-----------|-------------------------------------------------------------|
+| `--background`          | #fffaf5   | **Main background.** Use for the main page background and navbar when scrolled. Creates a soft, inviting canvas. |
+| `--light-orange`        | #fff2e6   | **Section backgrounds.** Use for about section backgrounds, card icon backgrounds, and to create subtle contrast between sections. |
+| `--lighter-orange`      | #fff8f0   | **Alternating section backgrounds.** Use for the quality commitment section and to alternate with `--light-orange` for visual separation. |
+| `--pure-white`          | #ffffff   | **Cards and forms.** Use for card backgrounds, testimonial cards, service cards, and form elements (inputs, textareas, etc.) for maximum contrast. |
+
+---
+
+## 3. Text Colors
+
+| Variable                | Hex       | Usage
+|-------------------------|-----------|-------------------------------------------------------------|
+| `--heading`             | #663300   | **Headings.** Use for all major headings and the “Summit” logo text. |
+| `--body`                | #996633   | **Body text.** Use for all paragraph and secondary text. |
+| `--text-white`          | #ffffff   | **Text on dark backgrounds.** Use for text in the footer, on primary buttons, and in the contact section. |
+| `--text-light-gray`     | #d1d5db   | **Secondary text on dark backgrounds.** Use for less important text in the footer and contact section. |
+
+---
+
+## 4. UI and Interactive Elements
+
+| Variable                | Hex/RGBA  | Usage
+|-------------------------|-----------|-------------------------------------------------------------|
+| `--primary`             | #ff7e32   | **Primary buttons, links, and interactive elements.** Use for all main call-to-action elements. |
+| `--primary-hover`       | #e65c00   | **Button hover states.** Use for hover/focus states on primary buttons and links. |
+| `--primary-transparent` | rgba(255,126,50,0.2) | **Subtle highlights and hover effects.** Use for card icon hover states, button focus rings, and subtle overlays. |
+| `--gray-400`            | #9ca3af   | **Footer links and less important text.** Use for secondary links and muted text in the footer. |
+
+---
+
+## 5. Overlay and Gradient Colors
+
+| Variable                | Hex/RGBA  | Usage
+|-------------------------|-----------|-------------------------------------------------------------|
+| `--orange-gradient-light` | rgba(255,126,50,0.2) to transparent | **Image overlays.** Use as a gradient overlay on images, especially in the about section, for a subtle branded effect. |
+| `--orange-shadow`       | rgba(255,126,50,0.1) | **Elevated elements.** Use for card and button shadows to add depth with a branded tint. |
+| `--background-blur-light` | rgba(255,250,245,0.9) | **Navbar background when scrolled.** Use for a semi-transparent, blurred navbar effect. |
+
+---
+
+## 6. Form Elements
+
+| Variable                | Hex/RGBA  | Usage
+|-------------------------|-----------|-------------------------------------------------------------|
+| `--border-gray`         | #d1d5db   | **Form input borders.** Use for input, textarea, and select borders. |
+| `--focus-orange`        | #ff7e32   | **Form input focus states.** Use for the border or underline of focused form elements. |
+| `--focus-ring`          | rgba(255,126,50,0.2) | **Focus ring.** Use for the outer glow on focused form elements. |
+
+---
+
+## 7. General Guidelines
+
+- **Consistency:** Always use the defined variables. Do not hardcode hex values in components.
+- **Contrast:** Ensure text and background combinations meet accessibility standards (WCAG 2.1 AA).
+- **Hierarchy:** Use `--primary` for the most important actions, `--deep-brown` for headings, and `--medium-brown` for body text.
+- **Backgrounds:** Alternate between `--background`, `--light-orange`, and `--lighter-orange` for sections.
+- **Interactive Elements:** Use `--primary` for all main interactive elements, and `--primary-hover` for their hover/focus states.
+- **Dark Sections:** For dark backgrounds (footer, contact), use `--text-white` for main text and `--text-light-gray` for secondary text.
+- **Animations:** When animating colors, transition between shades within the same color family for a cohesive look.
+
+---
+
+## 8. Example Usage
+
+```tsx
+// Button
+<button
+  className=\"bg-primary hover:bg-[hsl(var(--primary-hover))] text-text-white focus:ring-[hsl(var(--focus-ring))]\"
+>
+  Call to Action
+</button>
+
+// Section background
+<section className=\"bg-[hsl(var(--light-orange))]\">
+  ...
+</section>
+
+// Heading
+<h1 className=\"text-[hsl(var(--heading))]\">Welcome to Summit</h1>
+
+// Card
+<div className=\"bg-[hsl(var(--pure-white))] shadow-[0_4px_24px_0_hsl(var(--orange-shadow))]\">
+  ...
+</div>
+
+// Form input
+<input
+  className=\"border border-[hsl(var(--border-gray))] focus:border-[hsl(var(--focus-orange))] focus:ring-[hsl(var(--focus-ring))]\"
+/>
+```
+
+---
+
+## 9. Reference
+
+All variables are defined in `app/globals.css` and `styles/globals.css`.  
+**Always use the CSS variables via Tailwind’s `hsl(var(--...))` syntax for consistency and maintainability.**
+
+---
+
+
+This guide ensures the Summit website remains visually cohesive, accessible, and true to its brand identity.

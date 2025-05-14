@@ -11,72 +11,94 @@ import { SummitButton } from "@/components/ui/summit-button"
 import { MainNav } from "@/components/navigation/main-nav"
 import { useNavigation } from "@/hooks/useNavigation"
 import { usePathname } from "next/navigation"
-import { navigationData } from "@/lib/navigation"
+import { DesktopAccessibilityBar } from "@/components/features/accessibility/DesktopAccessibilityBar"
+import { AccessibilityIcon } from "@/components/features/accessibility/AccessibilityIcon"
+
+const SCROLL_THRESHOLD = 10; // Show/hide headers when scrolled more than this many pixels from top
+const ACCESSIBILITY_BAR_HEIGHT_CLASS = "h-8"; // Tailwind class for 32px
+const MAIN_HEADER_HEIGHT_CLASS = "h-20"; // Tailwind class for 80px
 
 /**
  * @component Header
- * @description The main navigation header component for SummitSDA. Appears at the top of all pages. Contains the Summit logo, main navigation links, and mobile menu for responsive design.
- *
- * @example
- * ```tsx
- * <Header />
- * ```
- *
- * @category Layout
- * @usedIn All pages via the RootLayout
- * @returns {JSX.Element}
+ * @description The main navigation header and accessibility bar component for SummitSDA.
+ * Manages the scroll-based visibility of both bars.
  */
 export function Header() {
-  const [scrolled, setScrolled] = useState(false)
-  const { mobileMenuOpen, setMobileMenuOpen, activeService, setActiveService, handleNavigation } = useNavigation()
+  const [areHeadersVisible, setAreHeadersVisible] = useState(true); // Controls visibility of the entire header section
+  const [headerBackgroundScrolled, setHeaderBackgroundScrolled] = useState(false); // For main header's blur/border style
+  
+  const {
+    mobileMenuOpen,
+    setMobileMenuOpen,
+    handleNavigation,
+  } = useNavigation()
   const pathname = usePathname()
   const rafId = useRef<number>()
   const lastScrollY = useRef(0)
+  const [isAccessibilityMenuMobileOpen, setIsAccessibilityMenuMobileOpen] = useState(false)
 
-  // Throttled scroll handler using requestAnimationFrame
   const handleScroll = useCallback(() => {
     if (rafId.current) {
-      cancelAnimationFrame(rafId.current)
+      cancelAnimationFrame(rafId.current);
     }
 
     rafId.current = requestAnimationFrame(() => {
-      const currentScrollY = window.scrollY
+      const currentScrollY = window.scrollY;
+      const isScrollingDown = currentScrollY > lastScrollY.current;
+
+      if (currentScrollY <= SCROLL_THRESHOLD) {
+        setAreHeadersVisible(true);
+      } else if (isScrollingDown) {
+        setAreHeadersVisible(false);
+      } else { // Scrolling up
+        setAreHeadersVisible(true);
+      }
       
-      // Only update if scroll position changed significantly (3px threshold)
-      if (Math.abs(currentScrollY - lastScrollY.current) > 3) {
-        setScrolled(currentScrollY > 20)
-        lastScrollY.current = currentScrollY
-      }
-    })
-  }, [])
+      // Style for the main header background (blur/border)
+      // Activate if scrolled past the point where the accessibility bar would normally be fully visible
+      setHeaderBackgroundScrolled(currentScrollY > 0); // Simplified: any scroll changes background if headers are visible
 
-  // Close mobile menu on route change
-  useEffect(() => {
-    setMobileMenuOpen(false)
-  }, [pathname, setMobileMenuOpen])
+      lastScrollY.current = currentScrollY;
+    });
+  }, []); 
 
-  // Setup scroll listener
   useEffect(() => {
-    // Initial check
-    handleScroll()
-    
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    
+    setMobileMenuOpen(false);
+    setIsAccessibilityMenuMobileOpen(false);
+  }, [pathname, setMobileMenuOpen]);
+
+  useEffect(() => {
+    handleScroll(); 
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
-      if (rafId.current) {
-        cancelAnimationFrame(rafId.current)
-      }
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [handleScroll])
+      if (rafId.current) cancelAnimationFrame(rafId.current);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
+  
+  const handleToggleMobileAccessibilityMenu = () => {
+    setIsAccessibilityMenuMobileOpen(prev => !prev);
+    if (!isAccessibilityMenuMobileOpen) setMobileMenuOpen(false);
+  };
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50">
+    <div 
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50",
+        "transition-transform duration-300 ease-in-out transform",
+        areHeadersVisible ? "translate-y-0" : "-translate-y-full"
+      )}
+    >
+      <DesktopAccessibilityBar isVisible={areHeadersVisible} />
       <header
         role="banner"
         className={cn(
-          "w-full h-20 border-b-2 transition-all duration-300",
-          scrolled ? "bg-white/80 backdrop-blur-md shadow-md border-secondary/70" : "bg-white border-secondary/40",
+          "w-full border-b-2", // No margin-top needed, positioned naturally after accessibility bar
+          MAIN_HEADER_HEIGHT_CLASS, // Explicit height class
+          // Background styles are applied regardless of transform, visibility handled by parent div
+          headerBackgroundScrolled && areHeadersVisible // Only apply scrolled styles if headers are meant to be visible
+            ? "bg-[hsl(var(--background-blur-light))] backdrop-blur-md shadow-md border-[hsl(var(--secondary))]/70"
+            : "bg-[hsl(var(--background))] border-[hsl(var(--secondary))]/40"
         )}
       >
         <div className="flex h-full items-center px-6 max-w-[1400px] mx-auto">
@@ -87,7 +109,7 @@ export function Header() {
             aria-label="SummitSDA - Return to homepage"
           >
             <Image
-              src="/header/summit-logo.svg"
+              src="/logo/logo.png"
               alt="SummitSDA logo"
               fill
               className="object-contain"
@@ -96,54 +118,46 @@ export function Header() {
             />
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="flex-1 flex justify-center">
-            <MainNav
-              activeService={activeService}
-              onServiceHover={setActiveService}
-              onNavigate={handleNavigation}
-              className="hidden lg:flex"
-            />
+            <MainNav onNavigate={handleNavigation} className="hidden lg:flex" />
           </nav>
 
-          {/* Contact Button and Mobile Menu */}
           <div className="flex items-center h-full gap-2">
             <SummitButton
               variant="contact"
               asChild
-              className="hidden lg:flex h-16 items-center px-8 text-lg font-semibold rounded-md shadow-sm transition-shadow"
+              className="hidden lg:flex h-16 items-center px-8 text-lg font-semibold rounded-md shadow-sm transition-shadow bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] hover:bg-[hsl(var(--primary-hover))]"
             >
-              <Link href="/contact" onClick={handleNavigation}>
-                Contact
-              </Link>
+              <Link href="/contact" onClick={handleNavigation}>Contact</Link>
             </SummitButton>
 
-            {/* Mobile Menu */}
-            <div className="lg:hidden">
+            <div className="lg:hidden flex items-center gap-1">
+              <AccessibilityIcon onClick={handleToggleMobileAccessibilityMenu} iconSize={32} className="p-2 -m-2 hover:bg-[hsl(var(--primary-transparent))] transition-colors rounded-md shadow-sm hover:shadow-md text-[hsl(var(--secondary))]" />
               <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
                 <SheetTrigger asChild>
                   <button
-                    className="p-2 -m-2 hover:bg-primary/10 transition-colors rounded-md shadow-sm hover:shadow-md"
-                    aria-label="Open menu"
+                    className="p-2 -m-2 hover:bg-[hsl(var(--primary-transparent))] transition-colors rounded-md shadow-sm hover:shadow-md"
+                    aria-label="Open main menu"
                     aria-expanded={mobileMenuOpen}
-                    aria-controls="mobile-menu"
+                    aria-controls="mobile-menu-content"
                   >
-                    <Menu className="h-16 w-16 p-4 text-secondary" aria-hidden="true" />
+                    <Menu className="h-16 w-16 p-4 text-[hsl(var(--secondary))]" aria-hidden="true" />
                   </button>
                 </SheetTrigger>
-                <SheetContent id="mobile-menu" className="w-80 sm:w-96">
-                  <MobileNav 
-                    services={navigationData.services}
-                    resources={navigationData.resources}
-                    about={navigationData.about}
-                    onNavigate={handleNavigation} 
-                  />
+                <SheetContent id="mobile-menu-content" className="w-80 sm:w-96 bg-[hsl(var(--background))] z-[65]">
+                  <MobileNav onNavigate={handleNavigation} />
                 </SheetContent>
               </Sheet>
             </div>
           </div>
         </div>
       </header>
+      
+      {/* Mobile Accessibility Options Menu is outside the sliding container to remain fixed */}
+      {isAccessibilityMenuMobileOpen && (
+        <div className="lg:hidden fixed inset-0 z-[70] bg-black/30 backdrop-blur-sm" onClick={handleToggleMobileAccessibilityMenu} />
+      )}
+      
     </div>
   )
 }

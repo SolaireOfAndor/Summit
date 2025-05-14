@@ -27,9 +27,9 @@ export function AboutMenu({ onNavigate }: AboutMenuProps) {
   const [activeItem, setActiveItem] = useState<NavigationItem>(navigationData.about[0])
 
   return (
-    <div className="w-[700px] grid grid-cols-[250px_1fr] bg-gradient-to-br from-white/95 to-white/90 backdrop-blur-md rounded-lg shadow-xl overflow-hidden border border-secondary/20">
+    <div className="w-[700px] grid grid-cols-[250px_1fr] bg-[hsl(var(--background))] backdrop-blur-md rounded-lg shadow-xl overflow-hidden border border-[hsl(var(--border))]">
       {/* Left side - Menu items */}
-      <div className="bg-gradient-to-br from-secondary/5 to-accent/5 border-r border-secondary/20">
+      <div className="bg-[hsl(var(--muted))] border-r border-[hsl(var(--border))]">
         <ul className="py-2">
           {navigationData.about.map((item) => (
             <li key={item.title} className="relative">
@@ -41,10 +41,10 @@ export function AboutMenu({ onNavigate }: AboutMenuProps) {
                     window.location.href = item.href
                   }}
                   className={cn(
-                    "w-full text-left px-5 py-4 transition-all hover:bg-accent/5 group relative",
+                    "w-full text-left px-5 py-4 transition-all hover:bg-[hsl(var(--accent))/0.05] group relative",
                     activeItem.title === item.title
-                      ? "bg-accent/10 text-secondary"
-                      : "text-secondary/80 hover:text-secondary"
+                      ? "bg-[hsl(var(--accent))/0.1] text-[hsl(var(--secondary-foreground))]"
+                      : "text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--secondary-foreground))]"
                   )}
                 >
                   <div className="font-medium text-base flex items-center">
@@ -55,7 +55,7 @@ export function AboutMenu({ onNavigate }: AboutMenuProps) {
                     )}>→</span>
                   </div>
                   <div className={cn(
-                    "absolute bottom-0 left-0 h-[2px] bg-accent transition-all duration-300 ease-out",
+                    "absolute bottom-0 left-0 h-[2px] bg-[hsl(var(--accent))] transition-all duration-300 ease-out",
                     activeItem.title === item.title
                       ? "w-full opacity-100"
                       : "w-0 group-hover:w-full opacity-0 group-hover:opacity-100"
@@ -90,19 +90,19 @@ export function AboutMenu({ onNavigate }: AboutMenuProps) {
               </Link>
             </div>
             <div className="relative">
-              <h3 className="font-semibold text-xl text-secondary mb-3 flex items-center">
+              <h3 className="font-semibold text-xl text-[hsl(var(--secondary-foreground))] mb-3 flex items-center">
                 {activeItem.title}
-                <div className="ml-4 h-px flex-1 bg-gradient-to-r from-secondary/30 to-transparent" />
+                <div className="ml-4 h-px flex-1 bg-gradient-to-r from-[hsl(var(--secondary-foreground))/0.3] to-transparent" />
               </h3>
               {activeItem.description && (
-                <p className="text-secondary/80 leading-relaxed mb-4">
+                <p className="text-[hsl(var(--muted-foreground))] leading-relaxed mb-4">
                   {activeItem.description}
                 </p>
               )}
               <Link 
                 href={activeItem.href} 
                 onClick={onNavigate}
-                className="inline-flex items-center text-accent hover:text-accent-dark font-medium transition-colors"
+                className="inline-flex items-center text-[hsl(var(--accent))] hover:text-[hsl(var(--primary))] font-medium transition-colors"
               >
                 Learn more
                 <span className="ml-1 transform transition-transform group-hover:translate-x-1">→</span>

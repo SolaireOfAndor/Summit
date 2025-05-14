@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation"
 
 export function useNavigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [activeService, setActiveService] = useState("Eden Independence")
+  const [activeService, setActiveService] = useState("Summit Independence")
   const pathname = usePathname()
 
   useEffect(() => {

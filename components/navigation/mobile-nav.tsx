@@ -40,14 +40,14 @@ export function MobileNav({ onNavigate }: MobileNavProps) {
   }
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-full bg-[hsl(var(--background))]">
       <div className="flex-1 overflow-y-auto py-6">
         <div className="space-y-1 mt-6">
           {/* Supported Accommodations Section */}
           <div>
             <button
               onClick={() => toggleSection("supportedAccommodations")}
-              className="flex items-center justify-between w-full px-6 py-3 text-base font-semibold hover:text-primary transition-colors border-l-2 border-transparent hover:border-primary/50 hover:bg-primary/5"
+              className="flex items-center justify-between w-full px-6 py-3 text-base font-semibold text-[hsl(var(--secondary-foreground))] hover:text-[hsl(var(--primary))] transition-colors border-l-2 border-transparent hover:border-[hsl(var(--primary))/0.5] hover:bg-[hsl(var(--primary-transparent))]"
             >
               <span>Supported Accommodations</span>
               <ChevronDown
@@ -61,7 +61,7 @@ export function MobileNav({ onNavigate }: MobileNavProps) {
                     key={item.title}
                     href={item.href}
                     onClick={() => handleNavigation(item.href)}
-                    className="block rounded-lg text-sm text-muted-foreground hover:text-primary transition-colors py-2 px-3 hover:bg-primary/5"
+                    className="block rounded-lg text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition-colors py-2 px-3 hover:bg-[hsl(var(--primary-transparent))]"
                   >
                     {item.title}
                   </Link>
@@ -74,7 +74,7 @@ export function MobileNav({ onNavigate }: MobileNavProps) {
           <div>
             <button
               onClick={() => toggleSection("dropInSupport")}
-              className="flex items-center justify-between w-full px-6 py-3 text-base font-semibold hover:text-primary transition-colors border-l-2 border-transparent hover:border-primary/50 hover:bg-primary/5"
+              className="flex items-center justify-between w-full px-6 py-3 text-base font-semibold text-[hsl(var(--secondary-foreground))] hover:text-[hsl(var(--primary))] transition-colors border-l-2 border-transparent hover:border-[hsl(var(--primary))/0.5] hover:bg-[hsl(var(--primary-transparent))]"
             >
               <span>Drop-in Support</span>
               <ChevronDown
@@ -88,7 +88,7 @@ export function MobileNav({ onNavigate }: MobileNavProps) {
                     key={item.title}
                     href={item.href}
                     onClick={() => handleNavigation(item.href)}
-                    className="block rounded-lg text-sm text-muted-foreground hover:text-primary transition-colors py-2 px-3 hover:bg-primary/5"
+                    className="block rounded-lg text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition-colors py-2 px-3 hover:bg-[hsl(var(--primary-transparent))]"
                   >
                     {item.title}
                   </Link>
@@ -101,7 +101,7 @@ export function MobileNav({ onNavigate }: MobileNavProps) {
           <Link
             href="/community-participation"
             onClick={() => handleNavigation("/community-participation")}
-            className="flex items-center px-6 py-3 text-base font-semibold hover:text-primary transition-colors border-l-2 border-transparent hover:border-primary/50 hover:bg-primary/5 rounded-lg"
+            className="flex items-center px-6 py-3 text-base font-semibold text-[hsl(var(--secondary-foreground))] hover:text-[hsl(var(--primary))] transition-colors border-l-2 border-transparent hover:border-[hsl(var(--primary))/0.5] hover:bg-[hsl(var(--primary-transparent))] rounded-lg"
           >
             Community Participation
           </Link>
@@ -113,7 +113,7 @@ export function MobileNav({ onNavigate }: MobileNavProps) {
           <div>
             <button
               onClick={() => toggleSection("about")}
-              className="flex items-center justify-between w-full px-6 py-3 text-base font-semibold hover:text-primary transition-colors border-l-2 border-transparent hover:border-primary/50 hover:bg-primary/5"
+              className="flex items-center justify-between w-full px-6 py-3 text-base font-semibold text-[hsl(var(--secondary-foreground))] hover:text-[hsl(var(--primary))] transition-colors border-l-2 border-transparent hover:border-[hsl(var(--primary))/0.5] hover:bg-[hsl(var(--primary-transparent))]"
             >
               <span>About</span>
               <ChevronDown
@@ -127,7 +127,7 @@ export function MobileNav({ onNavigate }: MobileNavProps) {
                     key={item.title}
                     href={item.href}
                     onClick={() => handleNavigation(item.href)}
-                    className="block rounded-lg text-sm text-muted-foreground hover:text-primary transition-colors py-2 px-3 hover:bg-primary/5"
+                    className="block rounded-lg text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition-colors py-2 px-3 hover:bg-[hsl(var(--primary-transparent))]"
                   >
                     {item.title}
                   </Link>
@@ -140,7 +140,7 @@ export function MobileNav({ onNavigate }: MobileNavProps) {
           <div>
             <button
               onClick={() => toggleSection("learn")}
-              className="flex items-center justify-between w-full px-6 py-3 text-base font-semibold hover:text-primary transition-colors border-l-2 border-transparent hover:border-primary/50 hover:bg-primary/5"
+              className="flex items-center justify-between w-full px-6 py-3 text-base font-semibold text-[hsl(var(--secondary-foreground))] hover:text-[hsl(var(--primary))] transition-colors border-l-2 border-transparent hover:border-[hsl(var(--primary))/0.5] hover:bg-[hsl(var(--primary-transparent))]"
             >
               <span>Learn</span>
               <ChevronDown
@@ -154,7 +154,7 @@ export function MobileNav({ onNavigate }: MobileNavProps) {
                     key={item.title}
                     href={item.href}
                     onClick={() => handleNavigation(item.href)}
-                    className="block rounded-lg text-sm text-muted-foreground hover:text-primary transition-colors py-2 px-3 hover:bg-primary/5"
+                    className="block rounded-lg text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition-colors py-2 px-3 hover:bg-[hsl(var(--primary-transparent))]"
                   >
                     {item.title}
                   </Link>

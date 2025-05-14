@@ -1,7 +1,10 @@
+'use client'
+
 /**
  * @component Hero
- * @description Main hero section displayed on the homepage. Features a prominent call-to-action,
- * descriptive text about SummitSDA's services, and visual elements with a gradient background.
+ * @description Main hero section for the SummitSDA landing page. Features a prominent
+ * call-to-action, descriptive text about SummitSDA\'s mission, and an illustrative image.
+ * Uses GSAP for entrance animations.
  * 
  * @example
  * ```tsx
@@ -9,85 +12,146 @@
  * ```
  * 
  * @category Section
- * @usedIn Homepage
+ * @usedIn Landing Page (app/page.tsx)
  */
 import Link from "next/link"
 import Image from "next/image"
 import { SummitButton } from "@/components/ui/summit-button"
+import { useEffect, useRef } from "react"
+import { gsap } from "gsap"
+import { cn } from "@/lib/utils"
 
 export function Hero() {
+  const heroRef = useRef<HTMLElement>(null)
+  const titleRef = useRef<HTMLHeadingElement>(null)
+  const paragraphRef = useRef<HTMLParagraphElement>(null)
+  const buttonsRef = useRef<HTMLDivElement>(null)
+  const imageRef = useRef<HTMLDivElement>(null)
+  const statsRef = useRef<HTMLDivElement>(null)
+
+
+  useEffect(() => {
+    if (heroRef.current) {
+      const tl = gsap.timeline({ defaults: { ease: "power3.out" } })
+
+      // Animate text elements
+      if (titleRef.current) {
+        tl.fromTo(
+          titleRef.current,
+          { opacity: 0, y: 50 },
+          { opacity: 1, y: 0, duration: 0.8, delay: 0.2 }
+        )
+      }
+      if (paragraphRef.current) {
+        tl.fromTo(
+          paragraphRef.current,
+          { opacity: 0, y: 40 },
+          { opacity: 1, y: 0, duration: 0.7 },
+          "-=0.5" // Start slightly after title
+        )
+      }
+      if (buttonsRef.current?.children) {
+        tl.fromTo(
+          buttonsRef.current.children,
+          { opacity: 0, y: 30 },
+          { opacity: 1, y: 0, duration: 0.6, stagger: 0.2 },
+          "-=0.4" // Start slightly after paragraph
+        )
+      }
+       if (statsRef.current?.children) {
+        tl.fromTo(
+          statsRef.current.children,
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.5, stagger: 0.15 },
+          "-=0.3"
+        )
+      }
+
+      // Animate image
+      if (imageRef.current) {
+        tl.fromTo(
+          imageRef.current,
+          { opacity: 0, scale: 0.95, x: 50 },
+          { opacity: 1, scale: 1, x: 0, duration: 1 },
+          "-=0.8" // Start in parallel with text animations
+        )
+      }
+    }
+  }, [])
+
   return (
     <section 
-      className="relative min-h-[85vh] flex items-center bg-gradient-to-br from-primary/20 via-white to-accent/10"
-      aria-label="Hero section"
+      ref={heroRef}
+      className="relative min-h-[90vh] lg:min-h-screen flex items-center py-20 lg:py-0 overflow-hidden bg-[hsl(var(--background))]"
+      aria-labelledby="hero-title"
     >
-      {/* Decorative elements */}
-      <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-        <div className="absolute -top-1/2 -right-1/2 w-[800px] h-[800px] rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 blur-3xl" />
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/10 via-transparent to-transparent" />
+      {/* Subtle decorative background using pseudo-elements or SVGs - to be designed later */}
+      <div 
+        className="absolute inset-0 opacity-50"
+        aria-hidden="true" 
+      >
+        {/* Example: Soft gradient spark, can be animated with GSAP */}
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[hsl(var(--primary))]/5 via-[hsl(var(--background))] to-[hsl(var(--light-orange))]/10" />
       </div>
 
-      {/* Grid pattern overlay */}
-      <div 
-        className="absolute inset-0 bg-[linear-gradient(to_right,#692b74_1px,transparent_1px),linear-gradient(to_bottom,#692b74_1px,transparent_1px)] [background-size:64px_64px] opacity-[0.03]"
-        aria-hidden="true" 
-      />
-
-      <div className="container relative">
+      <div className="container relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Content */}
-          <div className="lg:col-span-4 space-y-8">
+          <div className="lg:col-span-7 xl:col-span-6 space-y-8 text-center lg:text-left">
             <div className="space-y-6">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-secondary">
-                SummitSDA
+              <h1 
+                id="hero-title"
+                ref={titleRef}
+                className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tighter text-[hsl(var(--heading))]"
+              >
+                Empowering Your Journey to Independence
               </h1>
-              <p className="text-xl sm:text-2xl font-medium text-secondary/90 max-w-xl">
-                Empowering independence through thoughtfully designed living spaces and comprehensive NDIS support services across NSW.
+              <p 
+                ref={paragraphRef}
+                className="text-lg sm:text-xl lg:text-2xl text-[hsl(var(--body))] max-w-2xl mx-auto lg:mx-0"
+              >
+                SummitSDA delivers participant-centered NDIS support and high-quality accommodation, guiding you towards greater autonomy and a fulfilling life across NSW.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <SummitButton asChild size="lg">
-                <Link href="/services/sil-vacancies">Explore Vacancies</Link>
+            <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <SummitButton asChild size="lg" className="shadow-[0_4px_24px_0_hsl(var(--orange-shadow))]">
+                <Link href="/vacancies/sda-vacancies">Explore SDA Vacancies</Link>
               </SummitButton>
-              <SummitButton asChild variant="outline" size="lg">
-                <Link href="/contact">Contact Us</Link>
+              <SummitButton asChild variant="outline" size="lg" className="border-[hsl(var(--primary))] text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary-transparent))] hover:text-[hsl(var(--primary-hover))]">
+                <Link href="/contact">Get in Touch</Link>
               </SummitButton>
             </div>
 
-            <div className="pt-4">
-              <div className="flex items-center gap-8">
-                <div className="space-y-1">
-                  <p className="text-3xl font-bold text-secondary">50+</p>
-                  <p className="text-sm text-muted-foreground">participants supported</p>
+            <div ref={statsRef} className="pt-6 sm:pt-8">
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 sm:gap-10">
+                <div className="text-center sm:text-left">
+                  <p className="text-3xl sm:text-4xl font-bold text-[hsl(var(--heading))]">Sydney-Based</p>
+                  <p className="text-sm sm:text-base text-[hsl(var(--body))]">With NSW-Wide Reach</p>
                 </div>
-                <div className="space-y-1">
-                  <p className="text-3xl font-bold text-secondary">98%</p>
-                  <p className="text-sm text-muted-foreground">Client Satisfaction</p>
-                </div>
-                <div className="space-y-1">
-                  <p className="text-3xl font-bold text-secondary">24/7</p>
-                  <p className="text-sm text-muted-foreground">Support Available</p>
+                <div className="h-10 w-px bg-[hsl(var(--medium-brown))]/30 hidden sm:block" />
+                <div className="text-center sm:text-left">
+                  <p className="text-3xl sm:text-4xl font-bold text-[hsl(var(--heading))]">Participant-First</p>
+                  <p className="text-sm sm:text-base text-[hsl(var(--body))]">Tailored NDIS Support</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Image */}
-          <div className="relative lg:col-span-8 lg:h-[600px] h-[400px]">
+          <div ref={imageRef} className="relative lg:col-span-5 xl:col-span-6 lg:h-[650px] h-[400px] sm:h-[500px]">
             <Image
-              src="/nurse-walking-with-senior-patient-wheelchair.webp"
-              alt="A joyful moment showing care and support at SummitSDA"
+              src="/properties/sydney-cbd/exterior-day.webp" // Placeholder, replace with a more suitable hero image
+              alt="A modern, accessible home representing SummitSDA's quality accommodations"
               fill
-              className="object-cover object-bottom rounded-2xl shadow-2xl"
+              className="object-cover rounded-2xl shadow-2xl shadow-[hsl(var(--orange-shadow))]"
               priority
               quality={85}
-              sizes="(max-width: 768px) 100vw, 66vw"
-              placeholder="blur"
-              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQtJSEkLzYvLy0vLi44QjY4NC43OC0tMUE3QjlDRUlKLzZPVU5GTVJLT0j/2wBDAQoLCw8NDx0QEBpJLiYuSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUn/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
+              // Consider adding blurDataURL for better perceived performance
             />
             <div 
-              className="absolute inset-0 rounded-2xl bg-gradient-to-br from-secondary/20 to-transparent"
+              className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/10 via-transparent to-transparent"
               aria-hidden="true"
             />
           </div>
