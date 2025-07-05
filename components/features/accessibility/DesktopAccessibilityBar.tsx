@@ -94,7 +94,7 @@ export const DesktopAccessibilityBar = ({ isVisible }: DesktopAccessibilityBarPr
             aria-expanded={isExpanded}
             className="p-1 -m-1 rounded-md hover:bg-[hsl(var(--primary-transparent))] focus:outline-none focus:ring-2 focus:ring-[hsl(var(--focus-ring))] focus:ring-offset-1 focus:ring-offset-[hsl(var(--background))]"
           >
-            <AccessibilityIcon iconSize={18} className="!p-0 !ring-0 !ring-offset-0 text-[hsl(var(--primary))]" />
+            <AccessibilityIcon asChild iconSize={18} className="text-[hsl(var(--primary))]" />
           </button>
         </div>
 
