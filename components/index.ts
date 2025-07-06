@@ -11,14 +11,12 @@ export { Footer } from './layout/footer';
 export { MobileNav } from './navigation/mobile-nav';
 export { MainNav } from './navigation/main-nav';
 export { ScrollToTop } from './navigation/scroll-to-top';
-export { NavigationErrorBoundary, withErrorBoundary } from './common/error-boundary';
+export { withErrorBoundary } from './common/error-boundary';
 
 // Section Components
 export { Hero } from './sections/hero';
 export { PageHero } from './sections/page-hero';
 export { default as CTASection } from './sections/cta-section';
-export { EdenHousingSection } from './sections/eden-housing-section';
-export { EdenIndependenceSection } from './sections/eden-independence-section';
 
 // Feature Components
 export { PropertyCard } from './features/property-card';
@@ -43,7 +41,6 @@ export { Button } from './ui/button';
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from './ui/card';
 export { Badge } from './ui/badge';
 export { NavigationMenu } from './ui/navigation-menu';
-export { Avatar, AvatarImage, AvatarFallback } from './ui/avatar';
 export { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from './ui/dialog';
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from './ui/accordion';
 export { Collapsible, CollapsibleTrigger, CollapsibleContent } from './ui/collapsible'; 

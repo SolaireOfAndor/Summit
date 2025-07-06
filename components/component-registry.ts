@@ -1,18 +1,4 @@
 import { ComponentType } from 'react';
-import { 
-  EnhancedIcon, 
-  IconVariant,
-  IconEffect,
-  IconSize 
-} from './ui/enhanced-icon';
-import { 
-  IconFeature, 
-  IconFeatureGroup 
-} from './ui/icon-feature';
-import {
-  IconStack,
-  FeatureIconGrid
-} from './ui/icon-stack';
 
 /**
  * Component category types
@@ -134,20 +120,6 @@ export const componentRegistry: ComponentRegistryEntry[] = [
     description: 'Call-to-action section',
     usedIn: ['Various pages'],
   },
-  {
-    name: 'EdenHousingSection',
-    path: 'components/sections/eden-housing-section.tsx',
-    category: ComponentCategory.SECTION,
-    description: 'Section showcasing Eden Housing features',
-    usedIn: ['Homepage', 'Housing page'],
-  },
-  {
-    name: 'EdenIndependenceSection',
-    path: 'components/sections/eden-independence-section.tsx',
-    category: ComponentCategory.SECTION,
-    description: 'Section showcasing Eden Independence features',
-    usedIn: ['Homepage', 'Independence page'],
-  },
 
   // Feature Components
   {
@@ -241,42 +213,7 @@ export const componentRegistry: ComponentRegistryEntry[] = [
     description: 'Provider for theme context',
     usedIn: ['Layout (root)'],
   },
-  {
-    name: 'MotionDiv',
-    path: 'components/common/motion-wrapper.tsx',
-    category: ComponentCategory.COMMON,
-    description: 'A wrapper component for framer-motion animations, providing a convenient way to add animation capabilities to div elements',
-    usedIn: ['Signature Housing Page', 'Various components requiring animations'],
-    dependencies: ['framer-motion'],
-    props: {
-      children: 'Child elements to be rendered within the motion div',
-      className: 'Optional CSS classes to apply to the motion div',
-      initial: 'Initial animation state',
-      animate: 'Target animation state',
-      exit: 'Exit animation state for AnimatePresence context',
-      transition: 'Animation transition configuration',
-      whileInView: 'Animation state to use when element comes into view',
-      viewport: 'Viewport observation options for whileInView animations'
-    }
-  },
-  {
-    name: 'MotionSection',
-    path: 'components/common/motion-wrapper.tsx',
-    category: ComponentCategory.COMMON,
-    description: 'A section element wrapper with framer-motion animation capabilities for animating entire page sections',
-    usedIn: ['Page sections requiring scroll-based or mount animations'],
-    dependencies: ['framer-motion'],
-    props: {
-      children: 'Child elements to be rendered within the motion section',
-      className: 'Optional CSS classes to apply to the motion section',
-      initial: 'Initial animation state',
-      animate: 'Target animation state',
-      exit: 'Exit animation state for AnimatePresence context',
-      transition: 'Animation transition configuration',
-      whileInView: 'Animation state to use when element comes into view',
-      viewport: 'Viewport observation options for whileInView animations'
-    }
-  },
+
   {
     name: 'ScrollProgress',
     path: 'components/common/scroll-progress.tsx',
@@ -284,91 +221,8 @@ export const componentRegistry: ComponentRegistryEntry[] = [
     description: 'Progress bar showing scroll position',
     usedIn: ['Blog pages', 'Long-form content'],
   },
-  {
-    name: 'ErrorBoundary',
-    path: 'components/navigation/error-boundary.tsx',
-    category: ComponentCategory.COMMON,
-    description: 'React error boundary for navigation components. Deprecated: use common/error-boundary instead.',
-    usedIn: ['Header', 'Navigation containers'],
-    props: {},
-    dependencies: ['../common/error-boundary'],
-    deprecated: { since: '2024-06', reason: 'Use common/error-boundary instead.' },
-  },
 
-  // UI Components - Add after other UI components
-  {
-    name: 'EnhancedIcon',
-    path: 'components/ui/enhanced-icon.tsx',
-    category: ComponentCategory.UI,
-    description: 'An enhanced icon component with animations and visual effects',
-    usedIn: ['Throughout the website for improved icon presentation'],
-    props: {
-      icon: 'LucideIcon component to render',
-      variant: 'Color variant for the icon (primary, secondary, accent, etc.)',
-      effect: 'Animation effect to apply (pulse, bounce, spin, etc.)',
-      size: 'Icon size (xs, sm, md, lg, xl)',
-      withBackground: 'Whether to display icon with background',
-      withHoverEffect: 'Whether to apply hover effects',
-      effectOnHover: 'Apply animations only on hover',
-    },
-  },
-  {
-    name: 'IconFeature',
-    path: 'components/ui/icon-feature.tsx',
-    category: ComponentCategory.UI,
-    description: 'Component for displaying features with enhanced icons and text',
-    usedIn: ['Feature lists', 'Benefits sections', 'About pages'],
-    props: {
-      icon: 'LucideIcon component to display',
-      title: 'Feature title text',
-      description: 'Feature description',
-      variant: 'Color variant for the icon',
-      iconEffect: 'Animation effect for the icon',
-    },
-    dependencies: ['EnhancedIcon'],
-  },
-  {
-    name: 'IconFeatureGroup',
-    path: 'components/ui/icon-feature.tsx',
-    category: ComponentCategory.UI,
-    description: 'Component for grouping multiple IconFeature components',
-    usedIn: ['Feature sections', 'Benefits lists'],
-    props: {
-      variant: 'Color variant for icons in the group',
-      direction: 'Layout direction (row or column)',
-      withDividers: 'Add dividers between items',
-      withBackground: 'Add background to the group',
-    },
-    dependencies: ['IconFeature'],
-  },
-  {
-    name: 'IconStack',
-    path: 'components/ui/icon-stack.tsx',
-    category: ComponentCategory.UI,
-    description: 'Component for displaying multiple icons stacked together with effects',
-    usedIn: ['Feature highlights', 'Benefits sections'],
-    props: {
-      icons: 'Array of LucideIcon components to display',
-      variant: 'Color variant for the icons',
-      effect: 'Animation effect to apply',
-      arrangement: 'How to arrange the icons (cascade, grid, circle, overlap)',
-    },
-    dependencies: ['EnhancedIcon'],
-  },
-  {
-    name: 'FeatureIconGrid',
-    path: 'components/ui/icon-stack.tsx',
-    category: ComponentCategory.UI,
-    description: 'Grid of feature icons with labels',
-    usedIn: ['Feature summaries', 'Benefit highlights'],
-    props: {
-      features: 'Array of feature items with icons and labels',
-      variant: 'Color variant for all icons',
-      effect: 'Animation effect for icons',
-      columns: 'Number of columns in the grid',
-    },
-    dependencies: ['EnhancedIcon'],
-  },
+
 ];
 
 /**
