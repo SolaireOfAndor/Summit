@@ -13,8 +13,8 @@ const contactMethods = [
     title: "Email",
     description: "Send us a detailed message",
     icon: Mail,
-    value: "feedback@edenability.com.au",
-    link: "mailto:feedback@edenability.com.au",
+    value: "feedback@summitsda.com.au",
+    link: "mailto:feedback@summitsda.com.au",
   },
   {
     title: "Phone",

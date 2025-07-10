@@ -11,7 +11,7 @@ const contactMethods = [
     description: "Questions about our services or organization",
     icon: MessageSquare,
     href: "#contact-form",
-    email: "enquiries@edenability.com.au",
+    email: "enquiries@summitsda.com.au",
     phone: "1300 033 623",
   },
   {
@@ -19,7 +19,7 @@ const contactMethods = [
     description: "Get help or share your experience",
     icon: HelpCircle,
     href: "/about/feedback",
-    email: "support@edenability.com.au",
+    email: "support@summitsda.com.au",
     phone: "1300 033 624",
   },
   {
@@ -27,7 +27,7 @@ const contactMethods = [
     description: "Questions about SDA or SIL applications",
     icon: FileText,
     href: "#contact-form",
-    email: "housing@edenability.com.au",
+    email: "housing@summitsda.com.au",
     phone: "1300 033 625",
   },
 ]
@@ -37,21 +37,21 @@ const locations = [
     name: "Sydney Head Office",
     address: "123 Business Street, Sydney NSW 2000",
     hours: "Monday - Friday: 9:00 AM - 5:00 PM",
-    email: "sydney@edenability.com.au",
+    email: "sydney@summitsda.com.au",
     phone: "1300 033 623",
   },
   {
     name: "Melbourne Office",
     address: "456 Corporate Road, Melbourne VIC 3000",
     hours: "Monday - Friday: 9:00 AM - 5:00 PM",
-    email: "melbourne@edenability.com.au",
+    email: "melbourne@summitsda.com.au",
     phone: "1300 033 624",
   },
   {
     name: "Brisbane Office",
     address: "789 Business Avenue, Brisbane QLD 4000",
     hours: "Monday - Friday: 9:00 AM - 5:00 PM",
-    email: "brisbane@edenability.com.au",
+    email: "brisbane@summitsda.com.au",
     phone: "1300 033 625",
   },
 ]

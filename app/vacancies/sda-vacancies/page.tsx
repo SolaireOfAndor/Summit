@@ -57,7 +57,7 @@ export default function SDAVacanciesPage() {
         className="bg-primary/5"
         breadcrumbs={[
           { title: "Services", href: "/services" },
-          { title: "Eden Housing", href: "/services/eden-housing" },
+          { title: "SDA Services", href: "/supported-accommodations/sda" },
           { title: "SDA Vacancies", href: "/services/sda-vacancies" },
         ]}
       />

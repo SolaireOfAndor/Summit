@@ -71,7 +71,7 @@ export function ThemeProvider({ children, ...props }: ExtendedThemeProviderProps
       defaultTheme="system"
       enableSystem
       disableTransitionOnChange
-      storageKey="eden-theme"
+      storageKey="summit-theme"
       themes={['light', 'dark', 'system']}
       value={{
         light: 'light',
@@ -86,7 +86,7 @@ export function ThemeProvider({ children, ...props }: ExtendedThemeProviderProps
           __html: `
             (function() {
               try {
-                const storageKey = 'eden-theme';
+                const storageKey = 'summit-theme';
                 const theme = localStorage.getItem(storageKey);
                 const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
                 
@@ -129,7 +129,7 @@ export function withTheme<T extends object>(
 
 // Constants for theme configuration
 export const THEME_CONFIG = {
-  STORAGE_KEY: 'eden-theme',
+  STORAGE_KEY: 'summit-theme',
   THEMES: ['light', 'dark', 'system'] as const,
   DEFAULT_THEME: 'system' as const,
 } as const

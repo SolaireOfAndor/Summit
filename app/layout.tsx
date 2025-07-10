@@ -17,30 +17,30 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://edenability.com.au'),
-  title: "EDENABILITY - Specialist Disability Accommodations",
-  description: "Creating cleaner, healthier spaces so you can focus on what matters most.",
+  metadataBase: new URL('https://summitsda.com.au'),
+  title: "Summit - Specialist Disability Accommodations",
+  description: "Summit provides comprehensive NDIS support services and high-quality disability accommodations. Supporting your journey towards independence with personalized care across NSW.",
   generator: 'v0.dev',
   openGraph: {
     type: 'website',
     locale: 'en_AU',
-    url: 'https://edenability.com.au',
-    siteName: 'EDENABILITY',
-    title: 'EDENABILITY - Specialist Disability Accommodations',
-    description: 'Creating cleaner, healthier spaces so you can focus on what matters most.',
+    url: 'https://summitsda.com.au',
+    siteName: 'Summit',
+    title: 'Summit - Specialist Disability Accommodations',
+    description: 'Summit provides comprehensive NDIS support services and high-quality disability accommodations. Supporting your journey towards independence with personalized care across NSW.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'EDENABILITY',
+        alt: 'Summit',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'EDENABILITY - Specialist Disability Accommodations',
-    description: 'Creating cleaner, healthier spaces so you can focus on what matters most.',
+    title: 'Summit - Specialist Disability Accommodations',
+    description: 'Summit provides comprehensive NDIS support services and high-quality disability accommodations. Supporting your journey towards independence with personalized care across NSW.',
     images: ['/og-image.jpg'],
   },
   robots: {

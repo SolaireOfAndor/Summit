@@ -55,7 +55,7 @@ const filterOptions = generateFilterOptions();
 
 // Add metadata for the main properties page
 export const metadata: Metadata = {
-  title: "Available Properties | Eden Ability",
+  title: "Available Properties | Summit",
   description: "Find your perfect home from our range of accessible and supported living options."
 }
 

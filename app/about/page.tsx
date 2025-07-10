@@ -26,13 +26,13 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "About EDEN Ability | Specialist Disability Support Services",
+  title: "About Summit | Specialist Disability Support Services",
   description:
-    "EDEN Ability is a leading disability support organisation and NDIS service provider, dedicated to supporting our clients' goals and optimising their potential in a homelike environment.",
+    "Summit is a leading disability support organisation and NDIS service provider, dedicated to supporting our clients' goals and optimising their potential in a homelike environment.",
   openGraph: {
-    title: "About EDEN Ability | Specialist Disability Support Services",
+    title: "About Summit | Specialist Disability Support Services",
     description:
-      "EDEN Ability is a leading disability support organisation and NDIS service provider, dedicated to supporting our clients' goals and optimising their potential in a homelike environment.",
+      "Summit is a leading disability support organisation and NDIS service provider, dedicated to supporting our clients' goals and optimising their potential in a homelike environment.",
     type: "website",
   },
 }
@@ -88,14 +88,14 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        title="About EDEN Ability"
+        title="About Summit"
         description="Supporting our clients' goals and optimising their potential to grow in a homelike environment."
         backgroundPattern="dots"
         alignment="center"
         className="bg-primary/5"
         heroImage={{
           src: "/header/page-header-6.webp",
-          alt: "EDEN Ability team supporting clients in a welcoming environment",
+          alt: "Summit team supporting clients in a welcoming environment",
         }}
       />
 
@@ -112,10 +112,10 @@ export default function AboutPage() {
                   <Users className="w-4 h-4" />
                   <span>Who We Are</span>
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold tracking-tight bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">Welcome to EDEN Ability</h2>
+                <h2 className="text-2xl md:text-3xl font-bold tracking-tight bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">Welcome to Summit</h2>
                 <div className="space-y-4 text-muted-foreground backdrop-blur-sm bg-white/30 rounded-xl p-5 border border-primary/10 shadow-sm">
                   <p>
-                    EDEN Ability is a disability support organisation and NDIS service provider. We support our client's
+                    Summit is a disability support organisation and NDIS service provider. We support our client's
                     goals and optimise their potential to grow and become who they aim to be in a homelike environment.
                   </p>
                   <p>
@@ -140,7 +140,7 @@ export default function AboutPage() {
               <div className="relative aspect-square rounded-2xl overflow-hidden bg-muted shadow-lg border border-primary/10 transform hover:scale-[1.02] transition-all duration-500">
                 <Image
                   src="/63.webp"
-                  alt="EDEN Ability Team"
+                  alt="Summit Team"
                   fill
                   className="object-cover"
                 />
@@ -205,24 +205,23 @@ export default function AboutPage() {
               <Sparkles className="w-4 h-4" />
               <span>Our Name & Purpose</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">The Meaning of EDEN</h2>
+            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">Our Core Values</h2>
             <div className="space-y-4 px-4 py-6 rounded-xl bg-white/50 backdrop-blur-sm shadow-sm border border-primary/10">
               <p className="text-lg text-muted-foreground">
-                EDEN means a state of great delight, happiness and contentment. It is also called Garden of EDEN, the
-                garden which Adam and Eve first lived at the creation.
+                Summit represents the pinnacle of disability support - reaching new heights in care, independence, and quality of life.
               </p>
               <p className="text-lg text-muted-foreground">
-                EDEN is a place of pleasure and this is exactly what EDEN projects create, edenic places to call home.
+                Like climbing to a summit, we help our clients reach their highest potential and achieve their personal goals.
               </p>
             </div>
             <p className="text-xl font-medium mt-6">
-              Each letter in <span className="text-primary font-bold">EDEN</span> represents a core value that drives our purpose forward:
+              Our <span className="text-primary font-bold">four core principles</span> guide everything we do:
             </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {purposes.map((purpose, index) => {
-              const letter = "EDEN".charAt(index);
+              const letter = purpose.title.charAt(0);
               const colors = [
                 { bg: "from-blue-500 to-cyan-400", light: "bg-blue-100", border: "border-blue-200" },
                 { bg: "from-purple-500 to-pink-400", light: "bg-purple-100", border: "border-purple-200" },
@@ -302,7 +301,7 @@ export default function AboutPage() {
               <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">Person Centred Approach</h2>
               <div className="backdrop-blur-sm bg-white/40 rounded-xl p-6 border border-primary/10 shadow-sm">
                 <p className="text-muted-foreground">
-                  EDEN Ability Person Centred Approach puts the person with disability at the centre of the planning,
+                  Summit's Person Centred Approach puts the person with disability at the centre of the planning,
                   listens deeply to them and their family and friends, learns over time what it is they want for their
                   life now and in the future, and then acts on this.
                 </p>
@@ -370,18 +369,18 @@ export default function AboutPage() {
 
       {/* CTA Section */}
       <CTASection
-        title="Experience the EDEN Difference"
+        title="Experience the Summit Difference"
         description="After learning about our values and approach, discover how we can support you or your loved ones with our specialized disability services and accommodation solutions."
         primaryButtonText="Get In Touch"
         primaryButtonLink="/contact"
         secondaryButtonText="Explore Our Housing"
-        secondaryButtonLink="/services/eden-housing"
+        secondaryButtonLink="/properties"
         imageSrc="/png/1.webp"
         mobileImageSrc="/png/2.webp"
-        imageAlt="EDEN Ability staff providing supportive care"
+        imageAlt="Summit staff providing supportive care"
         footerText="Interested in learning more about our support services? View our"
-        footerLinkText="SIL Options"
-        footerLinkHref="/services/sil-models"
+        footerLinkText="Property Options"
+        footerLinkHref="/properties"
       />
     </>
   )

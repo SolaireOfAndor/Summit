@@ -61,7 +61,7 @@ export default function SILVacanciesPage() {
         className="bg-primary/5"
         breadcrumbs={[
           { title: "Services", href: "/services" },
-          { title: "Eden Independence", href: "/services/eden-independence" },
+          { title: "SIL Services", href: "/supported-accommodations/sil" },
           { title: "SIL Vacancies", href: "/services/sil-vacancies" },
         ]}
       />
