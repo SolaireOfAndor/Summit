@@ -6,6 +6,9 @@ import { Footer } from "@/components/layout/footer"
 import type React from "react"
 import { ScrollProgress } from "@/components/common/scroll-progress"
 import { ScrollToTop } from "@/components/navigation/scroll-to-top"
+import { DarkModeProvider } from "@/contexts/dark-mode-context"
+import { ColorBlindModeProvider } from "@/contexts/color-blind-context"
+import { ReadableFontModeProvider } from "@/contexts/readable-font-context"
 
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-sans" })
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-heading" })
@@ -63,16 +66,20 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${outfit.variable} ${montserrat.variable} font-sans min-h-screen flex flex-col`}>
-        <ScrollProgress />
-        <ScrollToTop />
-        <Header />
-        <main className="flex-1 [&>*:first-child:not(:has(.hero))]:pt-28 md:[&>*:first-child:not(:has(.hero))]:pt-32">
-          {children}
-        </main>
-        <Footer />
+        <DarkModeProvider>
+          <ColorBlindModeProvider>
+            <ReadableFontModeProvider>
+              <ScrollProgress />
+              <ScrollToTop />
+              <Header />
+              <main className="flex-1 [&>*:first-child:not(:has(.hero))]:pt-28 md:[&>*:first-child:not(:has(.hero))]:pt-32">
+                {children}
+              </main>
+              <Footer />
+            </ReadableFontModeProvider>
+          </ColorBlindModeProvider>
+        </DarkModeProvider>
       </body>
     </html>
   )
 }
-
-import './globals.css'

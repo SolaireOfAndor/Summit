@@ -81,26 +81,57 @@
   }
 
   .dark {
-    /* For dark mode, you may want to adjust only a few variables for contrast */
-    --background: 30 100% 15%; /* Deep brown background */
-    --foreground: 0 0% 100%; /* White text */
-    --card: 30 100% 20%; /* Deep brown card */
-    --card-foreground: 0 0% 100%; /* White text */
-    --popover: 30 100% 20%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 25 100% 60%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 30 100% 25%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 30 100% 20%;
-    --muted-foreground: 210 16% 85%;
-    --accent: 30 100% 25%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 30 100% 25%;
-    --input: 30 100% 25%;
-    --ring: 25 100% 60%;
+    /* === Primary Brand Colors === */
+    /* Keep primary orange but slightly adjust for dark mode */
+    --primary: 25 100% 65%; /* #ff8c4a - Slightly brighter orange for dark backgrounds */
+    --deep-brown: 30 10% 5%; /* #0f0d0a - Very dark brown for footer background in dark mode */
+    --medium-brown: 30 20% 75%; /* #c2b5a8 - Medium brown for body text on dark */
+
+    /* === Background Colors === */
+    /* Dark backgrounds that maintain warmth */
+    --background: 30 15% 8%; /* #1a1512 - Very dark warm brown */
+    --light-orange: 30 20% 12%; /* #241f1a - Dark section backgrounds */
+    --lighter-orange: 30 18% 10%; /* #1f1a16 - Slightly lighter dark backgrounds */
+    --pure-white: 30 15% 15%; /* #2b2520 - Card backgrounds on dark */
+
+    /* === Text Colors === */
+    --heading: 30 15% 85%; /* #d4c4b8 - Light brown for headings */
+    --body: 30 20% 75%; /* #c2b5a8 - Medium brown for body text */
+    --text-white: 0 0% 100%; /* #ffffff - Pure white for contrast */
+    --text-light-gray: 210 16% 65%; /* #9ca3af - Muted text */
+
+    /* === UI and Interactive Elements === */
+    --primary-hover: 25 100% 70%; /* #ff9a5c - Brighter orange on hover */
+    --primary-transparent: 25 100% 65% / 0.2; /* Orange with transparency */
+    --gray-400: 220 9% 60%; /* #8b93a1 - Muted elements */
+
+    /* === Overlay and Gradient Colors === */
+    --orange-gradient-light: 25 100% 65% / 0.2; /* Orange gradient overlay */
+    --orange-shadow: 25 100% 65% / 0.15; /* Orange shadow with more opacity */
+    --background-blur-light: 30 15% 8% / 0.9; /* Dark navbar blur */
+
+    /* === Form Elements === */
+    --border-gray: 30 15% 25%; /* #3d3530 - Dark borders */
+    --focus-orange: 25 100% 65%; /* #ff8c4a - Focus orange */
+    --focus-ring: 25 100% 65% / 0.2; /* Orange focus ring */
+
+    /* === General Purpose Variables for Tailwind === */
+    --foreground: var(--heading);
+    --card: var(--pure-white);
+    --card-foreground: var(--heading);
+    --popover: var(--pure-white);
+    --popover-foreground: var(--heading);
+    --secondary: var(--light-orange);
+    --secondary-foreground: var(--heading);
+    --muted: var(--lighter-orange);
+    --muted-foreground: var(--body);
+    --accent: 25 100% 65%; /* #ff8c4a - Summit orange for accent elements (footer headings) */
+    --accent-foreground: var(--heading);
+    --destructive: 0 84% 60%; /* Red for destructive actions */
+    --destructive-foreground: var(--text-white);
+    --border: var(--border-gray);
+    --input: var(--border-gray);
+    --ring: var(--focus-orange);
     --radius: 0.5rem;
   }
 
@@ -121,12 +152,93 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: hsl(var(--muted-foreground));
+    background: hsl(var(--primary));
     border-radius: 5px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--foreground));
+    background: hsl(var(--primary-hover));
+  }
+
+  /* Dark mode transitions */
+  * {
+    transition: 
+      background-color 0.3s ease,
+      color 0.3s ease,
+      border-color 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+
+  /* Dark mode image adjustments */
+  .dark img {
+    filter: brightness(0.9) contrast(1.1);
+  }
+
+  .dark .logo-image {
+    filter: brightness(1.2) contrast(1.1);
+  }
+
+  /* Better text contrast in dark mode */
+  .dark {
+    color-scheme: dark;
+  }
+
+  /* Form elements in dark mode */
+  .dark input,
+  .dark textarea,
+  .dark select {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+
+  /* Dark mode selection */
+  .dark ::selection {
+    background-color: hsl(var(--primary-transparent));
+    color: hsl(var(--text-white));
+  }
+
+  /* Focus visible improvements */
+  .dark *:focus-visible {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
+  }
+
+  /* Footer specific dark mode improvements */
+  .dark footer {
+    background-color: hsl(var(--deep-brown));
+    border-top: 1px solid hsl(var(--border-gray));
+  }
+
+  .dark footer h3,
+  .dark footer h4 {
+    color: hsl(var(--primary));
+  }
+
+  .dark footer p,
+  .dark footer a {
+    color: hsl(var(--text-white));
+  }
+
+  .dark footer a:hover {
+    color: hsl(var(--primary-hover));
+  }
+
+  .dark footer .social-links a {
+    color: hsl(var(--text-white));
+    opacity: 0.8;
+  }
+
+  .dark footer .social-links a:hover {
+    color: hsl(var(--primary));
+    opacity: 1;
   }
 }
 
@@ -155,6 +267,235 @@
     }
   }
 }
+
+  .colorblind {
+    /* === Color Blind Friendly Palette === */
+    /* Using blue-yellow palette for deuteranopia/protanopia accessibility */
+    
+    /* === Primary Brand Colors === */
+    /* --primary: Accessible Blue (#2563eb) - Universally distinguishable primary color */
+    --primary: 220 91% 60%; /* #2563eb */
+    /* Keep brown tones for headings as they're still accessible */
+    --deep-brown: 30 100% 15%; /* #4d2600 - Darker for better contrast */
+    --medium-brown: 30 20% 30%; /* #5c5246 - Adjusted for better contrast */
+
+    /* === Background Colors === */
+    /* Keep neutral backgrounds but adjust for better contrast */
+    --background: 0 0% 98%; /* #fafafa - High contrast white */
+    --light-orange: 45 100% 95%; /* #fffbf0 - Warm yellow tint instead of orange */
+    --lighter-orange: 45 100% 97%; /* #fffdfa - Very light yellow tint */
+    --pure-white: 0 0% 100%; /* #ffffff - Pure white for maximum contrast */
+
+    /* === Text Colors === */
+    --heading: 0 0% 10%; /* #1a1a1a - High contrast black for headings */
+    --body: 0 0% 20%; /* #333333 - Dark gray for body text */
+    --text-white: 0 0% 100%; /* #ffffff - Pure white */
+    --text-light-gray: 0 0% 60%; /* #999999 - Medium gray for secondary text */
+
+    /* === UI and Interactive Elements === */
+    /* Blue-based interactive elements */
+    --primary-hover: 220 91% 45%; /* #1d4ed8 - Darker blue for hover */
+    --primary-transparent: 220 91% 60% / 0.2; /* Blue with transparency */
+    
+    /* === Yellow Accent for Important Secondary Actions === */
+    --accent-yellow: 45 93% 47%; /* #eab308 - High contrast yellow */
+    --accent-yellow-hover: 45 93% 35%; /* #ca8a04 - Darker yellow for hover */
+    
+    /* === Overlay and Gradient Colors === */
+    --orange-gradient-light: 220 91% 60% / 0.2; /* Blue gradient overlay */
+    --orange-shadow: 220 91% 60% / 0.1; /* Blue shadow */
+    --background-blur-light: 0 0% 98% / 0.9; /* High contrast background blur */
+
+    /* === Form Elements === */
+    --border-gray: 0 0% 70%; /* #b3b3b3 - High contrast border */
+    --focus-orange: 220 91% 60%; /* #2563eb - Blue focus */
+    --focus-ring: 220 91% 60% / 0.3; /* Blue focus ring with higher opacity */
+
+    /* === General Purpose Variables for Tailwind === */
+    --foreground: var(--heading);
+    --card: var(--pure-white);
+    --card-foreground: var(--heading);
+    --popover: var(--pure-white);
+    --popover-foreground: var(--heading);
+    --secondary: var(--light-orange);
+    --secondary-foreground: var(--heading);
+    --muted: var(--lighter-orange);
+    --muted-foreground: var(--body);
+    --accent: var(--accent-yellow); /* Use yellow for accent elements */
+    --accent-foreground: var(--heading);
+    --destructive: 0 84% 40%; /* Darker red for better contrast */
+    --destructive-foreground: var(--text-white);
+    --border: var(--border-gray);
+    --input: var(--border-gray);
+    --ring: var(--focus-orange);
+    --radius: 0.5rem;
+  }
+
+  /* Color blind mode specific adjustments for better accessibility */
+  .colorblind a {
+    text-decoration: underline; /* Always underline links for better identification */
+  }
+
+  .colorblind button:focus,
+  .colorblind input:focus,
+  .colorblind textarea:focus,
+  .colorblind select:focus {
+    outline: 3px solid hsl(var(--focus-orange)); /* Thicker focus outline */
+    outline-offset: 2px;
+  }
+
+  /* High contrast shadows for better element distinction */
+  .colorblind .shadow-md,
+  .colorblind .shadow-lg,
+  .colorblind .shadow-xl {
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  /* Ensure good contrast for icons and images */
+  .colorblind img {
+    filter: contrast(1.1) brightness(0.95);
+  }
+
+  /* Readable Font Mode - Dyslexia-friendly and enhanced readability */
+  .readable-font {
+    /* Use highly readable, dyslexia-friendly fonts */
+    font-family: 'Verdana', 'Arial', 'Helvetica', 'Trebuchet MS', sans-serif !important;
+  }
+
+  .readable-font *,
+  .readable-font {
+    /* Apply readable fonts to all elements */
+    font-family: 'Verdana', 'Arial', 'Helvetica', 'Trebuchet MS', sans-serif !important;
+    
+    /* Enhanced readability settings */
+    letter-spacing: 0.05em !important; /* Increased letter spacing */
+    word-spacing: 0.1em !important; /* Increased word spacing */
+    line-height: 1.6 !important; /* Increased line height for better readability */
+  }
+
+  /* Specific text size and weight adjustments for readable font mode */
+  .readable-font h1,
+  .readable-font h2,
+  .readable-font h3,
+  .readable-font h4,
+  .readable-font h5,
+  .readable-font h6 {
+    font-weight: 700 !important; /* Heavier weight for headings */
+    line-height: 1.4 !important; /* Slightly tighter for headings */
+  }
+
+  .readable-font p,
+  .readable-font span,
+  .readable-font div,
+  .readable-font li,
+  .readable-font a {
+    font-weight: 500 !important; /* Medium weight for body text */
+    font-size: 1.05em !important; /* Slightly larger text */
+  }
+
+  .readable-font button {
+    font-weight: 600 !important; /* Semi-bold for buttons */
+    letter-spacing: 0.02em !important; /* Less spacing for buttons */
+  }
+
+  .readable-font input,
+  .readable-font textarea,
+  .readable-font select {
+    font-weight: 500 !important;
+    font-size: 1.05em !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Enhanced focus styles for readable font mode */
+  .readable-font *:focus {
+    outline: 3px solid hsl(var(--primary)) !important;
+    outline-offset: 2px !important;
+  }
+
+  /* Better paragraph spacing in readable font mode */
+  .readable-font p {
+    margin-bottom: 1.2em !important;
+  }
+
+  /* List spacing improvements */
+  .readable-font ul,
+  .readable-font ol {
+    line-height: 1.8 !important;
+  }
+
+  .readable-font li {
+    margin-bottom: 0.5em !important;
+  }
+
+  /* Override existing custom fonts */
+  .readable-font .font-sans,
+  .readable-font .font-heading,
+  .readable-font [class*="font-"] {
+    font-family: 'Verdana', 'Arial', 'Helvetica', 'Trebuchet MS', sans-serif !important;
+  }
+
+  /* Ensure the body class fonts are overridden */
+  body.readable-font,
+  html.readable-font body {
+    font-family: 'Verdana', 'Arial', 'Helvetica', 'Trebuchet MS', sans-serif !important;
+  }
+
+  /* Dark mode + Color blind mode combinations */
+  .dark.colorblind {
+    /* Override dark mode colors with color blind friendly alternatives */
+    --background: 0 0% 8%; /* Very dark background */
+    --light-orange: 220 20% 12%; /* Dark blue-tinted sections */
+    --lighter-orange: 220 15% 10%; /* Darker blue-tinted sections */
+    --pure-white: 0 0% 15%; /* Dark card backgrounds */
+    
+    /* Fix navbar background for dark + colorblind combination */
+    --background-blur-light: 0 0% 8% / 0.9; /* Dark blurred background instead of light */
+    
+    /* High contrast text for dark + colorblind */
+    --heading: 0 0% 95%; /* Very light heading text */
+    --body: 0 0% 85%; /* Light body text */
+    --text-light-gray: 0 0% 70%; /* Medium gray for secondary text */
+    
+    /* Blue primary that works in dark mode */
+    --primary: 220 91% 70%; /* Lighter blue for dark backgrounds */
+    --primary-hover: 220 91% 80%; /* Even lighter blue for hover */
+    
+    /* Yellow accent adjusted for dark mode */
+    --accent-yellow: 45 93% 60%; /* Brighter yellow for dark backgrounds */
+    --accent-yellow-hover: 45 93% 70%; /* Even brighter for hover */
+  }
+
+  /* Enhanced focus styles for dark + colorblind mode */
+  .dark.colorblind button:focus,
+  .dark.colorblind input:focus,
+  .dark.colorblind textarea:focus,
+  .dark.colorblind select:focus {
+    outline: 3px solid hsl(var(--primary));
+    outline-offset: 2px;
+    box-shadow: 0 0 0 1px hsl(var(--background)), 0 0 0 4px hsl(var(--primary) / 0.3);
+  }
+
+  /* Readable font combinations with other accessibility modes */
+  .dark.readable-font {
+    /* Ensure readable fonts work well in dark mode */
+  }
+
+  .colorblind.readable-font {
+    /* Ensure readable fonts work well with color blind mode */
+  }
+
+  .dark.colorblind.readable-font {
+    /* Triple combination: dark + color blind + readable font */
+    /* Enhanced focus for maximum accessibility */
+  }
+
+  .dark.colorblind.readable-font *:focus,
+  .dark.readable-font *:focus,
+  .colorblind.readable-font *:focus {
+    outline: 4px solid hsl(var(--primary)) !important;
+    outline-offset: 3px !important;
+    box-shadow: 0 0 0 1px hsl(var(--background)), 0 0 0 7px hsl(var(--primary) / 0.4) !important;
+  }
 
 /* Improve scrolling on Safari/iOS */
 @supports (-webkit-touch-callout: none) {

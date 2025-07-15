@@ -35,7 +35,7 @@ export function Footer() {
               <p>contact@summitsda.com.au</p>
             </div>
           </div>
-          <div className="flex gap-4 pt-2">
+          <div className="flex gap-4 pt-2 social-links">
             <Link href="https://www.facebook.com/SummitSDA" className="text-[hsl(var(--text-white))/0.8] hover:text-[hsl(var(--accent))] transition-colors" aria-label="SummitSDA Facebook">
               <Facebook className="h-5 w-5" />
             </Link>
