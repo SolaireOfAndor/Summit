@@ -35,10 +35,10 @@ interface MainNavProps {
  */
 export function MainNav({ onNavigate }: MainNavProps) {
   return (
-    <NavigationMenu className="hidden lg:flex">
-      <NavigationMenuList className="gap-3">
+    <NavigationMenu className="hidden lg:flex relative">
+      <NavigationMenuList className="gap-3 px-2">
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="h-16 text-xl font-semibold text-[hsl(var(--secondary-foreground))] hover:bg-[hsl(var(--primary-transparent))] hover:text-[hsl(var(--primary))] data-[state=open]:bg-[hsl(var(--primary-transparent))] data-[state=open]:text-[hsl(var(--primary))] rounded-md shadow-sm hover:shadow-md transition-shadow">
+          <NavigationMenuTrigger className="h-16 text-xl font-semibold text-[hsl(var(--secondary-foreground))] hover:bg-[hsl(var(--primary-transparent))] hover:text-[hsl(var(--primary))] data-[state=open]:bg-[hsl(var(--primary-transparent))] data-[state=open]:text-[hsl(var(--primary))] rounded-md shadow-sm hover:shadow-md transition-all duration-200">
             Supported Accommodations
           </NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -47,7 +47,7 @@ export function MainNav({ onNavigate }: MainNavProps) {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="h-16 text-xl font-semibold text-[hsl(var(--secondary-foreground))] hover:bg-[hsl(var(--primary-transparent))] hover:text-[hsl(var(--primary))] data-[state=open]:bg-[hsl(var(--primary-transparent))] data-[state=open]:text-[hsl(var(--primary))] rounded-md shadow-sm hover:shadow-md transition-shadow">
+          <NavigationMenuTrigger className="h-16 text-xl font-semibold text-[hsl(var(--secondary-foreground))] hover:bg-[hsl(var(--primary-transparent))] hover:text-[hsl(var(--primary))] data-[state=open]:bg-[hsl(var(--primary-transparent))] data-[state=open]:text-[hsl(var(--primary))] rounded-md shadow-sm hover:shadow-md transition-all duration-200">
             Drop-in Support
           </NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -59,7 +59,7 @@ export function MainNav({ onNavigate }: MainNavProps) {
           <Button
             asChild
             variant="ghost"
-            className="h-16 px-6 text-xl font-semibold text-[hsl(var(--secondary-foreground))] hover:bg-[hsl(var(--primary-transparent))] hover:text-[hsl(var(--primary))] rounded-md shadow-sm hover:shadow-md transition-shadow border-none"
+            className="h-16 px-6 text-xl font-semibold text-[hsl(var(--secondary-foreground))] hover:bg-[hsl(var(--primary-transparent))] hover:text-[hsl(var(--primary))] rounded-md shadow-sm hover:shadow-md transition-all duration-200 border-none"
           >
             <Link href="/community-participation" onClick={onNavigate}>
               Community Participation
@@ -70,7 +70,7 @@ export function MainNav({ onNavigate }: MainNavProps) {
         <div className="flex-1" />
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="h-16 text-xl font-semibold text-[hsl(var(--secondary-foreground))] hover:bg-[hsl(var(--primary-transparent))] hover:text-[hsl(var(--primary))] data-[state=open]:bg-[hsl(var(--primary-transparent))] data-[state=open]:text-[hsl(var(--primary))] rounded-md shadow-sm hover:shadow-md transition-shadow">
+          <NavigationMenuTrigger className="h-16 text-xl font-semibold text-[hsl(var(--secondary-foreground))] hover:bg-[hsl(var(--primary-transparent))] hover:text-[hsl(var(--primary))] data-[state=open]:bg-[hsl(var(--primary-transparent))] data-[state=open]:text-[hsl(var(--primary))] rounded-md shadow-sm hover:shadow-md transition-all duration-200">
             About
           </NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -79,7 +79,7 @@ export function MainNav({ onNavigate }: MainNavProps) {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="h-16 text-xl font-semibold text-[hsl(var(--secondary-foreground))] hover:bg-[hsl(var(--primary-transparent))] hover:text-[hsl(var(--primary))] data-[state=open]:bg-[hsl(var(--primary-transparent))] data-[state=open]:text-[hsl(var(--primary))] rounded-md shadow-sm hover:shadow-md transition-shadow">
+          <NavigationMenuTrigger className="h-16 text-xl font-semibold text-[hsl(var(--secondary-foreground))] hover:bg-[hsl(var(--primary-transparent))] hover:text-[hsl(var(--primary))] data-[state=open]:bg-[hsl(var(--primary-transparent))] data-[state=open]:text-[hsl(var(--primary))] rounded-md shadow-sm hover:shadow-md transition-all duration-200">
             Learn
           </NavigationMenuTrigger>
           <NavigationMenuContent>

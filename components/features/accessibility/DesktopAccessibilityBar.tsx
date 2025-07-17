@@ -79,7 +79,7 @@ export const DesktopAccessibilityBar = ({ isVisible }: DesktopAccessibilityBarPr
     <div
       ref={containerRef}
       className={cn(
-        "hidden lg:block fixed right-4 z-40",
+        "hidden lg:block fixed right-4 z-30",
         "transition-all duration-300 ease-in-out",
         isVisible ? "top-24 opacity-100" : "top-4 opacity-0 pointer-events-none"
       )}
@@ -108,7 +108,7 @@ export const DesktopAccessibilityBar = ({ isVisible }: DesktopAccessibilityBarPr
 
         {/* Dropdown Menu */}
         {isExpanded && (
-          <div className="absolute top-full right-0 mt-2 min-w-[280px] bg-[hsl(var(--background))] border border-[hsl(var(--border))] rounded-lg shadow-xl overflow-hidden z-50">
+          <div className="absolute top-full right-0 mt-2 min-w-[280px] bg-[hsl(var(--background))] border border-[hsl(var(--border))] rounded-lg shadow-xl overflow-hidden z-40">
             <div className="p-4">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="text-sm font-semibold text-[hsl(var(--heading))]">Accessibility Options</h3>
