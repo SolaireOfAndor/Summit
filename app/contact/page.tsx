@@ -1,66 +1,143 @@
-import { PageHero } from "@/components/sections/page-hero"
+import type { Metadata } from "next"
 import { ContactForm } from "@/components/forms/contact-form"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Mail, Phone, Clock, MapPin, MessageSquare, FileText, HelpCircle, Building, ArrowRight } from "lucide-react"
-import Link from "next/link"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { SummitButton } from "@/components/ui/summit-button"
+import { Mail, Phone, Clock, Users, HeartHandshake, MessageSquare, FileText } from "lucide-react"
 
-const contactMethods = [
-  {
-    title: "General Enquiries",
-    description: "Questions about our services or organization",
-    icon: MessageSquare,
-    href: "#contact-form",
-    email: "enquiries@summitsda.com.au",
-    phone: "1300 033 623",
+export const metadata: Metadata = {
+  title: "Contact Summit | Get In Touch With Our Disability Support Team",
+  description: "Contact Summit for specialist disability accommodation, support services, and NDIS enquiries. Professional support team ready to help you achieve your goals.",
+  openGraph: {
+    title: "Contact Summit | Get In Touch With Our Disability Support Team",
+    description: "Contact Summit for specialist disability accommodation, support services, and NDIS enquiries. Professional support team ready to help you achieve your goals.",
+    type: "website",
   },
-  {
-    title: "Support & Feedback",
-    description: "Get help or share your experience",
-    icon: HelpCircle,
-    href: "/about/feedback",
-    email: "support@summitsda.com.au",
-    phone: "1300 033 624",
-  },
-  {
-    title: "Housing Applications",
-    description: "Questions about SDA or SIL applications",
-    icon: FileText,
-    href: "#contact-form",
-    email: "housing@summitsda.com.au",
-    phone: "1300 033 625",
-  },
-]
-
-const locations = [
-  {
-    name: "Sydney Head Office",
-    address: "123 Business Street, Sydney NSW 2000",
-    hours: "Monday - Friday: 9:00 AM - 5:00 PM",
-    email: "sydney@summitsda.com.au",
-    phone: "1300 033 623",
-  },
-  {
-    name: "Melbourne Office",
-    address: "456 Corporate Road, Melbourne VIC 3000",
-    hours: "Monday - Friday: 9:00 AM - 5:00 PM",
-    email: "melbourne@summitsda.com.au",
-    phone: "1300 033 624",
-  },
-  {
-    name: "Brisbane Office",
-    address: "789 Business Avenue, Brisbane QLD 4000",
-    hours: "Monday - Friday: 9:00 AM - 5:00 PM",
-    email: "brisbane@summitsda.com.au",
-    phone: "1300 033 625",
-  },
-]
+}
 
 export default function ContactPage() {
   return (
-    <main className="p-8">
-      <h1 className="text-3xl font-bold mb-4">Contact</h1>
-      <p className="text-lg text-muted-foreground">This is the Contact page.</p>
+    <main className="min-h-screen bg-gradient-to-b from-background to-primary/5 pt-20">
+      {/* Contact Form Section */}
+      <section className="py-12 md:py-16">
+        <div className="container px-8 sm:px-24">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center space-y-6 mb-12">
+              <div className="inline-flex items-center gap-2 text-sm font-medium text-white bg-primary px-5 py-2 rounded-full shadow-md">
+                <MessageSquare className="w-4 h-4" />
+                <span>Contact Summit</span>
+              </div>
+              <h1 className="text-3xl md:text-4xl font-bold tracking-tight bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+                Get In Touch Today
+              </h1>
+              <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+                Ready to get started? Our dedicated support team is here to help you find the right disability services and accommodation solutions.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-3 gap-12">
+              {/* Contact Form */}
+              <div className="lg:col-span-2">
+                <Card className="shadow-lg border border-primary/10 bg-white/90 backdrop-blur-sm">
+                  <CardHeader>
+                    <CardTitle className="text-xl font-bold flex items-center gap-2">
+                      <FileText className="w-5 h-5 text-primary" />
+                      Contact Form
+                    </CardTitle>
+                    <p className="text-sm text-muted-foreground">
+                      Choose between simple or detailed mode to share as much or as little information as you'd like
+                    </p>
+                  </CardHeader>
+                  <CardContent>
+                    <ContactForm />
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Contact Information */}
+              <div className="space-y-6">
+                <Card className="shadow-md border border-primary/10 bg-white/90 backdrop-blur-sm">
+                  <CardHeader>
+                    <CardTitle className="text-lg font-bold flex items-center gap-2">
+                      <Clock className="w-5 h-5 text-primary" />
+                      Business Hours
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    <div className="flex justify-between">
+                      <span className="text-sm font-medium">Monday - Friday</span>
+                      <span className="text-sm text-muted-foreground">9:00 AM - 5:00 PM</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-sm font-medium">Saturday</span>
+                      <span className="text-sm text-muted-foreground">10:00 AM - 2:00 PM</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-sm font-medium">Sunday</span>
+                      <span className="text-sm text-muted-foreground">Closed</span>
+                    </div>
+                    <div className="pt-3 border-t border-primary/10">
+                      <p className="text-xs text-muted-foreground">
+                        Emergency support available 24/7 for existing clients
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="shadow-md border border-primary/10 bg-white/90 backdrop-blur-sm">
+                  <CardHeader>
+                    <CardTitle className="text-lg font-bold flex items-center gap-2">
+                      <Users className="w-5 h-5 text-primary" />
+                      Quick Contact
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div>
+                      <p className="text-sm font-medium mb-1">Main Phone</p>
+                      <a href="tel:1300033623" className="text-sm text-primary hover:underline">
+                        1300 033 623
+                      </a>
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium mb-1">General Email</p>
+                      <a href="mailto:enquiries@summitsda.com.au" className="text-sm text-primary hover:underline break-all">
+                        enquiries@summitsda.com.au
+                      </a>
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium mb-1">Emergency Contact</p>
+                      <a href="tel:1300033624" className="text-sm text-red-600 hover:underline">
+                        1300 033 624
+                      </a>
+                      <p className="text-xs text-muted-foreground mt-1">
+                        For existing clients only
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="shadow-md border border-primary/10 bg-gradient-to-br from-primary/5 to-blue-50">
+                  <CardContent className="p-6">
+                    <div className="text-center space-y-3">
+                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+                        <HeartHandshake className="w-6 h-6 text-primary" />
+                      </div>
+                      <h3 className="font-bold text-sm">Need Immediate Support?</h3>
+                      <p className="text-xs text-muted-foreground">
+                        Our support team is ready to help you with any urgent questions or concerns.
+                      </p>
+                      <SummitButton asChild size="sm" className="w-full">
+                        <a href="tel:1300033623">
+                          Call Now
+                        </a>
+                      </SummitButton>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

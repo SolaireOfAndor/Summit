@@ -1,15 +1,58 @@
-"use client"
+import { notFound } from "next/navigation"
+import { PropertyPage } from "@/components/features/property-page"
+import { getProperties, generatePropertySEO, type PropertyData } from "@/lib/properties"
+import { Metadata } from "next"
 
-import { useParams } from "next/navigation"
+interface PropertySlugPageProps {
+  params: { slug: string }
+}
 
-export default function PropertySlugPage() {
-  const params = useParams();
-  const slug = params?.slug || "[slug]";
-  return (
-    <main className="p-8">
-      <h1 className="text-3xl font-bold mb-4">Property: {slug}</h1>
-      <p className="text-lg text-muted-foreground">This is the dynamic property page for <span className="font-mono">{slug}</span>.</p>
-    </main>
-  )
+export async function generateMetadata({ params }: PropertySlugPageProps): Promise<Metadata> {
+  const properties = getProperties()
+  const property = properties.find(p => p.slug === params.slug)
+  
+  if (!property) {
+    return {
+      title: "Property Not Found | Summit",
+      description: "The requested property could not be found."
+    }
+  }
+
+  const seoData = generatePropertySEO(property)
+  
+  return {
+    title: seoData.metaTitle,
+    description: seoData.metaDescription,
+    openGraph: {
+      title: seoData.metaTitle,
+      description: seoData.metaDescription,
+      images: property.images?.[0] ? [property.images[0]] : [],
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: seoData.metaTitle,
+      description: seoData.metaDescription,
+      images: property.images?.[0] ? [property.images[0]] : [],
+    }
+  }
+}
+
+export async function generateStaticParams() {
+  const properties = getProperties()
+  return properties.map((property) => ({
+    slug: property.slug,
+  }))
+}
+
+export default function PropertySlugPage({ params }: PropertySlugPageProps) {
+  const properties = getProperties()
+  const property = properties.find(p => p.slug === params.slug)
+  
+  if (!property) {
+    notFound()
+  }
+
+  return <PropertyPage property={property} />
 }
 

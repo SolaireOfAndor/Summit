@@ -25,5 +25,5 @@
 
 
 - /vacancies
-    - /vacancies/sil-vacancies
-    - /vacancies/sda-vacancies 
+    - /properties/sil-vacancies
+- /properties/sda-vacancies 

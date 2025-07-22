@@ -116,7 +116,7 @@ export function Hero() {
 
             <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <SummitButton asChild size="lg" className="shadow-[0_4px_24px_0_hsl(var(--orange-shadow))]">
-                <Link href="/vacancies/sda-vacancies">Explore SDA Vacancies</Link>
+                <Link href="/properties/sda-vacancies">Explore SDA Vacancies</Link>
               </SummitButton>
               <SummitButton asChild variant="outline" size="lg" className="border-[hsl(var(--primary))] text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary-transparent))] hover:text-[hsl(var(--primary-hover))]">
                 <Link href="/contact">Get in Touch</Link>

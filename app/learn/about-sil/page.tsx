@@ -1508,7 +1508,7 @@ export default function AboutSILPage() {
         imageAlt="NDIS participant living independently with support"
         footerText="Looking for accommodation options? Explore our"
         footerLinkText="SIL Vacancies"
-        footerLinkHref="/vacancies/sil-vacancies"
+        footerLinkHref="/properties/sil-vacancies"
       />
     </>
   )

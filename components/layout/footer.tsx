@@ -17,134 +17,94 @@ import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react
 export function Footer() {
   return (
     <footer className="border-t border-[hsl(var(--deep-brown))/0.3] py-12 bg-[hsl(var(--deep-brown))] text-[hsl(var(--text-white))]">
-      <div className="container grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-        <div className="space-y-4">
-          <h3 className="font-bold text-[hsl(var(--accent))]">SummitSDA</h3>
+      <div className="container grid gap-8 md:grid-cols-2 lg:grid-cols-5">
+        <div className="space-y-4 lg:col-span-2">
+          <h3 className="font-bold text-[hsl(var(--primary))]">SummitSDA</h3>
           <p className="text-sm text-[hsl(var(--text-white))/0.9]">Empowering NDIS participants across NSW with high-quality, participant-centered support and accommodation.</p>
           <div className="space-y-2 text-sm text-[hsl(var(--text-white))/0.8]">
             <div className="flex items-center gap-2">
-              <MapPin className="h-4 w-4 text-[hsl(var(--accent))]" />
+              <MapPin className="h-4 w-4 text-[hsl(var(--primary))]" />
               <p>Sydney, NSW 2000</p>
             </div>
             <div className="flex items-center gap-2">
-              <Phone className="h-4 w-4 text-[hsl(var(--accent))]" />
+              <Phone className="h-4 w-4 text-[hsl(var(--primary))]" />
               <p>1300 000 000</p>
             </div>
             <div className="flex items-center gap-2">
-              <Mail className="h-4 w-4 text-[hsl(var(--accent))]" />
+              <Mail className="h-4 w-4 text-[hsl(var(--primary))]" />
               <p>contact@summitsda.com.au</p>
             </div>
           </div>
           <div className="flex gap-4 pt-2 social-links">
-            <Link href="https://www.facebook.com/SummitSDA" className="text-[hsl(var(--text-white))/0.8] hover:text-[hsl(var(--accent))] transition-colors" aria-label="SummitSDA Facebook">
+            <Link href="https://www.facebook.com/SummitSDA" className="text-[hsl(var(--text-white))/0.8] hover:text-[hsl(var(--primary))] transition-colors" aria-label="SummitSDA Facebook">
               <Facebook className="h-5 w-5" />
             </Link>
-            <Link href="https://www.instagram.com/summitsda/" className="text-[hsl(var(--text-white))/0.8] hover:text-[hsl(var(--accent))] transition-colors" aria-label="SummitSDA Instagram">
+            <Link href="https://www.instagram.com/summitsda/" className="text-[hsl(var(--text-white))/0.8] hover:text-[hsl(var(--primary))] transition-colors" aria-label="SummitSDA Instagram">
               <Instagram className="h-5 w-5" />
             </Link>
-            <Link href="https://www.linkedin.com/company/summitsda/" className="text-[hsl(var(--text-white))/0.8] hover:text-[hsl(var(--accent))] transition-colors" aria-label="SummitSDA LinkedIn">
+            <Link href="https://www.linkedin.com/company/summitsda/" className="text-[hsl(var(--text-white))/0.8] hover:text-[hsl(var(--primary))] transition-colors" aria-label="SummitSDA LinkedIn">
               <Linkedin className="h-5 w-5" />
             </Link>
           </div>
         </div>
 
         <div>
-          <h4 className="font-semibold mb-4 text-[hsl(var(--accent))]">Services</h4>
+          <h4 className="font-semibold mb-4 text-[hsl(var(--primary))]">About</h4>
           <ul className="space-y-2 text-sm">
             <li>
-              <Link href="/services" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--accent))]">
-                All Services
+              <Link href="/about" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--primary))]">
+                About Us
               </Link>
             </li>
             <li>
-              <Link href="/services/summit-housing" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--accent))]">
-                Summit Housing
+              <Link href="/about/summit-vision" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--primary))]">
+                Summit Vision
               </Link>
             </li>
             <li>
-              <Link href="/services/summit-independence" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--accent))]">
-                Summit Independence
+              <Link href="/about/about-summit" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--primary))]">
+                About SummitSDA
               </Link>
             </li>
             <li>
-              <Link href="/services/summit-lifestyle" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--accent))]">
-                Summit Lifestyle
-              </Link>
-            </li>
-            <li>
-              <Link href="/services/sda-vacancies" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--accent))]">
-                SDA Vacancies
-              </Link>
-            </li>
-            <li>
-              <Link href="/services/sil-vacancies" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--accent))]">
-                SIL Vacancies
-              </Link>
-            </li>
-            <li>
-              <Link href="/services/sta" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--accent))]">
-                Short Term Accommodation
-              </Link>
-            </li>
-            <li>
-              <Link href="/services/mta" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--accent))]">
-                Medium Term Accommodation
-              </Link>
-            </li>
-            <li>
-              <Link href="/services/sil-models" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--accent))]">
-                SIL Models
-              </Link>
-            </li>
-            <li>
-              <Link href="/services/shared-accommodations" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--accent))]">
-                Shared Accommodations
-              </Link>
-            </li>
-            <li>
-              <Link href="/services/community-packs" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--accent))]">
-                Community Packs
+              <Link href="/about/feedback" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--primary))]">
+                Feedback & Complaints
               </Link>
             </li>
           </ul>
         </div>
 
         <div>
-          <h4 className="font-semibold mb-4 text-[hsl(var(--accent))]">Resources</h4>
+          <h4 className="font-semibold mb-4 text-[hsl(var(--primary))]">Learn</h4>
           <ul className="space-y-2 text-sm">
             <li>
-              <Link href="/resources" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--accent))]">
-                All Resources
+              <Link href="/learn" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--primary))]">
+                Learning Hub
               </Link>
             </li>
             <li>
-              <Link href="/resources/about-sda" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--accent))]">
+              <Link href="/learn/funding" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--primary))]">
+                NDIS Funding
+              </Link>
+            </li>
+            <li>
+              <Link href="/learn/about-sda" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--primary))]">
                 About SDA
               </Link>
             </li>
             <li>
-              <Link href="/resources/about-sil" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--accent))]">
+              <Link href="/learn/about-sil" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--primary))]">
                 About SIL
               </Link>
             </li>
             <li>
-              <Link href="/resources/sda-eligibility" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--accent))]">
-                SDA Eligibility
+              <Link href="/learn/about-sta" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--primary))]">
+                About STA
               </Link>
             </li>
             <li>
-              <Link href="/resources/sda-toolkit" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--accent))]">
-                SDA Toolkit
-              </Link>
-            </li>
-            <li>
-              <Link href="/resources/sda-pathways" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--accent))]">
-                SDA Pathways
-              </Link>
-            </li>
-            <li>
-              <Link href="/resources/sda-ownership" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--accent))]">
-                SDA Ownership
+              <Link href="/learn/about-mta" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--primary))]">
+                About MTA
               </Link>
             </li>
           </ul>
@@ -152,57 +112,57 @@ export function Footer() {
 
         <div className="space-y-8">
           <div>
-            <h4 className="font-semibold mb-4 text-[hsl(var(--accent))]">About & Contact</h4>
+            <h4 className="font-semibold mb-4 text-[hsl(var(--primary))]">Services</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/about" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--accent))]">
-                  About Us
+                <Link href="/supported-accommodations" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--primary))]">
+                  Supported Accommodations
                 </Link>
               </li>
               <li>
-                <Link href="/about/signature-housing" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--accent))]">
-                  Signature Housing
+                <Link href="/drop-in-support" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--primary))]">
+                  Drop-in Support
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--accent))]">
-                  Get in Touch
+                <Link href="/community-participation" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--primary))]">
+                  Community Participation
                 </Link>
               </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="font-semibold mb-4 text-[hsl(var(--primary))]">Properties</h4>
+            <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/about/feedback" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--accent))]">
-                  Feedback & Complaints
-                </Link>
-              </li>
-              <li>
-                <Link href="/properties" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--accent))]">
+                <Link href="/properties" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--primary))]">
                   Available Properties
                 </Link>
               </li>
+              <li>
+                <Link href="/properties/sda-vacancies" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--primary))]">
+                  SDA Vacancies
+                </Link>
+              </li>
+              <li>
+                <Link href="/properties/sil-vacancies" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--primary))]">
+                  SIL Vacancies
+                </Link>
+              </li>
             </ul>
           </div>
-          {/* Legal section temporarily disabled
+
           <div>
-            <h4 className="font-semibold mb-4 text-accent">Legal</h4>
+            <h4 className="font-semibold mb-4 text-[hsl(var(--primary))]">Contact</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/privacy-policy" className="text-white/80 transition-colors hover:text-accent">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms-conditions" className="text-white/80 transition-colors hover:text-accent">
-                  Terms & Conditions
-                </Link>
-              </li>
-              <li>
-                <Link href="/ndis-terms" className="text-white/80 transition-colors hover:text-accent">
-                  NDIS Terms
+                <Link href="/contact" className="text-[hsl(var(--text-white))/0.9] transition-colors hover:text-[hsl(var(--primary))]">
+                  Get in Touch
                 </Link>
               </li>
             </ul>
           </div>
-          */}
         </div>
       </div>
 

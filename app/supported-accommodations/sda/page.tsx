@@ -187,7 +187,7 @@ const relatedServices = [
     icon: Users,
     href: "/supported-accommodations/sil",
     hasVacancies: true,
-    vacancyHref: "/vacancies/sil-vacancies"
+    vacancyHref: "/properties/sil-vacancies"
   },
   {
     title: "Short Term Accommodation (STA)",
@@ -223,7 +223,7 @@ export default function SDAPage() {
           alt: "Modern accessible SDA property with wheelchair ramps and purpose-built features"
         }}
         ctaText="View Available Properties"
-        ctaHref="/vacancies/sda-vacancies"
+        ctaHref="/properties/sda-vacancies"
       />
 
       {/* What is SDA Section */}
@@ -417,7 +417,7 @@ export default function SDAPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-[hsl(var(--primary))] hover:bg-[hsl(var(--primary-hover))] text-[hsl(var(--text-white))] shadow-md">
-                <Link href="/vacancies/sda-vacancies">
+                <Link href="/properties/sda-vacancies">
                   <Building className="mr-2 h-5 w-5" />
                   Browse SDA Properties
                 </Link>
@@ -505,7 +505,7 @@ export default function SDAPage() {
           <div className="text-center mt-12">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild className="bg-[hsl(var(--primary))] hover:bg-[hsl(var(--primary-hover))] text-[hsl(var(--text-white))] shadow-md">
-                <Link href="/vacancies/sda-vacancies">
+                <Link href="/properties/sda-vacancies">
                   <Building className="mr-2 h-4 w-4" />
                   Browse Available Properties
                 </Link>

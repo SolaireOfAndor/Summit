@@ -56,9 +56,8 @@ export default function SDAVacanciesPage() {
         alignment="center"
         className="bg-primary/5"
         breadcrumbs={[
-          { title: "Services", href: "/services" },
-          { title: "SDA Services", href: "/supported-accommodations/sda" },
-          { title: "SDA Vacancies", href: "/services/sda-vacancies" },
+          { title: "Properties", href: "/properties" },
+          { title: "SDA Vacancies", href: "/properties/sda-vacancies" },
         ]}
       />
 
@@ -102,5 +101,4 @@ export default function SDAVacanciesPage() {
       </div>
     </>
   )
-}
-
+} 

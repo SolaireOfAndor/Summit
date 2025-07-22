@@ -17,7 +17,7 @@ import { AccessibilityOptionsList } from "@/components/features/accessibility/Ac
 
 const SCROLL_THRESHOLD = 10; // Show/hide headers when scrolled more than this many pixels from top
 const ACCESSIBILITY_BAR_HEIGHT_CLASS = "h-8"; // Tailwind class for 32px
-const MAIN_HEADER_HEIGHT_CLASS = "h-20";
+const MAIN_HEADER_HEIGHT_CLASS = "h-20"; // Standard height, CSS will handle readable mode
 
 /**
  * @component Header
@@ -125,8 +125,8 @@ export function Header() {
         <header
           role="banner"
           className={cn(
-            "w-full border-b-2",
-            MAIN_HEADER_HEIGHT_CLASS, // Explicit height class
+            "main-header w-full border-b-2",
+            MAIN_HEADER_HEIGHT_CLASS, // Standard height, CSS handles readable mode
             // Background styles are applied regardless of transform, visibility handled by parent div
             headerBackgroundScrolled && areHeadersVisible // Only apply scrolled styles if headers are meant to be visible
               ? "bg-[hsl(var(--background-blur-light))] backdrop-blur-md shadow-md border-[hsl(var(--secondary))]/70"
@@ -158,7 +158,7 @@ export function Header() {
               <SummitButton
                 variant="contact"
                 asChild
-                className="hidden lg:flex h-16 items-center px-8 text-lg font-semibold rounded-md shadow-sm transition-shadow bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] hover:bg-[hsl(var(--primary-hover))]"
+                className="contact-button hidden lg:flex h-16 items-center px-8 text-lg font-semibold rounded-md shadow-sm transition-shadow bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] hover:bg-[hsl(var(--primary-hover))]"
               >
                 <Link href="/contact" onClick={handleNavigation}>Contact</Link>
               </SummitButton>

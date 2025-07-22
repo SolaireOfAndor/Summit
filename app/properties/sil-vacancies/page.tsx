@@ -60,9 +60,8 @@ export default function SILVacanciesPage() {
         alignment="center"
         className="bg-primary/5"
         breadcrumbs={[
-          { title: "Services", href: "/services" },
-          { title: "SIL Services", href: "/supported-accommodations/sil" },
-          { title: "SIL Vacancies", href: "/services/sil-vacancies" },
+          { title: "Properties", href: "/properties" },
+          { title: "SIL Vacancies", href: "/properties/sil-vacancies" },
         ]}
       />
 
@@ -106,5 +105,4 @@ export default function SILVacanciesPage() {
       </div>
     </>
   )
-}
-
+} 

@@ -218,7 +218,7 @@ const relatedServices = [
     icon: Home,
     href: "/supported-accommodations/sil",
     hasVacancies: true,
-    vacancyHref: "/vacancies/sil-vacancies"
+    vacancyHref: "/properties/sil-vacancies"
   },
   {
     title: "Specialist Disability Accommodation (SDA)",
@@ -226,7 +226,7 @@ const relatedServices = [
     icon: Building,
     href: "/supported-accommodations/sda",
     hasVacancies: true,
-    vacancyHref: "/vacancies/sda-vacancies"
+    vacancyHref: "/properties/sda-vacancies"
   },
   {
     title: "Short Term Accommodation (STA)",

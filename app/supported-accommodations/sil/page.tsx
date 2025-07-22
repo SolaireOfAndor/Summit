@@ -150,7 +150,7 @@ const relatedServices = [
     icon: Building,
     href: "/supported-accommodations/sda",
     hasVacancies: true,
-    vacancyHref: "/vacancies/sda-vacancies"
+    vacancyHref: "/properties/sda-vacancies"
   },
   {
     title: "Short Term Accommodation (STA)",
@@ -186,7 +186,7 @@ export default function SILPage() {
           alt: "Person in wheelchair cooking in an accessible kitchen with support worker nearby"
         }}
         ctaText="View Available Properties"
-        ctaHref="/vacancies/sil-vacancies"
+        ctaHref="/properties/sil-vacancies"
       />
 
       {/* What is SIL Section */}
@@ -377,7 +377,7 @@ export default function SILPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-[hsl(var(--primary))] hover:bg-[hsl(var(--primary-hover))] text-[hsl(var(--text-white))] shadow-md">
-                <Link href="/vacancies/sil-vacancies">
+                <Link href="/properties/sil-vacancies">
                   <Home className="mr-2 h-5 w-5" />
                   Browse SIL Properties
                 </Link>
@@ -439,7 +439,7 @@ export default function SILPage() {
           <div className="text-center mt-12">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild className="bg-[hsl(var(--primary))] hover:bg-[hsl(var(--primary-hover))] text-[hsl(var(--text-white))] shadow-md">
-                <Link href="/vacancies/sil-vacancies">
+                <Link href="/properties/sil-vacancies">
                   <Home className="mr-2 h-4 w-4" />
                   Browse Available Properties
                 </Link>
