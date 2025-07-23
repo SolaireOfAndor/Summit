@@ -133,11 +133,11 @@ export function Header() {
               : "bg-[hsl(var(--background))] border-[hsl(var(--secondary))]/40"
           )}
         >
-          <div className="flex h-full items-center px-4 sm:px-6 max-w-[1400px] mx-auto">
+          <div className="flex h-full items-center justify-between px-1 sm:px-2 lg:px-4 xl:px-6 max-w-[1400px] mx-auto">
             <Link 
               href="/" 
               onClick={handleNavigation}
-              className="h-12 w-32 sm:h-16 sm:w-44 relative flex-shrink-0"
+              className="h-10 w-28 sm:h-12 sm:w-32 lg:h-14 lg:w-36 xl:h-16 xl:w-44 relative flex-shrink-0"
               aria-label="SummitSDA - Return to homepage"
             >
               <Image
@@ -146,19 +146,19 @@ export function Header() {
                 fill
                 className="object-contain logo-image"
                 priority
-                sizes="(max-width: 768px) 128px, 176px"
+                sizes="(max-width: 640px) 112px, (max-width: 768px) 128px, (max-width: 1024px) 144px, 176px"
               />
             </Link>
 
-            <nav className="flex-1 flex justify-center">
+            <div className="flex-1 flex justify-center">
               <MainNav onNavigate={handleNavigation} className="hidden lg:flex" />
-            </nav>
+            </div>
 
             <div className="flex items-center h-full">
               <SummitButton
                 variant="contact"
                 asChild
-                className="contact-button hidden lg:flex h-16 items-center px-8 text-lg font-semibold rounded-md shadow-sm transition-shadow bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] hover:bg-[hsl(var(--primary-hover))]"
+                className="contact-button hidden lg:flex h-16 items-center px-2 lg:px-3 xl:px-5 2xl:px-8 text-xs lg:text-sm xl:text-base 2xl:text-lg font-semibold rounded-md shadow-sm transition-shadow bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] hover:bg-[hsl(var(--primary-hover))]"
               >
                 <Link href="/contact" onClick={handleNavigation}>Contact</Link>
               </SummitButton>

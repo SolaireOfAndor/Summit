@@ -4,43 +4,52 @@
  */
 
 // Layout Components
-export { Header } from './layout/header';
-export { Footer } from './layout/footer';
+export { Header } from './layout/header'
+export { Footer } from './layout/footer'
 
-// Navigation Components
-export { MobileNav } from './navigation/mobile-nav';
-export { MainNav } from './navigation/main-nav';
-export { ScrollToTop } from './navigation/scroll-to-top';
-export { withErrorBoundary } from './common/error-boundary';
+// Navigation Components  
+export { MainNav } from './navigation/main-nav'
+export { MobileNav } from './navigation/mobile-nav'
+export { ScrollToTop } from './navigation/scroll-to-top'
 
 // Section Components
-export { Hero } from './sections/hero';
-export { PageHero } from './sections/page-hero';
-export { default as CTASection } from './sections/cta-section';
+export { Hero } from './sections/hero'
+export { PageHero } from './sections/page-hero'
+export { default as CTASection } from './sections/cta-section'
+export { ServicesOverview } from './sections/services-overview'
+export { WebsiteFeatures } from './sections/website-features'
+export { PropertiesHighlight } from './sections/properties-highlight'
+export { WhyChooseSummit } from './sections/why-choose-summit'
 
 // Feature Components
-export { PropertyCard } from './features/property-card';
-export { PropertyFilters } from './features/property-filters';
-export { PropertyPage } from './features/property-page';
-export { ServiceCard } from './features/service-card';
+export { ServiceCard } from './features/service-card'
+export { PropertyCard } from './features/property-card'
+export { PropertyFilters } from './features/property-filters'
+export { PropertyPage } from './features/property-page'
 
 // Form Components
-export { ContactForm } from './forms/contact-form';
-export { FeedbackForm } from './forms/feedback-form';
+export { ContactForm } from './forms/contact-form'
+export { FeedbackForm } from './forms/feedback-form'
+
+// UI Components
+export { SummitButton } from './ui/summit-button'
+export { Button } from './ui/button'
+export { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card'
+export { Input } from './ui/input'
+export { Label } from './ui/label'
+export { Textarea } from './ui/textarea'
+export { Badge } from './ui/badge'
+export { Alert, AlertDescription, AlertTitle } from './ui/alert'
+export { Skeleton } from './ui/skeleton'
+export { Separator } from './ui/separator'
+export { SectionSeparator } from './ui/section-separator'
+
+// Accessibility Components
+export { AccessibilityIcon } from './features/accessibility/AccessibilityIcon'
+export { AccessibilityOptionsList } from './features/accessibility/AccessibilityOptionsList'
+export { DesktopAccessibilityBar } from './features/accessibility/DesktopAccessibilityBar'
 
 // Common Components
-export { ThemeProvider } from './common/theme-provider';
-export { ScrollProgress } from './common/scroll-progress';
-
-/**
- * Re-export UI components for convenience
- * Note: Not all UI components are re-exported here to keep bundle size manageable.
- * Import specific UI components directly from the ui/ folder when needed.
- */
-export { Button } from './ui/button';
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from './ui/card';
-export { Badge } from './ui/badge';
-export { NavigationMenu } from './ui/navigation-menu';
-export { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from './ui/dialog';
-export { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from './ui/accordion';
-export { Collapsible, CollapsibleTrigger, CollapsibleContent } from './ui/collapsible'; 
+export { withErrorBoundary } from './common/error-boundary'
+export { ScrollProgress } from './common/scroll-progress'
+export { ThemeProvider } from './common/theme-provider' 

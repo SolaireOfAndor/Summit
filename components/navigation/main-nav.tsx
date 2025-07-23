@@ -128,7 +128,7 @@ export function MainNav({ onNavigate, className }: MainNavProps) {
 
   return (
     <nav ref={navRef} className={cn("relative", className)}>
-      <div className="flex items-center gap-3 px-2">
+      <div className="flex items-center gap-0.5 lg:gap-1 xl:gap-2 2xl:gap-3 px-0.5 xl:px-1">
         {navigationItems.map((item) => (
           <div
             key={item.id}
@@ -140,7 +140,7 @@ export function MainNav({ onNavigate, className }: MainNavProps) {
               <Button
                 asChild
                 variant="ghost"
-                className="main-nav-item nav-button h-16 px-6 text-xl font-semibold text-[hsl(var(--secondary-foreground))] hover:bg-[hsl(var(--primary-transparent))] hover:text-[hsl(var(--primary))] rounded-md shadow-sm hover:shadow-md transition-all duration-200 border-none"
+                className="main-nav-item nav-button h-16 px-1.5 lg:px-2 xl:px-4 2xl:px-6 text-xs lg:text-sm xl:text-base 2xl:text-lg font-semibold text-[hsl(var(--secondary-foreground))] hover:bg-[hsl(var(--primary-transparent))] hover:text-[hsl(var(--primary))] rounded-md shadow-sm hover:shadow-md transition-all duration-200 border-none"
               >
                 <Link href={item.href} onClick={onNavigate} className="nav-link">
                   {item.label}
@@ -151,14 +151,14 @@ export function MainNav({ onNavigate, className }: MainNavProps) {
                 <button
                   ref={(el) => { itemRefs.current[item.id] = el }}
                   className={cn(
-                    "nav-button ml-1 p-2 h-16 flex items-center justify-center text-[hsl(var(--secondary-foreground))] hover:text-[hsl(var(--primary))] transition-all duration-200",
+                    "nav-button ml-0.5 lg:ml-1 p-1 lg:p-2 h-16 flex items-center justify-center text-[hsl(var(--secondary-foreground))] hover:text-[hsl(var(--primary))] transition-all duration-200",
                     activeDropdown === item.id && "text-[hsl(var(--primary))]"
                   )}
                   aria-label={`Open ${item.label} menu`}
                 >
                   <ChevronDown 
                     className={cn(
-                      "h-4 w-4 transition-transform duration-200",
+                      "h-3 w-3 lg:h-4 lg:w-4 transition-transform duration-200",
                       activeDropdown === item.id && "rotate-180"
                     )} 
                   />
