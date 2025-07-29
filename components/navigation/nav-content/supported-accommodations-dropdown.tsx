@@ -11,17 +11,17 @@ interface SupportedAccommodationsDropdownProps {
 }
 
 const accommodationImages = {
-  "Supported Independent Living (SIL)": "/house-image/1.webp",
-  "Short Term Accommodation (STA)": "/house-image/2.webp", 
-  "Medium Term Accommodation (MTA)": "/house-image/3.webp",
-  "Specialist Disability Accommodation (SDA)": "/house-image/4.webp"
+  "SIL": "/house-image/1.webp",
+  "STA": "/house-image/2.webp", 
+  "MTA": "/house-image/3.webp",
+  "SDA": "/house-image/4.webp"
 }
 
 const accommodationIcons = {
-  "Supported Independent Living (SIL)": Home,
-  "Short Term Accommodation (STA)": Calendar,
-  "Medium Term Accommodation (MTA)": Clock,
-  "Specialist Disability Accommodation (SDA)": Building2
+  "SIL": Home,
+  "STA": Calendar,
+  "MTA": Clock,
+  "SDA": Building2
 }
 
 /**
@@ -50,7 +50,7 @@ export function SupportedAccommodationsDropdown({ onNavigate }: SupportedAccommo
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6 mb-6">
           {navigationData.supportedAccommodations.map((item) => {
-            const IconComponent = accommodationIcons[item.title as keyof typeof accommodationIcons]
+            const IconComponent = accommodationIcons[item.title as keyof typeof accommodationIcons] || Building2
             const imageSrc = accommodationImages[item.title as keyof typeof accommodationImages]
             
             return (

@@ -21,7 +21,8 @@ import {
   Timer,
   CalendarDays,
   PhoneCall,
-  MapPin
+  MapPin,
+  Lightbulb
 } from "lucide-react"
 
 export const metadata: Metadata = {
