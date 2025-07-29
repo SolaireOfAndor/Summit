@@ -146,27 +146,6 @@ export function MobileNav({ onNavigate }: MobileNavProps) {
               )}
             </div>
 
-            {/* Community Participation */}
-            <div className="px-4">
-              <Link
-                href="/community-participation"
-                onClick={() => handleNavigation("/community-participation")}
-                className={cn(
-                  "flex items-center px-6 py-4 text-base font-semibold transition-all duration-200 rounded-lg shadow-sm hover:shadow-md border border-transparent hover:border-[hsl(var(--primary))/0.2]",
-                  isCurrentPage("/community-participation")
-                    ? "text-[hsl(var(--primary))] bg-[hsl(var(--primary-transparent))] border-[hsl(var(--primary))/0.2]"
-                    : "text-[hsl(var(--secondary-foreground))] hover:text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary-transparent))]"
-                )}
-              >
-                Community Participation
-              </Link>
-            </div>
-
-            {/* Divider */}
-            <div className="px-4 my-4">
-              <div className="border-t border-[hsl(var(--border))] opacity-30"></div>
-            </div>
-
             {/* About Section */}
             <div className="px-4">
               <button

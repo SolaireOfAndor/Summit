@@ -8,6 +8,8 @@ import { DarkModeProvider } from "@/contexts/dark-mode-context"
 import { ReadableFontModeProvider } from "@/contexts/readable-font-context"
 import { ScrollProgress } from "@/components/common/scroll-progress"
 import { ScrollToTop } from "@/components/navigation/scroll-to-top"
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -199,6 +201,8 @@ export default function RootLayout({
             </ReadableFontModeProvider>
           </ColorBlindModeProvider>
         </DarkModeProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )

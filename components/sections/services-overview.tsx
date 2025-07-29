@@ -65,7 +65,7 @@ export function ServicesOverview() {
       className="py-20 lg:py-24 bg-[hsl(var(--background))]"
       aria-labelledby="services-overview-title"
     >
-      <div className="container">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
           {/* Content Side */}
           <div>

@@ -39,12 +39,6 @@ const navigationItems: NavigationItem[] = [
     dropdownComponent: DropInSupportDropdown,
   },
   {
-    id: "community-participation",
-    label: "Community Participation", 
-    href: "/community-participation",
-    hasDropdown: false,
-  },
-  {
     id: "about",
     label: "About",
     href: "/about", // Link to main about page

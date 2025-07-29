@@ -105,7 +105,7 @@ export function WebsiteFeatures() {
       className="py-20 lg:py-24 bg-[hsl(var(--light-orange))]"
       aria-labelledby="website-features-title"
     >
-      <div className="container">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <div className="inline-flex items-center gap-2 text-sm font-medium text-[hsl(var(--primary))] bg-[hsl(var(--pure-white))] px-4 py-2 rounded-full mb-6">
             <Search className="w-4 h-4" />

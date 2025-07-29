@@ -54,7 +54,7 @@ const formSchema = z.object({
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [formStatus, setFormStatus] = useState<'idle' | 'success' | 'error'>('idle')
-  const [isSimpleMode, setIsSimpleMode] = useState(false)
+  const [isSimpleMode, setIsSimpleMode] = useState(true)
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),

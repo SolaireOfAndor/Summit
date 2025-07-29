@@ -62,7 +62,7 @@ export function WhyChooseSummit() {
       className="py-20 lg:py-24 bg-[hsl(var(--lighter-orange))]"
       aria-labelledby="why-choose-summit-title"
     >
-      <div className="container">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content Side */}
           <div>

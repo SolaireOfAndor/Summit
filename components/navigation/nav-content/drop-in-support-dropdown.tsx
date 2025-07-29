@@ -4,7 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { navigationData } from "@/lib/navigation"
 import { cn } from "@/lib/utils"
-import { ArrowRight, HeartHandshake, Home, User } from "lucide-react"
+import { ArrowRight, HeartHandshake, Home, User, Users } from "lucide-react"
 
 interface DropInSupportDropdownProps {
   onNavigate?: () => void
@@ -12,12 +12,14 @@ interface DropInSupportDropdownProps {
 
 const supportImages = {
   "Assistance with Daily Life": "/png/support-1120755_1920.jpg",
-  "Assistance with Self Care": "/nurse-walking-with-senior-patient-wheelchair.webp"
+  "Assistance with Self Care": "/nurse-walking-with-senior-patient-wheelchair.webp",
+  "Community Participation": "/png/3.webp"
 }
 
 const supportIcons = {
   "Assistance with Daily Life": Home,
-  "Assistance with Self Care": User
+  "Assistance with Self Care": User,
+  "Community Participation": Users
 }
 
 /**
@@ -44,7 +46,7 @@ export function DropInSupportDropdown({ onNavigate }: DropInSupportDropdownProps
         </div>
         
         {/* Main Services Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
           {navigationData.dropInSupport.map((item, index) => {
             const IconComponent = supportIcons[item.title as keyof typeof supportIcons]
             const imageSrc = supportImages[item.title as keyof typeof supportImages]

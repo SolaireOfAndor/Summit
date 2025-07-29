@@ -60,22 +60,22 @@ export const navigationData = {
   ],
   supportedAccommodations: [
     {
-      title: "Supported Independent Living (SIL)",
+      title: "SIL",
       href: "/supported-accommodations/sil",
       description: "Participant-centered supported living options.",
     },
     {
-      title: "Short Term Accommodation (STA)",
+      title: "STA",
       href: "/supported-accommodations/sta",
       description: "Respite and short-term stays.",
     },
     {
-      title: "Medium Term Accommodation (MTA)",
+      title: "MTA",
       href: "/supported-accommodations/mta",
       description: "Flexible medium-term housing solutions.",
     },
     {
-      title: "Specialist Disability Accommodation (SDA)",
+      title: "SDA",
       href: "/supported-accommodations/sda",
       description: "High-quality, individualized SDA options.",
     },
@@ -91,18 +91,11 @@ export const navigationData = {
       href: "/drop-in-support/assistant-with-self-care",
       description: "Personal care and wellbeing support.",
     },
-  ],
-  communityParticipation: [
     {
       title: "Community Participation",
       href: "/community-participation",
       description: "Engage and connect with your community.",
     },
   ],
-  contact: {
-    title: "Contact",
-    href: "/contact",
-    description: "Get in touch with SummitSDA.",
-  },
 } as const;
 
