@@ -28,11 +28,15 @@ export function Footer() {
             </div>
             <div className="flex items-center gap-2">
               <Phone className="h-4 w-4 text-[hsl(var(--primary))]" />
-              <p>1300 000 000</p>
+              <a href="tel:0450016874" className="text-[hsl(var(--text-white))/0.9] hover:text-[hsl(var(--primary))] transition-colors">
+                0450 016 874
+              </a>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="h-4 w-4 text-[hsl(var(--primary))]" />
-              <p>contact@summitsda.com.au</p>
+              <a href="mailto:Eliot@summitsda.com.au" className="text-[hsl(var(--text-white))/0.9] hover:text-[hsl(var(--primary))] transition-colors break-all">
+                Eliot@summitsda.com.au
+              </a>
             </div>
           </div>
           <div className="flex gap-4 pt-2 social-links">

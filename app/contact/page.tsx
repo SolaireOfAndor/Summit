@@ -92,25 +92,16 @@ export default function ContactPage() {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div>
-                      <p className="text-sm font-medium mb-1">Main Phone</p>
-                      <a href="tel:1300033623" className="text-sm text-primary hover:underline">
-                        1300 033 623
+                      <p className="text-sm font-medium mb-1">Phone</p>
+                      <a href="tel:0450016874" className="text-sm text-primary hover:underline">
+                        0450 016 874
                       </a>
                     </div>
                     <div>
-                      <p className="text-sm font-medium mb-1">General Email</p>
-                      <a href="mailto:enquiries@summitsda.com.au" className="text-sm text-primary hover:underline break-all">
-                        enquiries@summitsda.com.au
+                      <p className="text-sm font-medium mb-1">Email</p>
+                      <a href="mailto:Eliot@summitsda.com.au" className="text-sm text-primary hover:underline break-all">
+                        Eliot@summitsda.com.au
                       </a>
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium mb-1">Emergency Contact</p>
-                      <a href="tel:1300033624" className="text-sm text-red-600 hover:underline">
-                        1300 033 624
-                      </a>
-                      <p className="text-xs text-muted-foreground mt-1">
-                        For existing clients only
-                      </p>
                     </div>
                   </CardContent>
                 </Card>
@@ -126,7 +117,7 @@ export default function ContactPage() {
                         Our support team is ready to help you with any urgent questions or concerns.
                       </p>
                       <SummitButton asChild size="sm" className="w-full">
-                        <a href="tel:1300033623">
+                        <a href="tel:0450016874">
                           Call Now
                         </a>
                       </SummitButton>
