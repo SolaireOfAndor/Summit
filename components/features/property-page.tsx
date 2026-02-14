@@ -591,10 +591,23 @@ export function PropertyPage({ property }: PropertyPageProps) {
       {/* Breadcrumbs at the very top */}
       <div className="container pt-24 md:pt-20">
         <div className="py-2">
-          <div className="flex items-center text-xs text-muted-foreground">
-            <Link href="/services" className="hover:text-primary transition-colors">Services</Link>
-            <ChevronRight className="h-3 w-3 mx-1" />
-            <span className="text-foreground">{property.title}</span>
+          <div className="flex items-center text-xs text-muted-foreground flex-wrap">
+            <Link href="/" className="hover:text-primary transition-colors">Home</Link>
+            <ChevronRight className="h-3 w-3 mx-1 flex-shrink-0" />
+            <Link href="/properties" className="hover:text-primary transition-colors">Properties</Link>
+            <ChevronRight className="h-3 w-3 mx-1 flex-shrink-0" />
+            {property.type.includes("SIL") ? (
+              <>
+                <Link href="/properties/sil-vacancies" className="hover:text-primary transition-colors">SIL Vacancies</Link>
+                <ChevronRight className="h-3 w-3 mx-1 flex-shrink-0" />
+              </>
+            ) : property.type.includes("SDA") ? (
+              <>
+                <Link href="/properties/sda-vacancies" className="hover:text-primary transition-colors">SDA Vacancies</Link>
+                <ChevronRight className="h-3 w-3 mx-1 flex-shrink-0" />
+              </>
+            ) : null}
+            <span className="text-foreground font-medium">{property.title}</span>
           </div>
         </div>
       </div>

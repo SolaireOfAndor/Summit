@@ -22,16 +22,22 @@ import Image from "next/image"
 
 const coreServices = [
   {
+    title: "Supported Independent Living (SIL)",
+    description: "Personalised daily support to help you live independently in your own home.",
+    icon: Users,
+    href: "/supported-accommodations/sil",
+  },
+  {
     title: "Specialist Disability Accommodation (SDA)",
     description: "Purpose-built accessible housing with specialized features.",
     icon: Building2,
     href: "/supported-accommodations/sda",
   },
   {
-    title: "Supported Independent Living (SIL)",
-    description: "Personalized support for independent living.",
-    icon: Users,
-    href: "/supported-accommodations/sil",
+    title: "Daily Living Support",
+    description: "Assistance with personal care and household tasks.",
+    icon: Heart,
+    href: "/drop-in-support/assistant-with-daily-life",
   },
   {
     title: "Medium Term Accommodation (MTA)",
@@ -44,12 +50,6 @@ const coreServices = [
     description: "Respite and emergency accommodation support.",
     icon: Calendar,
     href: "/supported-accommodations/sta",
-  },
-  {
-    title: "Daily Living Support",
-    description: "Assistance with personal care and household tasks.",
-    icon: Heart,
-    href: "/drop-in-support/assistant-with-daily-life",
   },
   {
     title: "NDIS Guidance & Education",
@@ -77,14 +77,14 @@ export function ServicesOverview() {
               id="services-overview-title"
               className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[hsl(var(--heading))] mb-6"
             >
-              Comprehensive NDIS Support Services
+              SIL & NDIS Support Services
             </h2>
             <p className="text-lg text-[hsl(var(--body))] mb-8">
-              From accessible housing to daily living support, we provide tailored services 
-              that empower you to achieve your goals.
+              From Supported Independent Living to daily care and accessible housing, 
+              we provide tailored services that empower you to live on your terms.
             </p>
             <SummitButton asChild size="lg" className="shadow-[0_4px_24px_0_hsl(var(--orange-shadow))]">
-              <Link href="/about/about-summit">Explore All Services</Link>
+              <Link href="/supported-accommodations/sil">Explore SIL Services</Link>
             </SummitButton>
           </div>
 
@@ -92,8 +92,8 @@ export function ServicesOverview() {
           <div className="relative">
             <div className="relative h-80 lg:h-96 rounded-2xl overflow-hidden shadow-2xl shadow-[hsl(var(--orange-shadow))]">
               <Image
-                src="/house-image/1.webp"
-                alt="Summit SDA property - accessible and modern"
+                src="/house-image/3.webp"
+                alt="Summit SIL property - supported independent living"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
