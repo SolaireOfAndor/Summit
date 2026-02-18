@@ -26,7 +26,7 @@ export default function ContactPage() {
                 <MessageSquare className="w-4 h-4" />
                 <span>Contact Summit</span>
               </div>
-              <h1 className="text-3xl md:text-4xl font-bold tracking-tight bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+              <h1 className="text-3xl md:text-4xl font-bold tracking-tight bg-gradient-to-r from-primary to-primary-hover bg-clip-text text-transparent">
                 Get In Touch Today
               </h1>
               <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
@@ -37,7 +37,7 @@ export default function ContactPage() {
             <div className="grid lg:grid-cols-3 gap-12">
               {/* Contact Form */}
               <div className="lg:col-span-2">
-                <Card className="shadow-lg border border-primary/10 bg-white/90 backdrop-blur-sm">
+                <Card className="shadow-lg border border-primary/10 bg-[hsl(var(--pure-white))]/90 backdrop-blur-sm">
                   <CardHeader>
                     <CardTitle className="text-xl font-bold flex items-center gap-2">
                       <FileText className="w-5 h-5 text-primary" />
@@ -55,7 +55,7 @@ export default function ContactPage() {
 
               {/* Contact Information */}
               <div className="space-y-6">
-                <Card className="shadow-md border border-primary/10 bg-white/90 backdrop-blur-sm">
+                <Card className="shadow-md border border-primary/10 bg-[hsl(var(--pure-white))]/90 backdrop-blur-sm">
                   <CardHeader>
                     <CardTitle className="text-lg font-bold flex items-center gap-2">
                       <Clock className="w-5 h-5 text-primary" />
@@ -83,7 +83,7 @@ export default function ContactPage() {
                   </CardContent>
                 </Card>
 
-                <Card className="shadow-md border border-primary/10 bg-white/90 backdrop-blur-sm">
+                <Card className="shadow-md border border-primary/10 bg-[hsl(var(--pure-white))]/90 backdrop-blur-sm">
                   <CardHeader>
                     <CardTitle className="text-lg font-bold flex items-center gap-2">
                       <Users className="w-5 h-5 text-primary" />
@@ -106,7 +106,7 @@ export default function ContactPage() {
                   </CardContent>
                 </Card>
 
-                <Card className="shadow-md border border-primary/10 bg-gradient-to-br from-primary/5 to-blue-50">
+                <Card className="shadow-md border border-primary/10 bg-gradient-to-br from-primary/5 to-[hsl(var(--light-orange))]">
                   <CardContent className="p-6">
                     <div className="text-center space-y-3">
                       <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">

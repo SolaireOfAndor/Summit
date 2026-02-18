@@ -155,13 +155,13 @@ export function ContactForm() {
   return (
     <div className="space-y-6">
       {/* Mode Toggle */}
-      <div className="flex items-center justify-between p-4 bg-gradient-to-r from-primary/5 to-blue-50 rounded-lg border border-primary/10">
+      <div className="flex items-center justify-between p-4 bg-gradient-to-r from-primary/5 to-[hsl(var(--light-orange))] rounded-lg border border-primary/10">
         <div className="flex items-center gap-3">
-          <div className={`p-2 rounded-full transition-colors ${isSimpleMode ? 'bg-green-100' : 'bg-blue-100'}`}>
+          <div className={`p-2 rounded-full transition-colors ${isSimpleMode ? 'bg-primary/10' : 'bg-primary/15'}`}>
             {isSimpleMode ? (
-              <Zap className="w-4 h-4 text-green-600" />
+              <Zap className="w-4 h-4 text-primary" />
             ) : (
-              <Settings className="w-4 h-4 text-blue-600" />
+              <Settings className="w-4 h-4 text-primary" />
             )}
           </div>
           <div>
@@ -179,27 +179,27 @@ export function ContactForm() {
         <button
           type="button"
           onClick={handleModeToggle}
-          className="flex items-center gap-2 px-3 py-2 text-sm bg-white border border-primary/20 rounded-md hover:bg-primary/5 transition-colors"
+          className="flex items-center gap-2 px-3 py-2 text-sm bg-[hsl(var(--pure-white))] border border-primary/20 rounded-md hover:bg-primary/5 transition-colors"
           aria-label={`Switch to ${isSimpleMode ? 'detailed' : 'simple'} mode`}
         >
           {isSimpleMode ? (
             <>
-              <ToggleRight className="w-4 h-4 text-green-600" />
-              <span className="text-green-600 font-medium">Simple</span>
+              <ToggleRight className="w-4 h-4 text-primary" />
+              <span className="text-primary font-medium">Simple</span>
             </>
           ) : (
             <>
-              <ToggleLeft className="w-4 h-4 text-blue-600" />
-              <span className="text-blue-600 font-medium">Detailed</span>
+              <ToggleLeft className="w-4 h-4 text-primary" />
+              <span className="text-primary font-medium">Detailed</span>
             </>
           )}
         </button>
       </div>
 
       {formStatus === 'success' && (
-        <Alert className="bg-green-50 border-green-200">
-          <CheckCircle2 className="h-4 w-4 text-green-600" />
-          <AlertDescription className="text-green-700">
+        <Alert className="bg-green-50 dark:bg-green-950/30 border-green-200 dark:border-green-800">
+          <CheckCircle2 className="h-4 w-4 text-green-600 dark:text-green-400" />
+          <AlertDescription className="text-green-700 dark:text-green-300">
             Your message has been sent successfully. We'll get back to you soon.
           </AlertDescription>
         </Alert>
@@ -280,8 +280,8 @@ export function ContactForm() {
           {/* Additional Context - Only in Detailed Mode */}
           {!isSimpleMode && (
             <div className="space-y-6">
-              <div className="border-l-4 border-blue-500 pl-4">
-                <h3 className="font-semibold text-lg text-blue-600 mb-2">Additional Context</h3>
+              <div className="border-l-4 border-primary/60 pl-4">
+                <h3 className="font-semibold text-lg text-primary mb-2">Additional Context</h3>
                 <p className="text-sm text-muted-foreground">Optional details to help us assist you better</p>
               </div>
 
@@ -516,8 +516,8 @@ export function ContactForm() {
 
           {/* Message Section */}
           <div className="space-y-6">
-            <div className="border-l-4 border-green-500 pl-4">
-              <h3 className="font-semibold text-lg text-green-600 mb-2">Your Message</h3>
+            <div className="border-l-4 border-primary/80 pl-4">
+              <h3 className="font-semibold text-lg text-primary mb-2">Your Message</h3>
               <p className="text-sm text-muted-foreground">Tell us how we can help you</p>
             </div>
 
