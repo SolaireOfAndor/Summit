@@ -251,6 +251,65 @@
   }
 }
 
+@layer components {
+  /* Prose styling for ReactMarkdown content (property descriptions) */
+  .prose h1 {
+    @apply text-2xl font-bold mb-4 mt-6 text-[hsl(var(--heading))];
+  }
+  .prose h2 {
+    @apply text-xl font-semibold mb-3 mt-5 text-[hsl(var(--heading))];
+  }
+  .prose h3 {
+    @apply text-lg font-semibold mb-2 mt-4 text-[hsl(var(--heading))];
+  }
+  .prose p {
+    @apply mb-3 leading-relaxed text-[hsl(var(--body))];
+  }
+  .prose ul {
+    @apply list-disc pl-5 mb-4 space-y-1 text-[hsl(var(--body))];
+  }
+  .prose ol {
+    @apply list-decimal pl-5 mb-4 space-y-1 text-[hsl(var(--body))];
+  }
+  .prose li {
+    @apply leading-relaxed;
+  }
+  .prose strong {
+    @apply font-semibold text-[hsl(var(--heading))];
+  }
+  .prose hr {
+    @apply my-6 border-[hsl(var(--border))];
+  }
+  .prose blockquote {
+    @apply border-l-4 border-[hsl(var(--primary))] bg-[hsl(var(--light-orange))] rounded-r-lg p-4 my-6 text-[hsl(var(--body))];
+  }
+  .prose blockquote p {
+    @apply mb-0;
+  }
+  .prose blockquote strong {
+    @apply text-[hsl(var(--primary))];
+  }
+  .prose a {
+    @apply text-[hsl(var(--primary))] underline hover:text-[hsl(var(--primary-hover))];
+  }
+
+  /* Mobile-first prose adjustments */
+  @media (max-width: 640px) {
+    .prose h1 {
+      @apply text-xl;
+    }
+    .prose h2 {
+      @apply text-lg;
+    }
+    .prose h3 {
+      @apply text-base;
+    }
+    .prose blockquote {
+      @apply p-3 my-4 text-sm;
+    }
+  }
+}
+
 @layer utilities {
   .animate-fadeIn {
     animation: fadeIn 0.4s ease-in-out;
