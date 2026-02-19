@@ -11,11 +11,11 @@ interface LearnDropdownProps {
 }
 
 const learnImages = {
-  "NDIS Funding": "/png/business-19148_1920.jpg",
+  "NDIS Funding": "/13.webp",
   "About SIL": "/house-image/5.webp",
   "About STA": "/house-image/6.webp",
   "About MTA": "/house-image/7.webp",
-  "About SDA": "/house-image/8.webp"
+  "About SDA": "/house-image/4.webp"
 }
 
 const learnIcons = {

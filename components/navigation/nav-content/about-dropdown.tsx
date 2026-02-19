@@ -11,9 +11,9 @@ interface AboutDropdownProps {
 }
 
 const aboutImages = {
-  "Summit Vision": "/png/idea-3082824_1920.jpg",
-  "About SummitSDA": "/png/business-15721_1920.jpg",
-  "Feedback/Complaints": "/png/thumbs-up-2649310_960_720.webp"
+  "Summit Vision": "/4.webp",
+  "About SummitSDA": "/18.webp",
+  "Feedback/Complaints": "/16.webp"
 }
 
 const aboutIcons = {

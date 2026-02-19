@@ -11,8 +11,8 @@ interface SupportedAccommodationsDropdownProps {
 }
 
 const accommodationImages = {
-  "SIL": "/house-image/1.webp",
-  "STA": "/house-image/2.webp", 
+  "SIL": "/62.webp",
+  "STA": "/9.webp", 
   "MTA": "/house-image/3.webp",
   "SDA": "/house-image/4.webp"
 }
