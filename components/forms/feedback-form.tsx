@@ -87,11 +87,17 @@ export function FeedbackForm() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true)
     try {
-      // Here you would typically send the form data to your backend
-      console.log(values)
+      const response = await fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      })
 
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to send feedback.")
+      }
 
       toast.success("Thank you for your feedback! We'll review it carefully.", {
         duration: 5000,
@@ -99,7 +105,11 @@ export function FeedbackForm() {
       form.reset()
       setCharCount(0)
     } catch (error) {
-      toast.error("Something went wrong. Please try again later.")
+      toast.error(
+        error instanceof Error
+          ? error.message
+          : "Something went wrong. Please try again later."
+      )
     } finally {
       setIsSubmitting(false)
     }

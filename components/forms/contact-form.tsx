@@ -121,8 +121,17 @@ export function ContactForm() {
     }
     
     try {
-      // Here you would typically send the form data to your backend
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to send message.")
+      }
 
       setFormStatus('success')
       toast.success("Message sent successfully! We'll be in touch soon.", {
@@ -146,7 +155,11 @@ export function ContactForm() {
       })
     } catch (error) {
       setFormStatus('error')
-      toast.error("Something went wrong. Please try again later.")
+      toast.error(
+        error instanceof Error
+          ? error.message
+          : "Something went wrong. Please try again later."
+      )
     } finally {
       setIsSubmitting(false)
     }
