@@ -15,7 +15,7 @@ interface ServiceCardProps {
 
 /**
  * @component ServiceCard
- * @description A card component that displays information about a specific Summit service offering. Features an icon, title, description, and link. Used to showcase SummitSDA's NDIS support services in a consistent, accessible format.
+ * @description A card component that displays information about a specific Summit service offering. Features an icon, title, description, and link. Used to showcase Summit's NDIS support services in a consistent, accessible format.
  *
  * @example
  * ```tsx

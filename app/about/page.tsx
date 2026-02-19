@@ -26,14 +26,18 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "About Summit | Specialist Disability Support Services",
+  title: "About Summit | NDIS SIL Provider — Supported Independent Living Specialists",
   description:
-    "Summit is a leading disability support organisation and NDIS service provider, dedicated to supporting our clients' goals and optimising their potential in a homelike environment.",
+    "Summit is a specialist NDIS Supported Independent Living (SIL) provider serving Sydney & NSW. With expertise in ABI, spinal cord injury & high-intensity care, we put participants first — finding the right home and delivering 24/7 personalised support.",
+  keywords: "about Summit, NDIS SIL provider, Supported Independent Living specialist, disability support organisation, participant-first approach, ABI care provider, NDIS registered Sydney",
   openGraph: {
-    title: "About Summit | Specialist Disability Support Services",
+    title: "About Summit | NDIS SIL Provider — Supported Independent Living Specialists",
     description:
-      "Summit is a leading disability support organisation and NDIS service provider, dedicated to supporting our clients' goals and optimising their potential in a homelike environment.",
+      "Summit is a specialist NDIS Supported Independent Living (SIL) provider serving Sydney & NSW. Participant-first approach with 24/7 personalised support.",
     type: "website",
+  },
+  alternates: {
+    canonical: "/about",
   },
 }
 

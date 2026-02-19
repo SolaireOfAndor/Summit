@@ -38,11 +38,11 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Short Term Accommodation (STA) & Respite Care | SummitSDA NDIS Services",
-  description: "Discover SummitSDA's Short Term Accommodation (STA) and respite care services. Providing temporary accommodation and support for NDIS participants and relief for families and carers across NSW.",
-  keywords: "STA, Short Term Accommodation, respite care, NDIS respite, temporary accommodation, carer relief, disability respite, SummitSDA, NSW respite services, planned respite",
+  title: "Short Term Accommodation (STA) & Respite Care | Summit NDIS Services",
+  description: "Discover Summit's Short Term Accommodation (STA) and respite care services. Providing temporary accommodation and support for NDIS participants and relief for families and carers across NSW.",
+  keywords: "STA, Short Term Accommodation, respite care, NDIS respite, temporary accommodation, carer relief, disability respite, Summit, NSW respite services, planned respite",
   openGraph: {
-    title: "Short Term Accommodation (STA) & Respite Care | SummitSDA",
+    title: "Short Term Accommodation (STA) & Respite Care | Summit",
     description: "Quality respite and short-term accommodation providing relief for families and new experiences for participants.",
     type: "website",
     images: [
@@ -50,13 +50,13 @@ export const metadata: Metadata = {
         url: "/header/page-header-6.webp",
         width: 1200,
         height: 630,
-        alt: "SummitSDA STA respite accommodation - comfortable, welcoming environments"
+        alt: "Summit STA respite accommodation - comfortable, welcoming environments"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Short Term Accommodation (STA) & Respite Care | SummitSDA",
+    title: "Short Term Accommodation (STA) & Respite Care | Summit",
     description: "Quality respite and short-term accommodation for NDIS participants and families",
   }
 }

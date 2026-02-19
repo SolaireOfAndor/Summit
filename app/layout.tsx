@@ -15,17 +15,24 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: {
-    default: "Summit | NDIS Support Services & SDA Properties NSW",
+    default: "Summit | SIL Provider Sydney — Supported Independent Living NSW",
     template: "%s | Summit"
   },
-  description: "Summit delivers participant-centered NDIS support and high-quality accommodation across NSW. Explore our SDA properties, SIL services, learning resources, and comprehensive disability support services.",
+  description: "Summit is a registered NDIS SIL provider delivering 24/7 Supported Independent Living across Sydney & NSW. Specialising in ABI, spinal cord injury & high-intensity care. Participant-first approach — we find the right home and support for you.",
   keywords: [
-    "NDIS support services",
-    "SDA properties NSW", 
-    "Supported Independent Living",
-    "Specialist Disability Accommodation",
+    "SIL provider Sydney",
+    "Supported Independent Living NSW",
+    "NDIS SIL provider",
+    "24/7 SIL support Sydney",
+    "SIL vacancies Sydney",
     "disability support Sydney",
-    "NDIS provider NSW"
+    "NDIS registered provider",
+    "ABI support Sydney",
+    "spinal cord injury SIL",
+    "high intensity SIL NSW",
+    "SIL Eastern Suburbs",
+    "SIL Parramatta",
+    "SIL Manly Northern Beaches",
   ],
   authors: [{ name: "Summit" }],
   creator: "Summit",
@@ -50,21 +57,21 @@ export const metadata: Metadata = {
     locale: "en_AU",
     url: "https://summitsda.com.au",
     siteName: "Summit",
-    title: "Summit | NDIS Support Services & SDA Properties NSW",
-    description: "Summit delivers participant-centered NDIS support and high-quality accommodation across NSW. Empowering your journey to independence.",
+    title: "Summit | SIL Provider Sydney — Supported Independent Living NSW",
+    description: "Summit is a registered NDIS SIL provider delivering 24/7 Supported Independent Living across Sydney & NSW. Specialising in ABI, spinal cord injury & high-intensity care.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Summit - NDIS Support Services & SDA Properties",
+        alt: "Summit — Supported Independent Living (SIL) Provider Sydney & NSW",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Summit | NDIS Support Services & SDA Properties NSW",
-    description: "Summit delivers participant-centered NDIS support and high-quality accommodation across NSW. Empowering your journey to independence.",
+    title: "Summit | SIL Provider Sydney — Supported Independent Living NSW",
+    description: "Summit is a registered NDIS SIL provider delivering 24/7 Supported Independent Living across Sydney & NSW. Specialising in ABI, spinal cord injury & high-intensity care.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -79,7 +86,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "your-google-verification-code",
+    google: "google9c17074d3dab8932",
   },
 }
 
@@ -88,10 +95,10 @@ const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": ["Organization", "LocalBusiness"],
       "@id": "https://summitsda.com.au/#organization",
       "name": "Summit",
-      "alternateName": "SummitSDA",
+      "alternateName": "Summit Supported Independent Living",
       "url": "https://summitsda.com.au",
       "logo": {
         "@type": "ImageObject",
@@ -99,31 +106,62 @@ const structuredData = {
         "width": 300,
         "height": 100
       },
-      "description": "Summit is a registered NDIS service provider delivering participant-centered support and high-quality accommodation services across NSW.",
+      "image": "https://summitsda.com.au/og-image.jpg",
+      "description": "Summit is a registered NDIS Supported Independent Living (SIL) provider delivering 24/7 personalised care across Sydney and NSW. Specialising in acquired brain injury, spinal cord injury, physical disability, and psychosocial support.",
       "foundingDate": "2020",
-      "areaServed": {
-        "@type": "State",
-        "name": "New South Wales",
-        "containedInPlace": {
-          "@type": "Country",
-          "name": "Australia"
-        }
-      },
-      "serviceArea": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": -33.8688,
-          "longitude": 151.2093
+      "priceRange": "NDIS Funded",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Sydney",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "New South Wales"
+          }
         },
-        "geoRadius": "500000"
-      },
+        {
+          "@type": "State",
+          "name": "New South Wales",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "Australia"
+          }
+        }
+      ],
+      "serviceArea": [
+        { "@type": "Place", "name": "Eastern Suburbs Sydney" },
+        { "@type": "Place", "name": "Sydney CBD" },
+        { "@type": "Place", "name": "Manly and Northern Beaches" },
+        { "@type": "Place", "name": "Parramatta and Western Sydney" },
+        { "@type": "Place", "name": "Mascot and Inner South Sydney" },
+        { "@type": "Place", "name": "Wollongong and Illawarra" },
+        { "@type": "Place", "name": "Newcastle and Hunter" },
+        { "@type": "Place", "name": "Central Coast NSW" }
+      ],
+      "knowsAbout": [
+        "Supported Independent Living",
+        "NDIS Support Services",
+        "Acquired Brain Injury Care",
+        "Spinal Cord Injury Support",
+        "High Intensity Disability Support",
+        "Psychosocial Disability Support",
+        "24/7 Rostered Care",
+        "NDIS Roster of Care",
+        "Disability Support Sydney"
+      ],
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+61-2-XXXX-XXXX",
+        "telephone": "+61-450-016-874",
+        "email": "Eliot@summitsda.com.au",
         "contactType": "customer service",
         "areaServed": "AU",
-        "availableLanguage": "English"
+        "availableLanguage": "English",
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
       },
       "sameAs": [
         "https://www.facebook.com/summitsda",
@@ -134,8 +172,8 @@ const structuredData = {
       "@type": "WebSite",
       "@id": "https://summitsda.com.au/#website",
       "url": "https://summitsda.com.au",
-      "name": "Summit",
-      "description": "Summit delivers participant-centered NDIS support and high-quality accommodation across NSW.",
+      "name": "Summit — Supported Independent Living",
+      "description": "Summit is a registered NDIS SIL provider delivering 24/7 Supported Independent Living across Sydney and NSW. Participant-first approach to personalised disability support.",
       "publisher": {
         "@id": "https://summitsda.com.au/#organization"
       },
@@ -143,9 +181,91 @@ const structuredData = {
     },
     {
       "@type": "Service",
+      "@id": "https://summitsda.com.au/#sil-service",
+      "name": "Supported Independent Living (SIL)",
+      "description": "Summit delivers personalised 24/7 Supported Independent Living (SIL) with rostered care tailored to each participant. Specialising in acquired brain injury, spinal cord injury, physical disability, intellectual disability, and psychosocial support across Sydney and NSW.",
+      "provider": {
+        "@id": "https://summitsda.com.au/#organization"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Sydney" },
+        { "@type": "State", "name": "New South Wales" }
+      ],
+      "serviceType": "Supported Independent Living",
+      "category": "Disability Care",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "SIL Support Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "24/7 Rostered SIL Care",
+              "description": "Round-the-clock personalised support based on each participant's individual Roster of Care"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Acquired Brain Injury SIL Support",
+              "description": "Specialist SIL support for participants with acquired brain injury in Sydney and NSW"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Spinal Cord Injury SIL Support",
+              "description": "Expert SIL care for participants with spinal cord injuries requiring high-intensity support"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "High Intensity SIL Support",
+              "description": "Complex care and high-intensity SIL for participants with physical disabilities"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Psychosocial SIL Support",
+              "description": "Supported Independent Living for participants with psychosocial and mental health conditions"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Shared Living SIL",
+              "description": "Shared living arrangements with dedicated 24/7 support staff in a community environment"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Individual SIL Support",
+              "description": "One-on-one personalised SIL support in the participant's own home or chosen property"
+            }
+          }
+        ]
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "NDIS Participants requiring Supported Independent Living"
+      },
+      "termsOfService": "https://summitsda.com.au/learn/about-sil"
+    },
+    {
+      "@type": "Service",
       "@id": "https://summitsda.com.au/#sda-service",
       "name": "Specialist Disability Accommodation (SDA)",
-      "description": "Purpose-built, accessible housing designed specifically for people with extreme functional impairment or high support needs.",
+      "description": "Purpose-built, accessible housing designed for people with extreme functional impairment or high support needs across NSW.",
       "provider": {
         "@id": "https://summitsda.com.au/#organization"
       },
@@ -154,20 +274,6 @@ const structuredData = {
         "name": "New South Wales"
       },
       "serviceType": "Specialist Disability Accommodation"
-    },
-    {
-      "@type": "Service", 
-      "@id": "https://summitsda.com.au/#sil-service",
-      "name": "Supported Independent Living (SIL)",
-      "description": "Personalized support services to help you live independently while maintaining choice and control over your daily life.",
-      "provider": {
-        "@id": "https://summitsda.com.au/#organization"
-      },
-      "areaServed": {
-        "@type": "State",
-        "name": "New South Wales"
-      },
-      "serviceType": "Supported Independent Living"
     }
   ]
 }

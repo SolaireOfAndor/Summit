@@ -45,11 +45,11 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Medium Term Accommodation (MTA) | SummitSDA NDIS Transitional Housing",
-  description: "Discover SummitSDA's Medium Term Accommodation (MTA) services. Providing flexible transitional housing solutions for NDIS participants during life changes, recovery periods, and housing transitions across NSW.",
-  keywords: "MTA, Medium Term Accommodation, transitional housing, temporary accommodation, NDIS housing transitions, recovery accommodation, bridge housing, SummitSDA, NSW transitional accommodation, disability housing solutions",
+  title: "Medium Term Accommodation (MTA) | Summit NDIS Transitional Housing",
+  description: "Discover Summit's Medium Term Accommodation (MTA) services. Providing flexible transitional housing solutions for NDIS participants during life changes, recovery periods, and housing transitions across NSW.",
+  keywords: "MTA, Medium Term Accommodation, transitional housing, temporary accommodation, NDIS housing transitions, recovery accommodation, bridge housing, Summit, NSW transitional accommodation, disability housing solutions",
   openGraph: {
-    title: "Medium Term Accommodation (MTA) | SummitSDA Transitional Housing",
+    title: "Medium Term Accommodation (MTA) | Summit Transitional Housing",
     description: "Flexible transitional housing solutions during life changes and housing transitions for NDIS participants.",
     type: "website",
     images: [
@@ -57,13 +57,13 @@ export const metadata: Metadata = {
         url: "/header/page-header-7.webp",
         width: 1200,
         height: 630,
-        alt: "SummitSDA MTA transitional accommodation - comfortable temporary housing"
+        alt: "Summit MTA transitional accommodation - comfortable temporary housing"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Medium Term Accommodation (MTA) | SummitSDA",
+    title: "Medium Term Accommodation (MTA) | Summit",
     description: "Flexible transitional housing solutions for NDIS participants during life changes",
   }
 }

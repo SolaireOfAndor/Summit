@@ -65,14 +65,14 @@ export interface CTASectionProps {
  */
 export default function CTASection({
   title = "Ready to Take the Next Step?",
-  description = "We believe that everyone is different, and no two support plans are the same. Let us help you maintain your independence through SummitSDA tailored support services.",
+  description = "We believe that everyone is different, and no two support plans are the same. Let us help you maintain your independence through Summit tailored support services.",
   primaryButtonText = "Contact Us Now",
   primaryButtonLink = "/contact",
   secondaryButtonText = "View SIL Vacancies",
   secondaryButtonLink = "/services/sil-vacancies",
   imageSrc = "/png/1.webp",
   mobileImageSrc = "/png/2.webp",
-  imageAlt = "SummitSDA staff member helping a client",
+  imageAlt = "Summit staff member helping a client",
   footerText = "Want to learn more about disability accommodation? Check our",
   footerLinkText = "SDA Guide",
   footerLinkHref = "/resources/about-sda",

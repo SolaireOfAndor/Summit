@@ -24,22 +24,25 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Supported Accommodations | SummitSDA NDIS Housing & Support Services",
-  description: "Discover SummitSDA's comprehensive range of supported accommodations including SDA, SIL, MTA, and STA. Find the perfect accessible housing and support solution for your needs across NSW.",
-  keywords: "supported accommodations, SDA, SIL, MTA, STA, NDIS housing, disability accommodation, accessible housing, supported living, SummitSDA",
+  title: "NDIS Accommodation & SIL Services Sydney | Summit",
+  description: "Explore Summit's NDIS accommodation and Supported Independent Living services across Sydney & NSW. From SIL and SDA to STA and MTA — comprehensive disability support tailored to your needs. 24/7 personalised care.",
+  keywords: "NDIS accommodation Sydney, SIL services NSW, Supported Independent Living, SDA housing, disability accommodation, accessible housing, supported living Sydney, NDIS provider",
   openGraph: {
-    title: "Supported Accommodations | SummitSDA",
-    description: "Comprehensive NDIS housing solutions from specialist disability accommodation to supported independent living",
+    title: "NDIS Accommodation & SIL Services Sydney | Summit",
+    description: "Explore Summit's NDIS accommodation and Supported Independent Living services across Sydney & NSW. Comprehensive disability support tailored to your needs.",
     type: "website",
     images: [
       {
         url: "/header/page-header-6.webp",
         width: 1200,
         height: 630,
-        alt: "SummitSDA supported accommodations overview"
+        alt: "Summit NDIS accommodation and SIL services overview"
       }
     ]
-  }
+  },
+  alternates: {
+    canonical: "/supported-accommodations",
+  },
 }
 
 const accommodationTypes = [
@@ -147,7 +150,7 @@ export default function SupportedAccommodationsPage() {
         className="bg-gradient-to-br from-[hsl(var(--light-orange))] to-[hsl(var(--lighter-orange))]"
         heroImage={{
           src: "/header/page-header-6.webp",
-          alt: "SummitSDA supported accommodations overview showing accessible housing options"
+          alt: "Summit supported accommodations overview showing accessible housing options"
         }}
         ctaText="View Available Properties"
         ctaHref="/properties"

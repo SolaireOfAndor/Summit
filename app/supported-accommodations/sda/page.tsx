@@ -37,25 +37,25 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Specialist Disability Accommodation (SDA) | SummitSDA NDIS Services",
-  description: "Discover SummitSDA's Specialist Disability Accommodation (SDA) - purpose-built, high-quality housing designed for participants with extreme functional impairment. Find your perfect accessible home across NSW.",
-  keywords: "SDA, Specialist Disability Accommodation, NDIS housing, accessible accommodation, disability housing, SummitSDA, NSW disability accommodation, purpose-built housing",
+  title: "Specialist Disability Accommodation (SDA) | Summit NDIS Services",
+  description: "Discover Summit's Specialist Disability Accommodation (SDA) - purpose-built, high-quality housing designed for participants with extreme functional impairment. Find your perfect accessible home across NSW.",
+  keywords: "SDA, Specialist Disability Accommodation, NDIS housing, accessible accommodation, disability housing, Summit, NSW disability accommodation, purpose-built housing",
   openGraph: {
-    title: "Specialist Disability Accommodation (SDA) | SummitSDA",
-    description: "Purpose-built, accessible housing designed for your unique needs. Discover SummitSDA's premium SDA properties across NSW.",
+    title: "Specialist Disability Accommodation (SDA) | Summit",
+    description: "Purpose-built, accessible housing designed for your unique needs. Discover Summit's premium SDA properties across NSW.",
     type: "website",
     images: [
       {
         url: "/header/page-header-8.webp",
         width: 1200,
         height: 630,
-        alt: "SummitSDA SDA properties - accessible and purpose-built accommodation"
+        alt: "Summit SDA properties - accessible and purpose-built accommodation"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Specialist Disability Accommodation (SDA) | SummitSDA",
+    title: "Specialist Disability Accommodation (SDA) | Summit",
     description: "Purpose-built, accessible housing designed for your unique needs",
   }
 }
@@ -351,7 +351,7 @@ export default function SDAPage() {
               What Makes Our SDA Properties Special
             </h2>
             <p className="text-[hsl(var(--body))] text-lg leading-relaxed max-w-3xl mx-auto">
-              Every SummitSDA property is built to the highest standards with features designed to enhance 
+              Every Summit property is built to the highest standards with features designed to enhance 
               your independence, safety, and quality of life.
             </p>
           </div>

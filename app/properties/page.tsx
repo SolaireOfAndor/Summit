@@ -19,10 +19,13 @@ import {
   Star
 } from "lucide-react"
 
-// Add metadata for the main properties page
 export const metadata: Metadata = {
-  title: "Available Properties | Summit",
-  description: "Find your perfect home from our range of accessible and supported living options."
+  title: "SIL & SDA Properties Sydney | Available Vacancies — Summit",
+  description: "Browse Summit's available SIL and SDA properties across Sydney & NSW. Find supported living options in the Eastern Suburbs, CBD, Manly, Parramatta & regional areas. Participant-first matching approach.",
+  keywords: "SIL properties Sydney, SIL vacancies NSW, SDA properties, supported living vacancies, NDIS accommodation, disability housing Sydney, accessible properties",
+  alternates: {
+    canonical: "/properties",
+  },
 }
 
 

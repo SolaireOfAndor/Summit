@@ -29,11 +29,11 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Drop-in Support Services | SummitSDA NDIS Community Support",
+  title: "Drop-in Support Services | Summit NDIS Community Support",
   description: "Professional drop-in support services including assistance with daily life and self-care. Flexible NDIS support to help you maintain independence and wellbeing in your community.",
-  keywords: "drop-in support, NDIS support services, daily living assistance, self-care support, community support, personal care, domestic assistance, SummitSDA",
+  keywords: "drop-in support, NDIS support services, daily living assistance, self-care support, community support, personal care, domestic assistance, Summit",
   openGraph: {
-    title: "Drop-in Support Services | SummitSDA",
+    title: "Drop-in Support Services | Summit",
     description: "Flexible NDIS support services to help you live independently in your community",
     type: "website",
     images: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         url: "/header/page-header-12.webp",
         width: 1200,
         height: 630,
-        alt: "SummitSDA drop-in support services"
+        alt: "Summit drop-in support services"
       }
     ]
   }

@@ -41,11 +41,11 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "About Summit | SummitSDA - NDIS Accommodation & Support Services NSW",
+  title: "About Summit | Summit - NDIS Accommodation & Support Services NSW",
   description: "Learn about Summit's mission to provide participant-centered NDIS support services including SIL, SDA, and comprehensive disability support across NSW. Empowering independence through quality care.",
-  keywords: "About Summit, SummitSDA, NDIS provider, SIL, SDA, disability support, NSW accommodation, participant-centered care, independent living",
+  keywords: "About Summit, Summit, NDIS provider, SIL, SDA, disability support, NSW accommodation, participant-centered care, independent living",
   openGraph: {
-    title: "About Summit | SummitSDA - NDIS Accommodation & Support Services",
+    title: "About Summit | Summit - NDIS Accommodation & Support Services",
     description: "Discover Summit's commitment to participant-centered NDIS support, quality accommodation, and empowering independence across NSW.",
     type: "website",
     images: [
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Summit | SummitSDA - NDIS Support Services",
+    title: "About Summit | Summit - NDIS Support Services",
     description: "Empowering independence through participant-centered NDIS support and quality accommodation",
   }
 }

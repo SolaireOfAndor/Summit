@@ -40,11 +40,11 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Assistance with Daily Life Services | Professional NDIS Support | SummitSDA",
+  title: "Assistance with Daily Life Services | Professional NDIS Support | Summit",
   description: "Expert assistance with daily life activities through NDIS funding. Professional support workers help with household tasks, personal care, community access, and independent living skills development.",
   keywords: "assistance with daily life, NDIS daily living support, household tasks assistance, personal care support, community access, independent living skills, disability support services, NDIS participant support",
   openGraph: {
-    title: "Assistance with Daily Life Services | SummitSDA",
+    title: "Assistance with Daily Life Services | Summit",
     description: "Professional NDIS support for daily living activities, household management, and independent living skills development.",
     type: "website",
     images: [
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Assistance with Daily Life Services | SummitSDA",
+    title: "Assistance with Daily Life Services | Summit",
     description: "Expert NDIS support for daily living, household tasks, and independent living skills",
   },
   alternates: {
@@ -208,7 +208,7 @@ export default function AssistantWithDailyLifePage() {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[hsl(var(--heading))] mb-4">
-              Why Choose SummitSDA for Daily Life Support?
+              Why Choose Summit for Daily Life Support?
             </h2>
             <p className="text-lg text-[hsl(var(--body))] max-w-3xl mx-auto">
               We provide more than just assistance – we empower you to achieve your goals and live life on your terms.

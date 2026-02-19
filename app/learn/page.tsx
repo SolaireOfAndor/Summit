@@ -35,22 +35,25 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Learn About NDIS Services | Educational Hub | SummitSDA",
-  description: "Comprehensive educational resources about NDIS services including SDA, SIL, MTA, STA, funding information, and support options. Learn everything you need to know about disability support services.",
-  keywords: "NDIS education, learn about SDA, SIL information, MTA guide, STA services, NDIS funding guide, disability support education, NDIS explained, SummitSDA resources",
+  title: "NDIS Learning Hub | SIL, SDA & Disability Support Guides — Summit",
+  description: "Expert educational resources about Supported Independent Living (SIL), SDA, NDIS funding & disability support services. Trusted guides for participants, families & support coordinators in NSW.",
+  keywords: "NDIS learning hub, what is SIL, SIL guide, SDA information, NDIS funding explained, disability support education, SIL vs SDA, choosing SIL provider, NDIS participant resources",
   openGraph: {
-    title: "Learn About NDIS Services | Educational Hub | SummitSDA",
-    description: "Comprehensive NDIS education and resources to help you understand your support options",
+    title: "NDIS Learning Hub | SIL, SDA & Disability Support Guides — Summit",
+    description: "Expert educational resources about Supported Independent Living (SIL), SDA, NDIS funding & disability support. Trusted guides for participants and families.",
     type: "website",
     images: [
       {
         url: "/header/page-header-5.webp",
         width: 1200,
         height: 630,
-        alt: "Educational resources and NDIS learning materials"
+        alt: "Summit NDIS learning hub — SIL, SDA and disability support guides"
       }
     ]
-  }
+  },
+  alternates: {
+    canonical: "/learn",
+  },
 }
 
 const learningTopics = [
@@ -439,7 +442,7 @@ export default function LearnPage() {
                       </Button>
                       <Button asChild variant="outline" className="border-[hsl(var(--primary))] text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))]/10">
                         <Link href="/about">
-                          Learn About SummitSDA
+                          Learn About Summit
                           <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>

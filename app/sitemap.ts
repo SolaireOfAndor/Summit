@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next"
 import { properties } from "@/lib/properties"
+import { silLocations } from "@/lib/sil-locations"
 
 const BASE_URL = "https://summitsda.com.au"
 
@@ -15,7 +16,6 @@ const createEntry = (
 })
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  // Property pages (dynamic)
   const propertyUrls: MetadataRoute.Sitemap = properties.map((property) => ({
     url: `${BASE_URL}/properties/${property.slug}`,
     lastModified: new Date(),
@@ -23,7 +23,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }))
 
-  // Static pages
+  const locationUrls: MetadataRoute.Sitemap = silLocations.map((location) => ({
+    url: `${BASE_URL}/sil/${location.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.9,
+  }))
+
   const staticUrls: MetadataRoute.Sitemap = [
     createEntry("/", "weekly", 1),
     createEntry("/about", "monthly", 0.9),
@@ -33,7 +39,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     createEntry("/contact", "monthly", 0.9),
     createEntry("/properties", "daily", 0.9),
     createEntry("/properties/sda-vacancies", "daily", 0.9),
-    createEntry("/properties/sil-vacancies", "daily", 0.9),
+    createEntry("/properties/sil-vacancies", "daily", 0.95),
     createEntry("/learn", "monthly", 0.9),
     createEntry("/learn/about-sda", "monthly", 0.8),
     createEntry("/learn/about-sda/application-process", "monthly", 0.7),
@@ -42,7 +48,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     createEntry("/learn/about-sda/funding-and-costs", "monthly", 0.7),
     createEntry("/learn/about-sda/housing-selection-guide", "monthly", 0.7),
     createEntry("/learn/about-sda/rights-and-support", "monthly", 0.7),
-    createEntry("/learn/about-sil", "monthly", 0.8),
+    createEntry("/learn/about-sil", "weekly", 0.9),
     createEntry("/learn/about-sta", "monthly", 0.8),
     createEntry("/learn/about-sta/accommodation-options", "monthly", 0.7),
     createEntry("/learn/about-sta/booking-and-planning", "monthly", 0.7),
@@ -61,7 +67,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     createEntry("/learn/funding/plan-management", "monthly", 0.7),
     createEntry("/supported-accommodations", "monthly", 0.9),
     createEntry("/supported-accommodations/sda", "monthly", 0.8),
-    createEntry("/supported-accommodations/sil", "monthly", 0.8),
+    createEntry("/supported-accommodations/sil", "weekly", 0.95),
     createEntry("/supported-accommodations/sta", "monthly", 0.8),
     createEntry("/supported-accommodations/mta", "monthly", 0.8),
     createEntry("/drop-in-support", "monthly", 0.8),
@@ -70,5 +76,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     createEntry("/community-participation", "monthly", 0.8),
   ]
 
-  return [...staticUrls, ...propertyUrls]
+  return [...staticUrls, ...locationUrls, ...propertyUrls]
 }

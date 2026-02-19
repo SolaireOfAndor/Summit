@@ -5,12 +5,16 @@ import { SummitButton } from "@/components/ui/summit-button"
 import { Mail, Phone, Clock, Users, HeartHandshake, MessageSquare, FileText } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Contact Summit | Get In Touch With Our Disability Support Team",
-  description: "Contact Summit for specialist disability accommodation, support services, and NDIS enquiries. Professional support team ready to help you achieve your goals.",
+  title: "Contact Summit | SIL Enquiries & NDIS Support — Sydney & NSW",
+  description: "Get in touch with Summit for Supported Independent Living (SIL) enquiries, NDIS support services & vacancy information across Sydney & NSW. Our team is ready to help you find the right care and accommodation.",
+  keywords: "contact Summit, SIL enquiries Sydney, NDIS support enquiry, Supported Independent Living contact, disability services NSW, SIL provider phone",
   openGraph: {
-    title: "Contact Summit | Get In Touch With Our Disability Support Team",
-    description: "Contact Summit for specialist disability accommodation, support services, and NDIS enquiries. Professional support team ready to help you achieve your goals.",
+    title: "Contact Summit | SIL Enquiries & NDIS Support — Sydney & NSW",
+    description: "Get in touch with Summit for Supported Independent Living (SIL) enquiries, NDIS support services & vacancy information across Sydney & NSW.",
     type: "website",
+  },
+  alternates: {
+    canonical: "/contact",
   },
 }
 

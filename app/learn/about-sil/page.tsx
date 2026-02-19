@@ -74,9 +74,9 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Complete Guide to Supported Independent Living (SIL) | What is SIL?",
-  description: "Comprehensive guide to Supported Independent Living (SIL) - understand eligibility, funding, support types, benefits, and how SIL works. Expert information for NDIS participants and families.",
-  keywords: "SIL, Supported Independent Living, NDIS SIL, independent living support, disability support, SIL explained, SIL services, NDIS participant support, SIL funding, SIL eligibility, SIL vs SDA",
+  title: "What is Supported Independent Living (SIL)? Complete NDIS Guide — Summit",
+  description: "Comprehensive guide to Supported Independent Living (SIL) — eligibility, funding, support types, choosing a provider & how SIL works in NSW. Written by NDIS specialists for participants, families & support coordinators.",
+  keywords: "what is SIL, Supported Independent Living explained, NDIS SIL eligibility, SIL funding guide, SIL vs SDA difference, choosing SIL provider Sydney, SIL support types, SIL roster of care, 24/7 SIL care, NDIS participant guide, SIL services NSW",
   openGraph: {
     title: "Complete Guide to Supported Independent Living (SIL)",
     description: "Everything you need to know about SIL - from eligibility and funding to daily support and choosing providers. Comprehensive educational resource.",

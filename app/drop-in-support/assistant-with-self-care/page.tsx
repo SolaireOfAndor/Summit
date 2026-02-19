@@ -44,11 +44,11 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Assistance with Self Care Services | Personal Care Support | SummitSDA",
+  title: "Assistance with Self Care Services | Personal Care Support | Summit",
   description: "Professional NDIS self-care assistance including personal hygiene, grooming, dressing, medication management, and mobility support. Dignified, person-centered care that promotes independence.",
   keywords: "assistance with self care, NDIS personal care, self care support, personal hygiene assistance, grooming support, dressing assistance, medication management, mobility support, disability self care",
   openGraph: {
-    title: "Assistance with Self Care Services | SummitSDA",
+    title: "Assistance with Self Care Services | Summit",
     description: "Professional NDIS self-care support promoting dignity, independence, and personal well-being through personalized assistance.",
     type: "website",
     images: [
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Assistance with Self Care Services | SummitSDA",
+    title: "Assistance with Self Care Services | Summit",
     description: "Dignified NDIS self-care support promoting independence and personal well-being",
   },
   alternates: {
@@ -213,7 +213,7 @@ export default function AssistantWithSelfCarePage() {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[hsl(var(--heading))] mb-4">
-              Why Choose SummitSDA for Self Care Support?
+              Why Choose Summit for Self Care Support?
             </h2>
             <p className="text-lg text-[hsl(var(--body))] max-w-3xl mx-auto">
               We understand that personal care is deeply personal. Our approach prioritizes your comfort, dignity, and independence.
@@ -505,7 +505,7 @@ export default function AssistantWithSelfCarePage() {
       {/* CTA Section */}
       <CTASection
         title="Experience Personal Care with Dignity and Respect"
-        description="Join NDIS participants who trust SummitSDA for professional, compassionate personal care support. Our trained team provides assistance that maintains your dignity while promoting independence and well-being."
+        description="Join NDIS participants who trust Summit for professional, compassionate personal care support. Our trained team provides assistance that maintains your dignity while promoting independence and well-being."
         primaryButtonText="Discuss Your Needs"
         primaryButtonLink="/contact"
         secondaryButtonText="Learn About Daily Life Support"
