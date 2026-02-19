@@ -50,19 +50,19 @@ export function Hero() {
           "-=0.5"
         )
       }
-      if (buttonsRef.current?.children) {
+      if (buttonsRef.current) {
         tl.fromTo(
-          buttonsRef.current.children,
+          buttonsRef.current,
           { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: 0.6, stagger: 0.2 },
+          { opacity: 1, y: 0, duration: 0.6 },
           "-=0.4"
         )
       }
-       if (statsRef.current?.children) {
+      if (statsRef.current) {
         tl.fromTo(
-          statsRef.current.children,
+          statsRef.current,
           { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.5, stagger: 0.15 },
+          { opacity: 1, y: 0, duration: 0.5 },
           "-=0.3"
         )
       }
@@ -104,19 +104,19 @@ export function Hero() {
               <h1 
                 id="hero-title"
                 ref={titleRef}
-                className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tighter text-[hsl(var(--heading))]"
+                className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tighter text-[hsl(var(--heading))] opacity-0"
               >
                 Live Independently with the Right Support
               </h1>
               <p 
                 ref={paragraphRef}
-                className="text-base sm:text-lg lg:text-xl text-[hsl(var(--body))] max-w-2xl mx-auto lg:mx-0"
+                className="text-base sm:text-lg lg:text-xl text-[hsl(var(--body))] max-w-2xl mx-auto lg:mx-0 opacity-0"
               >
                 Summit provides personalised Supported Independent Living (SIL) services across NSW — helping you build the skills, confidence, and daily routines for a fulfilling, independent life.
               </p>
             </div>
 
-            <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start opacity-0">
               <SummitButton asChild size="lg" className="shadow-[0_4px_24px_0_hsl(var(--orange-shadow))]">
                 <Link href="/properties/sil-vacancies">Browse SIL Vacancies</Link>
               </SummitButton>
@@ -125,7 +125,7 @@ export function Hero() {
               </SummitButton>
             </div>
 
-            <div ref={statsRef} className="pt-4 sm:pt-6">
+            <div ref={statsRef} className="pt-4 sm:pt-6 opacity-0">
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 sm:gap-10">
                 <div className="text-center sm:text-left">
                   <p className="text-2xl sm:text-3xl font-bold text-[hsl(var(--heading))]">24/7</p>
@@ -146,7 +146,7 @@ export function Hero() {
           </div>
 
           {/* Image */}
-          <div ref={imageRef} className="relative lg:col-span-5 xl:col-span-6 lg:h-[650px] h-[400px] sm:h-[500px]">
+          <div ref={imageRef} className="relative lg:col-span-5 xl:col-span-6 lg:h-[650px] h-[400px] sm:h-[500px] opacity-0">
             <Image
               src="/house-image/1.webp"
               alt="A welcoming SIL property representing Summit's supported independent living services"
