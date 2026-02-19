@@ -26,33 +26,13 @@ export const DarkModeProvider = ({ children }: DarkModeProviderProps) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isInitialized, setIsInitialized] = useState(false);
 
-  // Initialize dark mode from localStorage on client side
+  // Initialize dark mode from localStorage — always default to light mode
   useEffect(() => {
     const savedMode = localStorage.getItem('summit-dark-mode');
     if (savedMode !== null) {
       setIsDarkMode(JSON.parse(savedMode));
-    } else {
-      // Check system preference
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setIsDarkMode(prefersDark);
     }
     setIsInitialized(true);
-  }, []);
-
-  // Listen for system preference changes
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    
-    const handleChange = (e: MediaQueryListEvent) => {
-      // Only update if user hasn't manually set a preference
-      const savedMode = localStorage.getItem('summit-dark-mode');
-      if (savedMode === null) {
-        setIsDarkMode(e.matches);
-      }
-    };
-
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
   // Apply dark mode class to document
