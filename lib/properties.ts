@@ -93,6 +93,601 @@ const SUMMIT_SERVICE_NOTE = `\n\n> **Looking for something different?** Summit S
 
 const rawProperties: PropertyData[] = [
   {
+    id: "bondi-apartments",
+    slug: "bondi-independent-apartments",
+    type: ["SIL", "SDA", "MTA"],
+    title: "Apartments in Bondi",
+    location: "Bondi, NSW 2022",
+    description: "Supported Independent Living (SIL) apartments in Sydney's iconic Eastern Suburbs, offering a vibrant coastal lifestyle with 24/7 personalised support.",
+    detailedDescription: `# Supported Independent Living in Bondi
+
+Summit Housing provides quality Supported Independent Living (SIL), Specialist Disability Accommodation (SDA), and Medium Term Accommodation (MTA) in Bondi, one of Sydney's most iconic and sought-after Eastern Suburbs.
+
+Our Bondi apartments offer self-contained one and two bedroom units in a fantastic location close to world-famous Bondi Beach. Participants enjoy a vibrant coastal lifestyle while receiving tailored 24/7 support to build their independence and confidence.
+${SUMMIT_SERVICE_NOTE}
+## Property Highlights
+
+- Self-contained 1 and 2 bedroom units with modern, accessible design
+- Each unit includes an ensuite, kitchenette, TV, built-in wardrobe, and quality furnishings
+- Shared amenities including communal living areas, garden, BBQ area, swimming pool, and gym
+- Lift access throughout the building
+- Suitable for SIL, MTA, and short-term stays
+
+## Support and Amenities
+
+- 24/7 on-site support staff
+- Personalised care plans for every participant
+- Large shared living and social areas
+- Fully equipped communal kitchen and individual kitchenettes
+- Secure building with intercom entry
+
+## Location Benefits
+
+Bondi is a world-renowned suburb famous for its beautiful beach, coastal walks, and lively community atmosphere. Bondi Junction train station is nearby, connecting you to the wider Sydney rail network. Westfield Bondi Junction offers extensive shopping and entertainment options. Prince of Wales Hospital is approximately 3 km away, and you will find medical centres, grocery stores, and chemists all within walking distance.
+
+## Activities
+
+### Indoor Activities
+- Shared meals and social dining with housemates
+- Morning exercise sessions in the gym
+- TV, games, and creative activities in communal areas
+- Board games, puzzles, and social events
+- Swimming in the on-site pool
+- Cooking and life skills development
+
+### Outdoor Activities
+- Beach walks along Bondi Beach and the Bondi to Coogee coastal walk
+- Swimming and surfing at Bondi Beach
+- Dining at beachside cafes and restaurants
+- Community outings and local events
+- Visits to nearby parks and reserves
+- Cultural events and markets
+
+## Contact Information
+
+For enquiries or to arrange a viewing, please get in touch:
+
+**Email:** Eliot@summitsda.com.au
+**Phone:** 0450 016 874
+
+We are available on weekdays, Monday to Friday, 9am–5pm.`,
+    metaDescription: "Supported Independent Living (SIL) apartments in Bondi, Eastern Suburbs. Summit Housing offers 24/7 disability support near Bondi Beach with modern accessible units.",
+    details: {
+      bedrooms: 2,
+      bathrooms: 2,
+      toilets: 2,
+      parking: 2,
+      accessibleParking: 1,
+      bedroomsAvailable: 2,
+    },
+    pricing: {
+      rent: "$0 per week",
+      notes: ["Funded through NDIS SIL, SDA, and MTA packages", "Commonwealth Rent Assistance may apply"],
+    },
+    availability: "2025-01-01",
+    features: [
+      { icon: "Thermometer", label: "Heating" },
+      { icon: "Wind", label: "Cooling" },
+      { icon: "Utensils", label: "Kitchenette" },
+      { icon: "DoorOpen", label: "Ensuite" },
+      { icon: "BookOpen", label: "Study Area" },
+      { icon: "Dumbbell", label: "Gym" },
+      { icon: "TreePine", label: "Outdoor Area" },
+      { icon: "Lock", label: "Secure Intercom Access" },
+      { icon: "Home", label: "Fully Furnished" },
+      { icon: "Wheelchair", label: "Wheelchair Accessible" },
+      { icon: "Building2", label: "SDA-Compliant Design" },
+      { icon: "Building2", label: "Robust Construction" },
+      { icon: "Wifi", label: "High-Speed Internet" },
+      { icon: "DoorOpen", label: "Built-in Wardrobes" },
+      { icon: "Ruler", label: "Doorway Widths > 950mm" },
+      { icon: "Lightbulb", label: "Energy Efficient" },
+      { icon: "Flame", label: "Fire Sprinklers" },
+      { icon: "Lift", label: "Lift Access" },
+    ],
+    activities: {
+      indoor: [
+        "Shared meals and social dining with housemates",
+        "Morning exercise sessions in the gym",
+        "TV, games, and creative activities in communal areas",
+        "Board games, puzzles, and social events",
+        "Swimming in the on-site pool",
+        "Cooking and life skills development",
+      ],
+      outdoor: [
+        "Beach walks along Bondi Beach and the coastal walk",
+        "Swimming and surfing at Bondi Beach",
+        "Dining at beachside cafes and restaurants",
+        "Community outings and local events",
+        "Visits to nearby parks and reserves",
+        "Cultural events and weekend markets",
+      ],
+    },
+    location_features: [
+      { icon: "Building2", label: "Prince of Wales Hospital", distance: "3km" },
+      { icon: "Building2", label: "Grocery Store", distance: "3 min walk" },
+      { icon: "Building2", label: "Bondi Junction Station", distance: "10 min walk" },
+      { icon: "Building2", label: "Bondi Beach", distance: "10 min walk" },
+      { icon: "Building2", label: "Westfield Bondi Junction", distance: "10 min walk" },
+      { icon: "Building2", label: "Medical Centre", distance: "5 min walk" },
+      { icon: "Building2", label: "Disability Day Programs", distance: "5km" },
+    ],
+    housemateInfo: {
+      currentTenants: 8,
+      ageRange: "ALL",
+      genders: ["Man", "Woman", "Rather not answer"],
+      preferences: [
+        "Enjoy socialising and spending time with housemates",
+        "Like an active and social home environment",
+        "Happy to share communal spaces and activities",
+      ],
+      selectionProcess: "Housemates are carefully matched based on individual needs, preferences, and compatibility assessments.",
+    },
+    eligibility: ["Currently receiving a Disability Support Pension", "Receiving NDIS funding for SIL, SDA, and/or MTA"],
+    contact: {
+      phone: "0450016874",
+      email: "Eliot@summitsda.com.au",
+      hours: "Weekdays, Monday to Friday, 9am-5pm",
+    },
+    images: [
+      "/properties/bondi/1.jpg",
+      "/properties/bondi/2.jpg",
+      "/properties/bondi/3.jpg",
+      "/properties/bondi/4.jpg",
+      "/properties/bondi/5.jpg",
+      "/properties/bondi/6.jpg",
+    ],
+  },
+  {
+    id: "eastern-suburbs-apartments",
+    slug: "eastern-suburbs-independent-apartments",
+    type: ["SIL", "SDA", "MTA"],
+    title: "Apartments in Eastern Suburbs",
+    location: "Randwick, NSW 2031",
+    description: "Supported Independent Living (SIL) apartments in Sydney's Eastern Suburbs, offering a coastal lifestyle near Coogee Beach with 24/7 personalised disability support.",
+    detailedDescription: `# Supported Independent Living in the Eastern Suburbs
+
+Summit Housing provides quality Supported Independent Living (SIL), Specialist Disability Accommodation (SDA), and Medium Term Accommodation (MTA) in Randwick, in the heart of Sydney's sought-after Eastern Suburbs.
+
+Our Eastern Suburbs apartments offer self-contained one and two bedroom units in a prime location close to beaches, hospitals, and excellent public transport. Participants enjoy an active coastal lifestyle while receiving tailored 24/7 support from our experienced team.
+${SUMMIT_SERVICE_NOTE}
+## Property Highlights
+
+- Self-contained 1 and 2 bedroom units with modern, accessible design
+- Each unit includes an ensuite, kitchenette, TV, built-in wardrobe, and quality furnishings
+- Shared amenities including communal living areas, garden, BBQ area, and outdoor terrace
+- Lift access throughout the building
+- Suitable for SIL, MTA, and short-term stays
+
+## Support and Amenities
+
+- 24/7 on-site support staff
+- Personalised care plans for every participant
+- Large shared living and social areas
+- Fully equipped communal kitchen and individual kitchenettes
+- Secure building with intercom entry
+
+## Location Benefits
+
+Randwick is a vibrant Eastern Suburbs hub with outstanding access to healthcare, beaches, and everyday amenities. The Prince of Wales Hospital and Sydney Children's Hospital are just minutes away at the Randwick Health Campus. Coogee Beach is a short trip down the road, and the Bondi to Coogee coastal walk is easily accessible. The Light Rail connects you to the CBD, Circular Quay, and Central Station. You will find grocery stores, cafes, medical centres, and the Royal Randwick Shopping Centre all within walking distance.
+
+## Activities
+
+### Indoor Activities
+- Shared meals and social dining with housemates
+- Morning exercise sessions in communal areas
+- TV, games, and creative activities
+- Board games, puzzles, and social events
+- Cooking and life skills development
+
+### Outdoor Activities
+- Beach walks along the Bondi to Coogee coastal trail
+- Swimming at Coogee Beach and Wylie's Baths
+- Dining at local cafes and restaurants in Randwick and Coogee
+- Community outings and local events
+- Visits to Centennial Park and nearby reserves
+- Cultural events and weekend markets
+
+## Contact Information
+
+For enquiries or to arrange a viewing, please get in touch:
+
+**Email:** Eliot@summitsda.com.au
+**Phone:** 0450 016 874
+
+We are available on weekdays, Monday to Friday, 9am–5pm.`,
+    metaDescription: "Supported Independent Living (SIL) apartments in Sydney's Eastern Suburbs. Summit Housing offers 24/7 disability support near Coogee Beach with modern accessible units.",
+    details: {
+      bedrooms: 2,
+      bathrooms: 2,
+      toilets: 2,
+      parking: 2,
+      accessibleParking: 1,
+      bedroomsAvailable: 2,
+    },
+    pricing: {
+      rent: "$0 per week",
+      notes: ["Funded through NDIS SIL, SDA, and MTA packages", "Commonwealth Rent Assistance may apply"],
+    },
+    availability: "2025-01-01",
+    features: [
+      { icon: "Thermometer", label: "Heating" },
+      { icon: "Wind", label: "Cooling" },
+      { icon: "Utensils", label: "Kitchenette" },
+      { icon: "DoorOpen", label: "Ensuite" },
+      { icon: "BookOpen", label: "Study Area" },
+      { icon: "Dumbbell", label: "Gym" },
+      { icon: "TreePine", label: "Garden and Outdoor Area" },
+      { icon: "Lock", label: "Secure Intercom Access" },
+      { icon: "Home", label: "Fully Furnished" },
+      { icon: "Wheelchair", label: "Wheelchair Accessible" },
+      { icon: "Building2", label: "SDA-Compliant Design" },
+      { icon: "Building2", label: "Robust Construction" },
+      { icon: "Wifi", label: "High-Speed Internet" },
+      { icon: "DoorOpen", label: "Built-in Wardrobes" },
+      { icon: "Ruler", label: "Doorway Widths > 950mm" },
+      { icon: "Lightbulb", label: "Energy Efficient" },
+      { icon: "Flame", label: "Fire Sprinklers" },
+      { icon: "Lift", label: "Lift Access" },
+    ],
+    activities: {
+      indoor: [
+        "Shared meals and social dining with housemates",
+        "Morning exercise sessions in communal areas",
+        "TV, games, and creative activities",
+        "Board games, puzzles, and social events",
+        "Cooking and life skills development",
+      ],
+      outdoor: [
+        "Beach walks along the Bondi to Coogee coastal trail",
+        "Swimming at Coogee Beach and Wylie's Baths",
+        "Dining at local cafes and restaurants in Randwick and Coogee",
+        "Community outings and local events",
+        "Visits to Centennial Park and nearby reserves",
+        "Cultural events and weekend markets",
+      ],
+    },
+    location_features: [
+      { icon: "Building2", label: "Prince of Wales Hospital", distance: "1km" },
+      { icon: "Building2", label: "Grocery Store", distance: "3 min walk" },
+      { icon: "Building2", label: "Light Rail Stop", distance: "5 min walk" },
+      { icon: "Building2", label: "Coogee Beach", distance: "10 min walk" },
+      { icon: "Building2", label: "Royal Randwick Shopping Centre", distance: "5 min walk" },
+      { icon: "Building2", label: "Medical Centre", distance: "5 min walk" },
+      { icon: "Building2", label: "Centennial Park", distance: "2km" },
+      { icon: "Building2", label: "Disability Day Programs", distance: "5km" },
+    ],
+    housemateInfo: {
+      currentTenants: 8,
+      ageRange: "ALL",
+      genders: ["Man", "Woman", "Rather not answer"],
+      preferences: [
+        "Enjoy socialising and spending time with housemates",
+        "Like an active and social home environment",
+        "Happy to share communal spaces and activities",
+      ],
+      selectionProcess: "Housemates are carefully matched based on individual needs, preferences, and compatibility assessments.",
+    },
+    eligibility: ["Currently receiving a Disability Support Pension", "Receiving NDIS funding for SIL, SDA, and/or MTA"],
+    contact: {
+      phone: "0450016874",
+      email: "Eliot@summitsda.com.au",
+      hours: "Weekdays, Monday to Friday, 9am-5pm",
+    },
+    images: [
+      "/properties/eastern-suburbs/1.jpg",
+      "/properties/eastern-suburbs/2.jpg",
+      "/properties/eastern-suburbs/3.jpg",
+      "/properties/eastern-suburbs/4.jpg",
+      "/properties/eastern-suburbs/5.jpg",
+      "/properties/eastern-suburbs/6.webp",
+      "/properties/eastern-suburbs/7.jpg",
+    ],
+  },
+  {
+    id: "parramatta-apartments",
+    slug: "parramatta-independent-living",
+    type: ["SIL", "SDA", "MTA"],
+    title: "Apartments in Parramatta",
+    location: "Parramatta, NSW 2150",
+    description: "Supported Independent Living (SIL) apartments in Western Sydney's major hub, offering excellent amenities and 24/7 personalised disability support.",
+    detailedDescription: `# Supported Independent Living in Parramatta
+
+Summit Housing provides quality Supported Independent Living (SIL), Specialist Disability Accommodation (SDA), and Medium Term Accommodation (MTA) in Parramatta, the thriving heart of Western Sydney.
+
+Our Parramatta apartments offer self-contained one and two bedroom units in a central location with outstanding access to transport, shopping, dining, and healthcare. Participants benefit from living in one of Sydney's fastest-growing centres while receiving tailored 24/7 support.
+${SUMMIT_SERVICE_NOTE}
+## Property Highlights
+
+- Self-contained 1 and 2 bedroom units with modern, accessible design
+- Each unit includes an ensuite, kitchenette, TV, built-in wardrobe, and quality furnishings
+- Shared amenities including communal living areas, garden, BBQ area, swimming pool, and gym
+- Lift access throughout the building
+- Suitable for SIL, MTA, and short-term stays
+
+## Support and Amenities
+
+- 24/7 on-site support staff
+- Personalised care plans for every participant
+- Large shared living and social areas
+- Fully equipped communal kitchen and individual kitchenettes
+- Secure building with intercom entry
+
+## Location Benefits
+
+Parramatta is Western Sydney's central business district and a major transport hub. Parramatta train station is a short drive away, with buses and the new Parramatta Light Rail providing excellent connectivity across Sydney. Westfield Parramatta offers extensive shopping and entertainment, and there is no shortage of dining options. Westmead Hospital, one of Sydney's largest, is approximately 3 km away. Parks including Parramatta Park and the historic Old Government House are within easy reach.
+
+## Activities
+
+### Indoor Activities
+- Shared meals and social dining with housemates
+- Morning exercise sessions in the gym
+- TV, games, and creative activities in communal areas
+- Board games, puzzles, and social events
+- Swimming in the on-site pool
+- Cooking and life skills development
+
+### Outdoor Activities
+- Walks in Parramatta Park and along the Parramatta River
+- Shopping at Westfield Parramatta
+- Dining at a wide range of restaurants and cafes
+- Community outings and cultural events
+- Bowling and recreational activities
+- Visits to museums and heritage sites
+
+## Contact Information
+
+For enquiries or to arrange a viewing, please get in touch:
+
+**Email:** Eliot@summitsda.com.au
+**Phone:** 0450 016 874
+
+We are available on weekdays, Monday to Friday, 9am–5pm.`,
+    metaDescription: "Supported Independent Living (SIL) apartments in Parramatta, Western Sydney. Summit Housing offers 24/7 disability support in a central location with excellent amenities.",
+    details: {
+      bedrooms: 2,
+      bathrooms: 2,
+      toilets: 2,
+      parking: 2,
+      accessibleParking: 1,
+      bedroomsAvailable: 2,
+    },
+    pricing: {
+      rent: "$0 per week",
+      notes: ["Funded through NDIS SIL, SDA, and MTA packages", "Commonwealth Rent Assistance may apply"],
+    },
+    availability: "2025-01-01",
+    features: [
+      { icon: "Thermometer", label: "Heating" },
+      { icon: "Wind", label: "Cooling" },
+      { icon: "Utensils", label: "Kitchenette" },
+      { icon: "DoorOpen", label: "Ensuite" },
+      { icon: "BookOpen", label: "Study Area" },
+      { icon: "Dumbbell", label: "Gym" },
+      { icon: "TreePine", label: "Garden and Outdoor Area" },
+      { icon: "Lock", label: "Secure Intercom Access" },
+      { icon: "Home", label: "Fully Furnished" },
+      { icon: "Wheelchair", label: "Wheelchair Accessible" },
+      { icon: "Building2", label: "SDA-Compliant Design" },
+      { icon: "Building2", label: "Robust Construction" },
+      { icon: "Wifi", label: "High-Speed Internet" },
+      { icon: "DoorOpen", label: "Built-in Wardrobes" },
+      { icon: "Ruler", label: "Doorway Widths > 950mm" },
+      { icon: "Lightbulb", label: "Energy Efficient" },
+      { icon: "Flame", label: "Fire Sprinklers" },
+      { icon: "Lift", label: "Lift Access" },
+    ],
+    activities: {
+      indoor: [
+        "Shared meals and social dining with housemates",
+        "Morning exercise sessions in the gym",
+        "TV, games, and creative activities in communal areas",
+        "Board games, puzzles, and social events",
+        "Swimming in the on-site pool",
+        "Cooking and life skills development",
+      ],
+      outdoor: [
+        "Walks in Parramatta Park and along the Parramatta River",
+        "Shopping at Westfield Parramatta",
+        "Dining at a wide range of restaurants and cafes",
+        "Community outings and cultural events",
+        "Bowling and recreational activities",
+        "Visits to museums and heritage sites",
+      ],
+    },
+    location_features: [
+      { icon: "Building2", label: "Westmead Hospital", distance: "3km" },
+      { icon: "Building2", label: "Grocery Store", distance: "3 min walk" },
+      { icon: "Building2", label: "Parramatta Train Station", distance: "5 min drive" },
+      { icon: "Building2", label: "Westfield Parramatta", distance: "5 min drive" },
+      { icon: "Building2", label: "Medical Centre", distance: "5 min walk" },
+      { icon: "Building2", label: "Parramatta Park", distance: "5 min drive" },
+      { icon: "Building2", label: "Disability Day Programs", distance: "5km" },
+      { icon: "Building2", label: "GP", distance: "1km" },
+    ],
+    housemateInfo: {
+      currentTenants: 8,
+      ageRange: "ALL",
+      genders: ["Man", "Woman", "Rather not answer"],
+      preferences: [
+        "Enjoy socialising and spending time with housemates",
+        "Like an active and social home environment",
+        "Happy to share communal spaces and activities",
+      ],
+      selectionProcess: "Housemates are carefully matched based on individual needs, preferences, and compatibility assessments.",
+    },
+    eligibility: ["Currently receiving a Disability Support Pension", "Receiving NDIS funding for SIL, SDA, and/or MTA"],
+    contact: {
+      phone: "0450016874",
+      email: "Eliot@summitsda.com.au",
+      hours: "Weekdays, Monday to Friday, 9am-5pm",
+    },
+    images: [
+      "/properties/parramatta/1.jpg",
+      "/properties/parramatta/2.jpg",
+      "/properties/parramatta/3.webp",
+      "/properties/parramatta/4.jpg",
+      "/properties/parramatta/5.jpg",
+      "/properties/parramatta/6.jpg",
+      "/properties/parramatta/7.jpg",
+      "/properties/parramatta/8.webp",
+      "/properties/parramatta/9.jpg",
+      "/properties/parramatta/10.webp",
+    ],
+  },
+  {
+    id: "mascot-apartments",
+    slug: "mascot-accessible-units",
+    type: ["SIL", "SDA", "MTA"],
+    title: "Accessible Units in Mascot",
+    location: "Mascot, NSW 2020",
+    description: "Supported Independent Living (SIL) accessible units in Mascot, offering modern city-fringe living with 24/7 personalised disability support.",
+    detailedDescription: `# Supported Independent Living in Mascot
+
+Summit Housing provides quality Supported Independent Living (SIL), Specialist Disability Accommodation (SDA), and Medium Term Accommodation (MTA) in Mascot, a well-connected inner-south suburb close to Sydney's CBD.
+
+Our Mascot units are purpose-designed for accessibility, featuring wide doorways, generous circulation spaces, and specialist equipment support. Participants enjoy modern, comfortable accommodation with 24/7 tailored support from our dedicated team.
+${SUMMIT_SERVICE_NOTE}
+## Property Highlights
+
+- Self-contained accessible units designed specifically for participants with mobility needs
+- Wide doorways (950mm+), spacious layouts with maximum circulation area
+- Support for hospital beds, hoists, and other mobility equipment
+- Each unit includes an ensuite, kitchenette, TV, built-in wardrobe, and quality furnishings
+- Communal areas, garden, and rooftop space
+- Lift access throughout the building
+- Suitable for SIL, MTA, and short-term stays
+
+## Support and Amenities
+
+- 24/7 on-site support staff
+- Personalised care plans for every participant
+- Large shared living and social areas
+- Automatic doors and emergency power backup
+- Fully equipped communal facilities
+- Secure building with intercom entry
+- Pets welcome (subject to agreement)
+
+## Location Benefits
+
+Mascot is a vibrant inner-south suburb with excellent transport connections. Mascot train station is a short walk away, providing direct access to the Sydney CBD, airport, and wider rail network. You will find grocery stores, medical centres, and everyday services within walking distance. Major hospitals including Prince of Wales and Royal Prince Alfred are easily accessible. Eastgardens Shopping Centre is nearby for a wider range of shops and entertainment.
+
+## Activities
+
+### Indoor Activities
+- Shared meals and social dining with housemates
+- Gym and fitness sessions
+- TV, games, and creative activities in communal areas
+- Board games, puzzles, and social events
+- Swimming and relaxation
+
+### Outdoor Activities
+- Community outings and local events
+- Dining at nearby restaurants and cafes
+- Art and creative workshops
+- Bowling and recreational activities
+- Aquatic therapy and hydrotherapy
+- Visits to local parks and green spaces
+
+## Contact Information
+
+For enquiries or to arrange a viewing, please get in touch:
+
+**Email:** Eliot@summitsda.com.au
+**Phone:** 0450 016 874
+
+We are available on weekdays, Monday to Friday, 9am–5pm.`,
+    metaDescription: "Supported Independent Living (SIL) accessible units in Mascot, Sydney. Summit Housing offers 24/7 disability support with purpose-designed accessible accommodation.",
+    details: {
+      bedrooms: 1,
+      bathrooms: 1,
+      toilets: 1,
+      parking: 1,
+      accessibleParking: 1,
+      bedroomsAvailable: 1,
+    },
+    pricing: {
+      rent: "$0 per week",
+      notes: ["Funded through NDIS SIL, SDA, and MTA packages", "Commonwealth Rent Assistance may apply"],
+    },
+    availability: "2025-01-01",
+    features: [
+      { icon: "Thermometer", label: "Heating" },
+      { icon: "Wind", label: "Cooling" },
+      { icon: "Utensils", label: "Kitchenette" },
+      { icon: "DoorOpen", label: "Automatic Doors" },
+      { icon: "DoorOpen", label: "Ensuite" },
+      { icon: "BookOpen", label: "Study Area" },
+      { icon: "Dumbbell", label: "Gym" },
+      { icon: "TreePine", label: "Outdoor Area" },
+      { icon: "Lock", label: "Secure Intercom Access" },
+      { icon: "Home", label: "Pets Welcome" },
+      { icon: "Home", label: "Fully Furnished" },
+      { icon: "Wheelchair", label: "Wheelchair Accessible" },
+      { icon: "Building2", label: "SDA-Compliant Design" },
+      { icon: "Building2", label: "Robust Construction" },
+      { icon: "Wifi", label: "High-Speed Internet" },
+      { icon: "DoorOpen", label: "Built-in Wardrobes" },
+      { icon: "Flame", label: "Emergency Power Backup" },
+      { icon: "Ruler", label: "Doorway Widths > 950mm" },
+      { icon: "Lightbulb", label: "Energy Efficient" },
+      { icon: "Lift", label: "Lift Access" },
+    ],
+    activities: {
+      indoor: [
+        "Shared meals and social dining with housemates",
+        "Gym and fitness sessions",
+        "TV, games, and creative activities in communal areas",
+        "Board games, puzzles, and social events",
+        "Swimming and relaxation",
+      ],
+      outdoor: [
+        "Community outings and local events",
+        "Dining at nearby restaurants and cafes",
+        "Art and creative workshops",
+        "Bowling and recreational activities",
+        "Aquatic therapy and hydrotherapy",
+        "Visits to local parks and green spaces",
+      ],
+    },
+    location_features: [
+      { icon: "Building2", label: "Prince of Wales Hospital", distance: "5km" },
+      { icon: "Building2", label: "Grocery Store", distance: "3 min walk" },
+      { icon: "Building2", label: "Mascot Train Station", distance: "5 min walk" },
+      { icon: "Building2", label: "Eastgardens Shopping Centre", distance: "3km" },
+      { icon: "Building2", label: "Medical Centre", distance: "3 min walk" },
+      { icon: "Building2", label: "Disability Day Programs", distance: "5 min drive" },
+      { icon: "Building2", label: "GP", distance: "5 min walk" },
+    ],
+    housemateInfo: {
+      currentTenants: 8,
+      ageRange: "ALL",
+      genders: ["Man", "Woman", "Rather not answer"],
+      preferences: [
+        "Enjoy socialising and spending time with housemates",
+        "Like an active and social home environment",
+        "Happy to share communal spaces and activities",
+      ],
+      selectionProcess: "Housemates are carefully matched based on individual needs, preferences, and compatibility assessments.",
+    },
+    eligibility: ["Currently receiving a Disability Support Pension", "Receiving NDIS funding for SIL, SDA, and/or MTA"],
+    contact: {
+      phone: "0450016874",
+      email: "Eliot@summitsda.com.au",
+      hours: "Weekdays, Monday to Friday, 9am-5pm",
+    },
+    images: [
+      "/properties/mascot/1.webp",
+      "/properties/mascot/2.jpg",
+      "/properties/mascot/3.jpg",
+      "/properties/mascot/4.jpg",
+      "/properties/mascot/5.jpg",
+      "/properties/mascot/6.png",
+      "/properties/mascot/7.webp",
+      "/properties/mascot/8.webp",
+    ],
+  },
+  {
     id: "bossley-park-villas",
     slug: "bossley-park-independent-villas",
     type: ["SIL", "SDA"],
@@ -663,605 +1258,6 @@ We are available on weekdays, Monday to Friday, 9am–5pm.`,
       "/properties/chatswood/4.webp",
       "/properties/chatswood/5.webp",
       "/properties/chatswood/6.webp",
-    ],
-  },
-  {
-    id: "bondi-apartments",
-    slug: "bondi-independent-apartments",
-    type: ["SIL", "SDA", "MTA"],
-    title: "Apartments in Bondi",
-    location: "Bondi, NSW 2022",
-    description: "Supported Independent Living (SIL) apartments in Sydney's iconic Eastern Suburbs, offering a vibrant coastal lifestyle with 24/7 personalised support.",
-    detailedDescription: `# Supported Independent Living in Bondi
-
-Summit Housing provides quality Supported Independent Living (SIL), Specialist Disability Accommodation (SDA), and Medium Term Accommodation (MTA) in Bondi, one of Sydney's most iconic and sought-after Eastern Suburbs.
-
-Our Bondi apartments offer self-contained one and two bedroom units in a fantastic location close to world-famous Bondi Beach. Participants enjoy a vibrant coastal lifestyle while receiving tailored 24/7 support to build their independence and confidence.
-${SUMMIT_SERVICE_NOTE}
-## Property Highlights
-
-- Self-contained 1 and 2 bedroom units with modern, accessible design
-- Each unit includes an ensuite, kitchenette, TV, built-in wardrobe, and quality furnishings
-- Shared amenities including communal living areas, garden, BBQ area, swimming pool, and gym
-- Lift access throughout the building
-- Suitable for SIL, MTA, and short-term stays
-
-## Support and Amenities
-
-- 24/7 on-site support staff
-- Personalised care plans for every participant
-- Large shared living and social areas
-- Fully equipped communal kitchen and individual kitchenettes
-- Secure building with intercom entry
-
-## Location Benefits
-
-Bondi is a world-renowned suburb famous for its beautiful beach, coastal walks, and lively community atmosphere. Bondi Junction train station is nearby, connecting you to the wider Sydney rail network. Westfield Bondi Junction offers extensive shopping and entertainment options. Prince of Wales Hospital is approximately 3 km away, and you will find medical centres, grocery stores, and chemists all within walking distance.
-
-## Activities
-
-### Indoor Activities
-- Shared meals and social dining with housemates
-- Morning exercise sessions in the gym
-- TV, games, and creative activities in communal areas
-- Board games, puzzles, and social events
-- Swimming in the on-site pool
-- Cooking and life skills development
-
-### Outdoor Activities
-- Beach walks along Bondi Beach and the Bondi to Coogee coastal walk
-- Swimming and surfing at Bondi Beach
-- Dining at beachside cafes and restaurants
-- Community outings and local events
-- Visits to nearby parks and reserves
-- Cultural events and markets
-
-## Contact Information
-
-For enquiries or to arrange a viewing, please get in touch:
-
-**Email:** Eliot@summitsda.com.au
-**Phone:** 0450 016 874
-
-We are available on weekdays, Monday to Friday, 9am–5pm.`,
-    metaDescription: "Supported Independent Living (SIL) apartments in Bondi, Eastern Suburbs. Summit Housing offers 24/7 disability support near Bondi Beach with modern accessible units.",
-    details: {
-      bedrooms: 2,
-      bathrooms: 2,
-      toilets: 2,
-      parking: 2,
-      accessibleParking: 1,
-      bedroomsAvailable: 2,
-    },
-    pricing: {
-      rent: "$0 per week",
-      notes: ["Funded through NDIS SIL, SDA, and MTA packages", "Commonwealth Rent Assistance may apply"],
-    },
-    availability: "2025-01-01",
-    features: [
-      { icon: "Thermometer", label: "Heating" },
-      { icon: "Wind", label: "Cooling" },
-      { icon: "Utensils", label: "Kitchenette" },
-      { icon: "DoorOpen", label: "Ensuite" },
-      { icon: "BookOpen", label: "Study Area" },
-      { icon: "Dumbbell", label: "Gym" },
-      { icon: "TreePine", label: "Outdoor Area" },
-      { icon: "Lock", label: "Secure Intercom Access" },
-      { icon: "Home", label: "Fully Furnished" },
-      { icon: "Wheelchair", label: "Wheelchair Accessible" },
-      { icon: "Building2", label: "SDA-Compliant Design" },
-      { icon: "Building2", label: "Robust Construction" },
-      { icon: "Wifi", label: "High-Speed Internet" },
-      { icon: "DoorOpen", label: "Built-in Wardrobes" },
-      { icon: "Ruler", label: "Doorway Widths > 950mm" },
-      { icon: "Lightbulb", label: "Energy Efficient" },
-      { icon: "Flame", label: "Fire Sprinklers" },
-      { icon: "Lift", label: "Lift Access" },
-    ],
-    activities: {
-      indoor: [
-        "Shared meals and social dining with housemates",
-        "Morning exercise sessions in the gym",
-        "TV, games, and creative activities in communal areas",
-        "Board games, puzzles, and social events",
-        "Swimming in the on-site pool",
-        "Cooking and life skills development",
-      ],
-      outdoor: [
-        "Beach walks along Bondi Beach and the coastal walk",
-        "Swimming and surfing at Bondi Beach",
-        "Dining at beachside cafes and restaurants",
-        "Community outings and local events",
-        "Visits to nearby parks and reserves",
-        "Cultural events and weekend markets",
-      ],
-    },
-    location_features: [
-      { icon: "Building2", label: "Prince of Wales Hospital", distance: "3km" },
-      { icon: "Building2", label: "Grocery Store", distance: "3 min walk" },
-      { icon: "Building2", label: "Bondi Junction Station", distance: "10 min walk" },
-      { icon: "Building2", label: "Bondi Beach", distance: "10 min walk" },
-      { icon: "Building2", label: "Westfield Bondi Junction", distance: "10 min walk" },
-      { icon: "Building2", label: "Medical Centre", distance: "5 min walk" },
-      { icon: "Building2", label: "Disability Day Programs", distance: "5km" },
-    ],
-    housemateInfo: {
-      currentTenants: 8,
-      ageRange: "ALL",
-      genders: ["Man", "Woman", "Rather not answer"],
-      preferences: [
-        "Enjoy socialising and spending time with housemates",
-        "Like an active and social home environment",
-        "Happy to share communal spaces and activities",
-      ],
-      selectionProcess: "Housemates are carefully matched based on individual needs, preferences, and compatibility assessments.",
-    },
-    eligibility: ["Currently receiving a Disability Support Pension", "Receiving NDIS funding for SIL, SDA, and/or MTA"],
-    contact: {
-      phone: "0450016874",
-      email: "Eliot@summitsda.com.au",
-      hours: "Weekdays, Monday to Friday, 9am-5pm",
-    },
-    images: [
-      "/properties/bondi/1.webp",
-      "/properties/bondi/2.webp",
-      "/properties/bondi/3.webp",
-      "/properties/bondi/4.webp",
-      "/properties/bondi/5.webp",
-      "/properties/bondi/6.webp",
-      "/properties/bondi/7.webp",
-      "/properties/bondi/8.webp",
-      "/properties/bondi/9.webp",
-      "/properties/bondi/10.webp",
-    ],
-  },
-  {
-    id: "mittagong-apartments",
-    slug: "mittagong-independent-living",
-    type: ["SIL", "SDA", "MTA"],
-    title: "Apartments in Mittagong",
-    location: "Mittagong, NSW 2575",
-    description: "Supported Independent Living (SIL) accommodation in the peaceful Southern Highlands, offering a relaxed country lifestyle with 24/7 personalised support.",
-    detailedDescription: `# Supported Independent Living in Mittagong
-
-Summit Housing provides quality Supported Independent Living (SIL), Specialist Disability Accommodation (SDA), and Medium Term Accommodation (MTA) in Mittagong, a charming town in the NSW Southern Highlands.
-
-Our Mittagong accommodation offers comfortable suites in a peaceful, natural setting. Participants enjoy the relaxed pace of country living while receiving tailored 24/7 support. The property is ideally located with Mittagong train station, shops, medical services, and the local hospital all within easy walking distance.
-${SUMMIT_SERVICE_NOTE}
-## Property Highlights
-
-- 2, 3, and 4 bedroom units designed for comfortable supported living
-- Each unit includes an ensuite, kitchenette, TV, built-in wardrobe, and quality furnishings
-- Beautiful garden, outdoor sitting areas, and BBQ area
-- Ramp access for full wheelchair accessibility
-- Suitable for SIL, MTA, and short-term stays
-
-## Support and Amenities
-
-- 24/7 on-site support staff
-- Personalised care plans for every participant
-- Comfortable indoor and outdoor communal areas
-- Fully equipped kitchen and laundry facilities
-- Secure property
-
-## Location Benefits
-
-Mittagong is a picturesque Southern Highlands town known for its natural beauty, fresh air, and strong sense of community. Almost everything you need is within a few minutes' walk — Mittagong train station, grocery stores, a chemist, the local hospital, and a GP are all just 200–300 metres away. The Southern Highlands offers stunning scenery, national parks, wineries, and a range of community events and activities throughout the year.
-
-## Activities
-
-### Indoor Activities
-- Shared meals and social dining with housemates
-- TV, games, and creative activities in communal areas
-- Board games, puzzles, and card games
-- Cooking and life skills development
-- BBQ sessions in the outdoor area
-
-### Outdoor Activities
-- Walks and nature trails in the Southern Highlands
-- Visits to local parks, gardens, and lookouts
-- Community outings and local markets
-- Dining at local cafes and restaurants
-- Bowling, fishing, and recreational activities
-- Exploring wineries and local attractions
-
-## Contact Information
-
-For enquiries or to arrange a viewing, please get in touch:
-
-**Email:** Eliot@summitsda.com.au
-**Phone:** 0450 016 874
-
-We are available on weekdays, Monday to Friday, 9am–5pm.`,
-    metaDescription: "Supported Independent Living (SIL) accommodation in Mittagong, Southern Highlands. Summit Housing offers 24/7 disability support in a peaceful country setting.",
-    details: {
-      bedrooms: 2,
-      bathrooms: 2,
-      toilets: 2,
-      parking: 2,
-      accessibleParking: 1,
-      bedroomsAvailable: 2,
-    },
-    pricing: {
-      rent: "$0 per week",
-      notes: ["Funded through NDIS SIL, SDA, and MTA packages", "Commonwealth Rent Assistance may apply"],
-    },
-    availability: "2025-01-01",
-    features: [
-      { icon: "Thermometer", label: "Heating" },
-      { icon: "Wind", label: "Cooling" },
-      { icon: "Utensils", label: "Fully Equipped Kitchen" },
-      { icon: "DoorOpen", label: "Ensuite" },
-      { icon: "BookOpen", label: "Study Area" },
-      { icon: "TreePine", label: "Garden and Outdoor Area" },
-      { icon: "Lock", label: "Secure Access" },
-      { icon: "Home", label: "Fully Furnished" },
-      { icon: "Wheelchair", label: "Wheelchair Accessible" },
-      { icon: "Building2", label: "SDA-Compliant Design" },
-      { icon: "DoorOpen", label: "Built-in Wardrobes" },
-      { icon: "Lightbulb", label: "Energy Efficient" },
-    ],
-    activities: {
-      indoor: [
-        "Shared meals and social dining with housemates",
-        "TV, games, and creative activities in communal areas",
-        "Board games, puzzles, and card games",
-        "Cooking and life skills development",
-        "BBQ sessions in the outdoor area",
-      ],
-      outdoor: [
-        "Walks and nature trails in the Southern Highlands",
-        "Visits to local parks, gardens, and lookouts",
-        "Community outings and local markets",
-        "Dining at local cafes and restaurants",
-        "Bowling, fishing, and recreational activities",
-        "Exploring wineries and local attractions",
-      ],
-    },
-    location_features: [
-      { icon: "Building2", label: "Southern Highlands Hospital", distance: "300m" },
-      { icon: "Building2", label: "Grocery Store", distance: "1 min walk" },
-      { icon: "Building2", label: "Mittagong Train Station", distance: "300m" },
-      { icon: "Building2", label: "Shopping Centre", distance: "300m" },
-      { icon: "Building2", label: "Local Park", distance: "300m" },
-      { icon: "Building2", label: "GP / Medical Practice", distance: "300m" },
-      { icon: "Building2", label: "Disability Day Programs", distance: "1km" },
-      { icon: "Building2", label: "Community Activities", distance: "1km" },
-    ],
-    housemateInfo: {
-      currentTenants: 6,
-      ageRange: "ALL",
-      genders: ["Man", "Woman", "Rather not answer"],
-      preferences: [
-        "Enjoy socialising and spending time with housemates",
-        "Like a relaxed and supportive home environment",
-        "Happy to share communal spaces and activities",
-      ],
-      selectionProcess: "Housemates are carefully matched based on individual needs, preferences, and compatibility assessments.",
-    },
-    eligibility: ["Currently receiving a Disability Support Pension", "Receiving NDIS funding for SIL, SDA, and/or MTA"],
-    contact: {
-      phone: "0450016874",
-      email: "Eliot@summitsda.com.au",
-      hours: "Weekdays, Monday to Friday, 9am-5pm",
-    },
-    images: [
-      "/properties/mittagong/1.webp",
-      "/properties/mittagong/2.webp",
-      "/properties/mittagong/3.webp",
-      "/properties/mittagong/4.webp",
-      "/properties/mittagong/5.webp",
-      "/properties/mittagong/6.webp",
-    ],
-  },
-  {
-    id: "mascot-apartments",
-    slug: "mascot-accessible-units",
-    type: ["SIL", "SDA", "MTA"],
-    title: "Accessible Units in Mascot",
-    location: "Mascot, NSW 2020",
-    description: "Supported Independent Living (SIL) accessible units in Mascot, offering modern city-fringe living with 24/7 personalised disability support.",
-    detailedDescription: `# Supported Independent Living in Mascot
-
-Summit Housing provides quality Supported Independent Living (SIL), Specialist Disability Accommodation (SDA), and Medium Term Accommodation (MTA) in Mascot, a well-connected inner-south suburb close to Sydney's CBD.
-
-Our Mascot units are purpose-designed for accessibility, featuring wide doorways, generous circulation spaces, and specialist equipment support. Participants enjoy modern, comfortable accommodation with 24/7 tailored support from our dedicated team.
-${SUMMIT_SERVICE_NOTE}
-## Property Highlights
-
-- Self-contained accessible units designed specifically for participants with mobility needs
-- Wide doorways (950mm+), spacious layouts with maximum circulation area
-- Support for hospital beds, hoists, and other mobility equipment
-- Each unit includes an ensuite, kitchenette, TV, built-in wardrobe, and quality furnishings
-- Communal areas, garden, and rooftop space
-- Lift access throughout the building
-- Suitable for SIL, MTA, and short-term stays
-
-## Support and Amenities
-
-- 24/7 on-site support staff
-- Personalised care plans for every participant
-- Large shared living and social areas
-- Automatic doors and emergency power backup
-- Fully equipped communal facilities
-- Secure building with intercom entry
-- Pets welcome (subject to agreement)
-
-## Location Benefits
-
-Mascot is a vibrant inner-south suburb with excellent transport connections. Mascot train station is a short walk away, providing direct access to the Sydney CBD, airport, and wider rail network. You will find grocery stores, medical centres, and everyday services within walking distance. Major hospitals including Prince of Wales and Royal Prince Alfred are easily accessible. Eastgardens Shopping Centre is nearby for a wider range of shops and entertainment.
-
-## Activities
-
-### Indoor Activities
-- Shared meals and social dining with housemates
-- Gym and fitness sessions
-- TV, games, and creative activities in communal areas
-- Board games, puzzles, and social events
-- Swimming and relaxation
-
-### Outdoor Activities
-- Community outings and local events
-- Dining at nearby restaurants and cafes
-- Art and creative workshops
-- Bowling and recreational activities
-- Aquatic therapy and hydrotherapy
-- Visits to local parks and green spaces
-
-## Contact Information
-
-For enquiries or to arrange a viewing, please get in touch:
-
-**Email:** Eliot@summitsda.com.au
-**Phone:** 0450 016 874
-
-We are available on weekdays, Monday to Friday, 9am–5pm.`,
-    metaDescription: "Supported Independent Living (SIL) accessible units in Mascot, Sydney. Summit Housing offers 24/7 disability support with purpose-designed accessible accommodation.",
-    details: {
-      bedrooms: 1,
-      bathrooms: 1,
-      toilets: 1,
-      parking: 1,
-      accessibleParking: 1,
-      bedroomsAvailable: 1,
-    },
-    pricing: {
-      rent: "$0 per week",
-      notes: ["Funded through NDIS SIL, SDA, and MTA packages", "Commonwealth Rent Assistance may apply"],
-    },
-    availability: "2025-01-01",
-    features: [
-      { icon: "Thermometer", label: "Heating" },
-      { icon: "Wind", label: "Cooling" },
-      { icon: "Utensils", label: "Kitchenette" },
-      { icon: "DoorOpen", label: "Automatic Doors" },
-      { icon: "DoorOpen", label: "Ensuite" },
-      { icon: "BookOpen", label: "Study Area" },
-      { icon: "Dumbbell", label: "Gym" },
-      { icon: "TreePine", label: "Outdoor Area" },
-      { icon: "Lock", label: "Secure Intercom Access" },
-      { icon: "Home", label: "Pets Welcome" },
-      { icon: "Home", label: "Fully Furnished" },
-      { icon: "Wheelchair", label: "Wheelchair Accessible" },
-      { icon: "Building2", label: "SDA-Compliant Design" },
-      { icon: "Building2", label: "Robust Construction" },
-      { icon: "Wifi", label: "High-Speed Internet" },
-      { icon: "DoorOpen", label: "Built-in Wardrobes" },
-      { icon: "Flame", label: "Emergency Power Backup" },
-      { icon: "Ruler", label: "Doorway Widths > 950mm" },
-      { icon: "Lightbulb", label: "Energy Efficient" },
-      { icon: "Lift", label: "Lift Access" },
-    ],
-    activities: {
-      indoor: [
-        "Shared meals and social dining with housemates",
-        "Gym and fitness sessions",
-        "TV, games, and creative activities in communal areas",
-        "Board games, puzzles, and social events",
-        "Swimming and relaxation",
-      ],
-      outdoor: [
-        "Community outings and local events",
-        "Dining at nearby restaurants and cafes",
-        "Art and creative workshops",
-        "Bowling and recreational activities",
-        "Aquatic therapy and hydrotherapy",
-        "Visits to local parks and green spaces",
-      ],
-    },
-    location_features: [
-      { icon: "Building2", label: "Prince of Wales Hospital", distance: "5km" },
-      { icon: "Building2", label: "Grocery Store", distance: "3 min walk" },
-      { icon: "Building2", label: "Mascot Train Station", distance: "5 min walk" },
-      { icon: "Building2", label: "Eastgardens Shopping Centre", distance: "3km" },
-      { icon: "Building2", label: "Medical Centre", distance: "3 min walk" },
-      { icon: "Building2", label: "Disability Day Programs", distance: "5 min drive" },
-      { icon: "Building2", label: "GP", distance: "5 min walk" },
-    ],
-    housemateInfo: {
-      currentTenants: 8,
-      ageRange: "ALL",
-      genders: ["Man", "Woman", "Rather not answer"],
-      preferences: [
-        "Enjoy socialising and spending time with housemates",
-        "Like an active and social home environment",
-        "Happy to share communal spaces and activities",
-      ],
-      selectionProcess: "Housemates are carefully matched based on individual needs, preferences, and compatibility assessments.",
-    },
-    eligibility: ["Currently receiving a Disability Support Pension", "Receiving NDIS funding for SIL, SDA, and/or MTA"],
-    contact: {
-      phone: "0450016874",
-      email: "Eliot@summitsda.com.au",
-      hours: "Weekdays, Monday to Friday, 9am-5pm",
-    },
-    images: [
-      "/properties/mascot/1.webp",
-      "/properties/mascot/2.webp",
-      "/properties/mascot/3.webp",
-      "/properties/mascot/4.webp",
-      "/properties/mascot/5.webp",
-      "/properties/mascot/6.webp",
-      "/properties/mascot/7.webp",
-      "/properties/mascot/8.webp",
-      "/properties/mascot/9.webp",
-      "/properties/mascot/10.webp",
-      "/properties/mascot/11.webp",
-    ],
-  },
-  {
-    id: "parramatta-apartments",
-    slug: "parramatta-independent-living",
-    type: ["SIL", "SDA", "MTA"],
-    title: "Apartments in Parramatta",
-    location: "Parramatta, NSW 2150",
-    description: "Supported Independent Living (SIL) apartments in Western Sydney's major hub, offering excellent amenities and 24/7 personalised disability support.",
-    detailedDescription: `# Supported Independent Living in Parramatta
-
-Summit Housing provides quality Supported Independent Living (SIL), Specialist Disability Accommodation (SDA), and Medium Term Accommodation (MTA) in Parramatta, the thriving heart of Western Sydney.
-
-Our Parramatta apartments offer self-contained one and two bedroom units in a central location with outstanding access to transport, shopping, dining, and healthcare. Participants benefit from living in one of Sydney's fastest-growing centres while receiving tailored 24/7 support.
-${SUMMIT_SERVICE_NOTE}
-## Property Highlights
-
-- Self-contained 1 and 2 bedroom units with modern, accessible design
-- Each unit includes an ensuite, kitchenette, TV, built-in wardrobe, and quality furnishings
-- Shared amenities including communal living areas, garden, BBQ area, swimming pool, and gym
-- Lift access throughout the building
-- Suitable for SIL, MTA, and short-term stays
-
-## Support and Amenities
-
-- 24/7 on-site support staff
-- Personalised care plans for every participant
-- Large shared living and social areas
-- Fully equipped communal kitchen and individual kitchenettes
-- Secure building with intercom entry
-
-## Location Benefits
-
-Parramatta is Western Sydney's central business district and a major transport hub. Parramatta train station is a short drive away, with buses and the new Parramatta Light Rail providing excellent connectivity across Sydney. Westfield Parramatta offers extensive shopping and entertainment, and there is no shortage of dining options. Westmead Hospital, one of Sydney's largest, is approximately 3 km away. Parks including Parramatta Park and the historic Old Government House are within easy reach.
-
-## Activities
-
-### Indoor Activities
-- Shared meals and social dining with housemates
-- Morning exercise sessions in the gym
-- TV, games, and creative activities in communal areas
-- Board games, puzzles, and social events
-- Swimming in the on-site pool
-- Cooking and life skills development
-
-### Outdoor Activities
-- Walks in Parramatta Park and along the Parramatta River
-- Shopping at Westfield Parramatta
-- Dining at a wide range of restaurants and cafes
-- Community outings and cultural events
-- Bowling and recreational activities
-- Visits to museums and heritage sites
-
-## Contact Information
-
-For enquiries or to arrange a viewing, please get in touch:
-
-**Email:** Eliot@summitsda.com.au
-**Phone:** 0450 016 874
-
-We are available on weekdays, Monday to Friday, 9am–5pm.`,
-    metaDescription: "Supported Independent Living (SIL) apartments in Parramatta, Western Sydney. Summit Housing offers 24/7 disability support in a central location with excellent amenities.",
-    details: {
-      bedrooms: 2,
-      bathrooms: 2,
-      toilets: 2,
-      parking: 2,
-      accessibleParking: 1,
-      bedroomsAvailable: 2,
-    },
-    pricing: {
-      rent: "$0 per week",
-      notes: ["Funded through NDIS SIL, SDA, and MTA packages", "Commonwealth Rent Assistance may apply"],
-    },
-    availability: "2025-01-01",
-    features: [
-      { icon: "Thermometer", label: "Heating" },
-      { icon: "Wind", label: "Cooling" },
-      { icon: "Utensils", label: "Kitchenette" },
-      { icon: "DoorOpen", label: "Ensuite" },
-      { icon: "BookOpen", label: "Study Area" },
-      { icon: "Dumbbell", label: "Gym" },
-      { icon: "TreePine", label: "Garden and Outdoor Area" },
-      { icon: "Lock", label: "Secure Intercom Access" },
-      { icon: "Home", label: "Fully Furnished" },
-      { icon: "Wheelchair", label: "Wheelchair Accessible" },
-      { icon: "Building2", label: "SDA-Compliant Design" },
-      { icon: "Building2", label: "Robust Construction" },
-      { icon: "Wifi", label: "High-Speed Internet" },
-      { icon: "DoorOpen", label: "Built-in Wardrobes" },
-      { icon: "Ruler", label: "Doorway Widths > 950mm" },
-      { icon: "Lightbulb", label: "Energy Efficient" },
-      { icon: "Flame", label: "Fire Sprinklers" },
-      { icon: "Lift", label: "Lift Access" },
-    ],
-    activities: {
-      indoor: [
-        "Shared meals and social dining with housemates",
-        "Morning exercise sessions in the gym",
-        "TV, games, and creative activities in communal areas",
-        "Board games, puzzles, and social events",
-        "Swimming in the on-site pool",
-        "Cooking and life skills development",
-      ],
-      outdoor: [
-        "Walks in Parramatta Park and along the Parramatta River",
-        "Shopping at Westfield Parramatta",
-        "Dining at a wide range of restaurants and cafes",
-        "Community outings and cultural events",
-        "Bowling and recreational activities",
-        "Visits to museums and heritage sites",
-      ],
-    },
-    location_features: [
-      { icon: "Building2", label: "Westmead Hospital", distance: "3km" },
-      { icon: "Building2", label: "Grocery Store", distance: "3 min walk" },
-      { icon: "Building2", label: "Parramatta Train Station", distance: "5 min drive" },
-      { icon: "Building2", label: "Westfield Parramatta", distance: "5 min drive" },
-      { icon: "Building2", label: "Medical Centre", distance: "5 min walk" },
-      { icon: "Building2", label: "Parramatta Park", distance: "5 min drive" },
-      { icon: "Building2", label: "Disability Day Programs", distance: "5km" },
-      { icon: "Building2", label: "GP", distance: "1km" },
-    ],
-    housemateInfo: {
-      currentTenants: 8,
-      ageRange: "ALL",
-      genders: ["Man", "Woman", "Rather not answer"],
-      preferences: [
-        "Enjoy socialising and spending time with housemates",
-        "Like an active and social home environment",
-        "Happy to share communal spaces and activities",
-      ],
-      selectionProcess: "Housemates are carefully matched based on individual needs, preferences, and compatibility assessments.",
-    },
-    eligibility: ["Currently receiving a Disability Support Pension", "Receiving NDIS funding for SIL, SDA, and/or MTA"],
-    contact: {
-      phone: "0450016874",
-      email: "Eliot@summitsda.com.au",
-      hours: "Weekdays, Monday to Friday, 9am-5pm",
-    },
-    images: [
-      "/properties/parramatta/1.webp",
-      "/properties/parramatta/2.webp",
-      "/properties/parramatta/3.webp",
-      "/properties/parramatta/4.webp",
-      "/properties/parramatta/5.webp",
-      "/properties/parramatta/6.webp",
-      "/properties/parramatta/7.webp",
-      "/properties/parramatta/8.webp",
-      "/properties/parramatta/9.webp",
-      "/properties/parramatta/10.webp",
-      "/properties/parramatta/11.webp",
-      "/properties/parramatta/12.webp",
-      "/properties/parramatta/13.webp",
-      "/properties/parramatta/14.webp",
     ],
   },
   {
