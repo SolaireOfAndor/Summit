@@ -69,13 +69,13 @@ export default function CTASection({
   primaryButtonText = "Contact Us Now",
   primaryButtonLink = "/contact",
   secondaryButtonText = "View SIL Vacancies",
-  secondaryButtonLink = "/services/sil-vacancies",
+  secondaryButtonLink = "/properties/sil-vacancies",
   imageSrc = "/png/1.webp",
   mobileImageSrc = "/png/2.webp",
   imageAlt = "Summit staff member helping a client",
   footerText = "Want to learn more about disability accommodation? Check our",
   footerLinkText = "SDA Guide",
-  footerLinkHref = "/resources/about-sda",
+  footerLinkHref = "/learn/about-sda",
   className = "",
 }: CTASectionProps) {
   // Use the mobile image source if provided, otherwise fall back to the desktop image

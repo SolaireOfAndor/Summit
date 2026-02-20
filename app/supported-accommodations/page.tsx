@@ -1,11 +1,10 @@
 import type { Metadata } from "next"
 import { PageHero } from "@/components/sections/page-hero"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { SectionSeparator } from "@/components/ui/section-separator"
 import CTASection from "@/components/sections/cta-section"
-import { ServiceCard } from "@/components/features/service-card"
 import Link from "next/link"
 import Image from "next/image"
 import { 
@@ -19,8 +18,7 @@ import {
   Calendar,
   Star,
   Target,
-  MapPin,
-  Phone
+  MapPin
 } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -274,39 +272,6 @@ export default function SupportedAccommodationsPage() {
           </div>
         </div>
         <SectionSeparator variant="secondary" className="bottom-0" />
-      </section>
-
-      {/* Properties CTA Section */}
-      <section className="relative py-16 md:py-24 bg-[hsl(var(--background))]" aria-label="Available properties">
-        <div className="container px-8 sm:px-24">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-[hsl(var(--primary))] text-[hsl(var(--text-white))] hover:bg-[hsl(var(--primary-hover))]">
-              Available Now
-            </Badge>
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-6 text-[hsl(var(--heading))]">
-              Find Your Perfect Home
-            </h2>
-            <p className="text-[hsl(var(--body))] text-lg leading-relaxed mb-8">
-              Browse our current property listings and find accommodation that meets your specific needs. 
-              Our team is here to help you through every step of the process.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-[hsl(var(--primary))] hover:bg-[hsl(var(--primary-hover))] text-[hsl(var(--text-white))] shadow-md">
-                <Link href="/properties">
-                  <Building2 className="mr-2 h-5 w-5" />
-                  Browse All Properties
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-[hsl(var(--primary))] text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))]/10">
-                <Link href="/contact">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Speak to Our Team
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* CTA Section */}

@@ -24,7 +24,6 @@ export { WhyChooseSummit } from './sections/why-choose-summit'
 // Feature Components
 export { ServiceCard } from './features/service-card'
 export { PropertyCard } from './features/property-card'
-export { PropertyFilters } from './features/property-filters'
 export { PropertyPage } from './features/property-page'
 
 // Form Components

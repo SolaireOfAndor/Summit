@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef, useCallback } from "react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
@@ -10,7 +10,8 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Checkbox } from "@/components/ui/checkbox"
-import { toast } from "sonner"
+import { Alert, AlertDescription } from "@/components/ui/alert"
+import { AlertCircle, CheckCircle2, Send, ArrowLeft } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const formSchema = z.object({
@@ -69,6 +70,15 @@ const formSchema = z.object({
 export function FeedbackForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [charCount, setCharCount] = useState(0)
+  const [formStatus, setFormStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [errorMessage, setErrorMessage] = useState("")
+  const resultRef = useRef<HTMLDivElement>(null)
+
+  const scrollToResult = useCallback(() => {
+    setTimeout(() => {
+      resultRef.current?.scrollIntoView({ behavior: "smooth", block: "center" })
+    }, 100)
+  }, [])
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -84,8 +94,17 @@ export function FeedbackForm() {
 
   const isAnonymous = form.watch("anonymous")
 
+  const handleSendAnother = () => {
+    setFormStatus('idle')
+    setErrorMessage("")
+    setCharCount(0)
+    form.reset()
+  }
+
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true)
+    setFormStatus('idle')
+    setErrorMessage("")
     try {
       const response = await fetch("/api/feedback", {
         method: "POST",
@@ -99,20 +118,44 @@ export function FeedbackForm() {
         throw new Error(data.error || "Failed to send feedback.")
       }
 
-      toast.success("Thank you for your feedback! We'll review it carefully.", {
-        duration: 5000,
-      })
+      setFormStatus('success')
+      scrollToResult()
       form.reset()
       setCharCount(0)
     } catch (error) {
-      toast.error(
-        error instanceof Error
-          ? error.message
-          : "Something went wrong. Please try again later."
-      )
+      const msg = error instanceof Error ? error.message : "Something went wrong. Please try again later."
+      setFormStatus('error')
+      setErrorMessage(msg)
+      scrollToResult()
     } finally {
       setIsSubmitting(false)
     }
+  }
+
+  if (formStatus === 'success') {
+    return (
+      <div ref={resultRef} className="flex flex-col items-center text-center py-10 px-6 space-y-6">
+        <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
+          <CheckCircle2 className="w-8 h-8 text-green-600" />
+        </div>
+        <div className="space-y-2">
+          <h3 className="text-2xl font-semibold text-[hsl(var(--heading))]">Feedback Received!</h3>
+          <p className="text-[hsl(var(--body))] max-w-md">
+            Thank you for your feedback. We take every submission seriously and will review it carefully.
+          </p>
+        </div>
+        <SummitButton
+          type="button"
+          variant="outline"
+          onClick={handleSendAnother}
+          className="mt-4"
+          aria-label="Submit more feedback"
+        >
+          <ArrowLeft className="mr-2 h-4 w-4" />
+          Submit More Feedback
+        </SummitButton>
+      </div>
+    )
   }
 
   return (
@@ -345,9 +388,23 @@ export function FeedbackForm() {
               Sending...
             </>
           ) : (
-            "Send Feedback"
+            <>
+              <Send className="mr-2 h-4 w-4" />
+              Send Feedback
+            </>
           )}
         </SummitButton>
+
+        {formStatus === 'error' && (
+          <div ref={resultRef}>
+            <Alert variant="destructive" className="animate-in fade-in slide-in-from-top-2 duration-300">
+              <AlertCircle className="h-4 w-4" />
+              <AlertDescription>
+                {errorMessage || "There was an error sending your feedback. Please try again."}
+              </AlertDescription>
+            </Alert>
+          </div>
+        )}
       </form>
     </Form>
   )

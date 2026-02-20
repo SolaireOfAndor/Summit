@@ -1,16 +1,18 @@
 import { NextRequest, NextResponse } from "next/server"
 import { Resend } from "resend"
 
-const getResendClient = () => {
-  const apiKey = process.env.RESEND_API_KEY
-  if (!apiKey) {
-    throw new Error("RESEND_API_KEY environment variable is not set")
-  }
-  return new Resend(apiKey)
-}
-
 export async function POST(request: NextRequest) {
   try {
+    const apiKey = process.env.RESEND_API_KEY
+    if (!apiKey) {
+      console.error("RESEND_API_KEY is not set in environment variables")
+      return NextResponse.json(
+        { error: "Email service is not configured. Please contact the site administrator." },
+        { status: 503 }
+      )
+    }
+
+    const resend = new Resend(apiKey)
     const body = await request.json()
 
     const {
@@ -74,26 +76,41 @@ export async function POST(request: NextRequest) {
       </div>
     `
 
-    const resend = getResendClient()
-    const { error } = await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL || "Summit <onboarding@resend.dev>",
-      to: process.env.CONTACT_EMAIL || "delivered@resend.dev",
+    const fromEmail = process.env.RESEND_FROM_EMAIL
+    const toEmail = process.env.CONTACT_EMAIL
+
+    if (!fromEmail || !toEmail) {
+      console.error("Missing email config — RESEND_FROM_EMAIL:", !!fromEmail, "CONTACT_EMAIL:", !!toEmail)
+      return NextResponse.json(
+        { error: "Email service is not fully configured. Please contact the site administrator." },
+        { status: 503 }
+      )
+    }
+
+    const { data, error } = await resend.emails.send({
+      from: fromEmail,
+      to: toEmail,
       replyTo: email,
       subject: `New Contact Enquiry from ${name}${enquiryType ? ` — ${enquiryType}` : ""}`,
       html: emailHtml,
     })
 
     if (error) {
-      console.error("Resend error:", error)
+      console.error("Resend API error:", JSON.stringify(error))
+      const userMessage =
+        error.message?.includes("domain")
+          ? "Email sending domain is not verified. Please contact the site administrator."
+          : "Failed to send email. Please try again later."
       return NextResponse.json(
-        { error: "Failed to send email. Please try again later." },
+        { error: userMessage },
         { status: 500 }
       )
     }
 
+    console.log("Email sent successfully, id:", data?.id)
     return NextResponse.json({ success: true })
   } catch (error) {
-    console.error("Contact form error:", error)
+    console.error("Contact form error:", error instanceof Error ? error.message : error)
     return NextResponse.json(
       { error: "An unexpected error occurred. Please try again later." },
       { status: 500 }

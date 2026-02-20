@@ -145,20 +145,6 @@ export const componentRegistry: ComponentRegistryEntry[] = [
     dependencies: ['Card', 'Badge', 'SummitButton', 'Image', 'Tooltip'],
   },
   {
-    name: 'PropertyFilters',
-    path: 'components/features/property-filters.tsx',
-    category: ComponentCategory.FEATURE,
-    description: 'Summit property search filters for building type, SDA design category, and more. Used on property listing/search pages.',
-    usedIn: ['Property search page'],
-    props: {
-      buildingTypes: 'List of available building types',
-      designCategories: 'Optional list of SDA design categories',
-      onFilterChange: 'Callback when filters change',
-      className: 'Optional additional class names',
-    },
-    dependencies: ['Select', 'Checkbox', 'Button', 'Badge', 'Popover', 'Command'],
-  },
-  {
     name: 'PropertyPage',
     path: 'components/features/property-page.tsx',
     category: ComponentCategory.FEATURE,

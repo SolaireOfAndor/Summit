@@ -47,7 +47,7 @@ import { getProperties } from "@/lib/properties"
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
-// Create the same icon map as in property-filters.tsx
+// Icon map for rendering property feature icons by name
 const iconMap = {
   Flame,
   Lift,

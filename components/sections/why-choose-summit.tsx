@@ -107,8 +107,8 @@ export function WhyChooseSummit() {
           <div className="relative">
             <div className="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl shadow-[hsl(var(--orange-shadow))]">
               <Image
-                src="/png/support-1120755_1920.jpg"
-                alt="Summit team providing quality NDIS support services"
+                src="/4.webp"
+                alt="Inclusive community circle with wheelchair user raising hands together in a park"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

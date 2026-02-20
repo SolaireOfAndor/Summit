@@ -12,6 +12,40 @@ interface MobileNavProps {
   onNavigate: () => void
 }
 
+interface MobileNavSection {
+  key: string
+  label: string
+  href: string
+  items: ReadonlyArray<{ title: string; href: string; description?: string }>
+}
+
+const mobileNavSections: MobileNavSection[] = [
+  {
+    key: "supportedAccommodations",
+    label: "Supported Accommodations",
+    href: "/supported-accommodations",
+    items: navigationData.supportedAccommodations,
+  },
+  {
+    key: "dropInSupport",
+    label: "Drop-in Support",
+    href: "/drop-in-support",
+    items: navigationData.dropInSupport,
+  },
+  {
+    key: "about",
+    label: "About",
+    href: "/about",
+    items: navigationData.about,
+  },
+  {
+    key: "learn",
+    label: "Learn",
+    href: "/learn",
+    items: navigationData.learn,
+  },
+]
+
 /**
  * @component MobileNav
  * @description Responsive navigation component for SummitSDA, optimized for mobile and tablet devices. Features a hamburger menu, slide-out navigation panel, accordion-style submenus, and touch-friendly interactive elements for easy mobile navigation.
@@ -34,7 +68,7 @@ export function MobileNav({ onNavigate }: MobileNavProps) {
     setOpenSections((prev) => ({ ...prev, [section]: !prev[section] }))
   }
 
-  const handleNavigation = (href: string) => {
+  const handleNavigation = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -46,8 +80,8 @@ export function MobileNav({ onNavigate }: MobileNavProps) {
     return pathname === href
   }
 
-  const isParentSectionActive = (items: ReadonlyArray<{href: string}>) => {
-    return items.some(item => pathname === item.href)
+  const isSectionActive = (section: MobileNavSection) => {
+    return pathname === section.href || section.items.some(item => pathname === item.href)
   }
 
   return (
@@ -64,169 +98,69 @@ export function MobileNav({ onNavigate }: MobileNavProps) {
       <div className="flex-1 overflow-y-auto">
         <div className="py-6">
           <div className="space-y-3">
-            {/* Supported Accommodations Section */}
-            <div className="px-4">
-              <button
-                onClick={() => toggleSection("supportedAccommodations")}
-                className={cn(
-                  "flex items-center justify-between w-full px-6 py-4 text-left text-base font-semibold transition-all duration-200 rounded-lg shadow-sm hover:shadow-md border border-transparent hover:border-[hsl(var(--primary))/0.2]",
-                  isParentSectionActive(navigationData.supportedAccommodations)
-                    ? "text-[hsl(var(--primary))] bg-[hsl(var(--primary-transparent))] border-[hsl(var(--primary))/0.2]"
-                    : "text-[hsl(var(--secondary-foreground))] hover:text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary-transparent))]"
-                )}
-              >
-                <span>Supported Accommodations</span>
-                <ChevronDown
+            {mobileNavSections.map((section) => (
+              <div key={section.key} className="px-4">
+                <div
                   className={cn(
-                    "h-5 w-5 transition-transform duration-200",
-                    openSections["supportedAccommodations"] ? "rotate-180 text-[hsl(var(--primary))]" : "",
-                    isParentSectionActive(navigationData.supportedAccommodations) ? "text-[hsl(var(--primary))]" : "text-[hsl(var(--muted-foreground))]"
+                    "flex items-center w-full rounded-lg shadow-sm hover:shadow-md border border-transparent transition-all duration-200",
+                    isSectionActive(section)
+                      ? "bg-[hsl(var(--primary-transparent))] border-[hsl(var(--primary))/0.2]"
+                      : "hover:border-[hsl(var(--primary))/0.2]"
                   )}
-                />
-              </button>
-              {openSections["supportedAccommodations"] && (
-                <div className="mt-3 px-2 pb-2 space-y-1 bg-[hsl(var(--lighter-orange))] rounded-lg border border-[hsl(var(--border))] shadow-sm">
-                  {navigationData.supportedAccommodations.map((item) => (
-                    <Link
-                      key={item.title}
-                      href={item.href}
-                      onClick={() => handleNavigation(item.href)}
+                >
+                  <Link
+                    href={section.href}
+                    onClick={handleNavigation}
+                    className={cn(
+                      "flex-1 px-6 py-4 text-left text-base font-semibold transition-all duration-200 rounded-l-lg",
+                      isSectionActive(section)
+                        ? "text-[hsl(var(--primary))]"
+                        : "text-[hsl(var(--secondary-foreground))] hover:text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary-transparent))]"
+                    )}
+                    aria-label={`Go to ${section.label} page`}
+                  >
+                    {section.label}
+                  </Link>
+                  <button
+                    onClick={() => toggleSection(section.key)}
+                    className={cn(
+                      "flex items-center justify-center px-4 py-4 rounded-r-lg transition-all duration-200 border-l border-[hsl(var(--border))]",
+                      "hover:bg-[hsl(var(--primary-transparent))]",
+                      "focus:outline-none focus:ring-2 focus:ring-[hsl(var(--focus-ring))] focus:ring-inset"
+                    )}
+                    aria-label={`${openSections[section.key] ? "Collapse" : "Expand"} ${section.label} submenu`}
+                    aria-expanded={openSections[section.key] ?? false}
+                  >
+                    <ChevronDown
                       className={cn(
-                        "block px-6 py-3 text-sm transition-all duration-200 rounded-lg border-l-2 hover:shadow-sm",
-                        isCurrentPage(item.href)
-                          ? "text-[hsl(var(--primary))] bg-[hsl(var(--primary-transparent))] border-[hsl(var(--primary))]"
-                          : "text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary-transparent))] border-transparent hover:border-[hsl(var(--primary))/0.5]"
+                        "h-5 w-5 transition-transform duration-200",
+                        openSections[section.key] ? "rotate-180 text-[hsl(var(--primary))]" : "",
+                        isSectionActive(section) ? "text-[hsl(var(--primary))]" : "text-[hsl(var(--muted-foreground))]"
                       )}
-                    >
-                      {item.title}
-                    </Link>
-                  ))}
+                    />
+                  </button>
                 </div>
-              )}
-            </div>
-
-            {/* Drop-in Support Section */}
-            <div className="px-4">
-              <button
-                onClick={() => toggleSection("dropInSupport")}
-                className={cn(
-                  "flex items-center justify-between w-full px-6 py-4 text-left text-base font-semibold transition-all duration-200 rounded-lg shadow-sm hover:shadow-md border border-transparent hover:border-[hsl(var(--primary))/0.2]",
-                  isParentSectionActive(navigationData.dropInSupport)
-                    ? "text-[hsl(var(--primary))] bg-[hsl(var(--primary-transparent))] border-[hsl(var(--primary))/0.2]"
-                    : "text-[hsl(var(--secondary-foreground))] hover:text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary-transparent))]"
+                {openSections[section.key] && (
+                  <div className="mt-3 px-2 pb-2 space-y-1 bg-[hsl(var(--lighter-orange))] rounded-lg border border-[hsl(var(--border))] shadow-sm">
+                    {section.items.map((item) => (
+                      <Link
+                        key={item.title}
+                        href={item.href}
+                        onClick={handleNavigation}
+                        className={cn(
+                          "block px-6 py-3 text-sm transition-all duration-200 rounded-lg border-l-2 hover:shadow-sm",
+                          isCurrentPage(item.href)
+                            ? "text-[hsl(var(--primary))] bg-[hsl(var(--primary-transparent))] border-[hsl(var(--primary))]"
+                            : "text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary-transparent))] border-transparent hover:border-[hsl(var(--primary))/0.5]"
+                        )}
+                      >
+                        {item.title}
+                      </Link>
+                    ))}
+                  </div>
                 )}
-              >
-                <span>Drop-in Support</span>
-                <ChevronDown
-                  className={cn(
-                    "h-5 w-5 transition-transform duration-200",
-                    openSections["dropInSupport"] ? "rotate-180 text-[hsl(var(--primary))]" : "",
-                    isParentSectionActive(navigationData.dropInSupport) ? "text-[hsl(var(--primary))]" : "text-[hsl(var(--muted-foreground))]"
-                  )}
-                />
-              </button>
-              {openSections["dropInSupport"] && (
-                <div className="mt-3 px-2 pb-2 space-y-1 bg-[hsl(var(--lighter-orange))] rounded-lg border border-[hsl(var(--border))] shadow-sm">
-                  {navigationData.dropInSupport.map((item) => (
-                    <Link
-                      key={item.title}
-                      href={item.href}
-                      onClick={() => handleNavigation(item.href)}
-                      className={cn(
-                        "block px-6 py-3 text-sm transition-all duration-200 rounded-lg border-l-2 hover:shadow-sm",
-                        isCurrentPage(item.href)
-                          ? "text-[hsl(var(--primary))] bg-[hsl(var(--primary-transparent))] border-[hsl(var(--primary))]"
-                          : "text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary-transparent))] border-transparent hover:border-[hsl(var(--primary))/0.5]"
-                      )}
-                    >
-                      {item.title}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* About Section */}
-            <div className="px-4">
-              <button
-                onClick={() => toggleSection("about")}
-                className={cn(
-                  "flex items-center justify-between w-full px-6 py-4 text-left text-base font-semibold transition-all duration-200 rounded-lg shadow-sm hover:shadow-md border border-transparent hover:border-[hsl(var(--primary))/0.2]",
-                  isParentSectionActive(navigationData.about)
-                    ? "text-[hsl(var(--primary))] bg-[hsl(var(--primary-transparent))] border-[hsl(var(--primary))/0.2]"
-                    : "text-[hsl(var(--secondary-foreground))] hover:text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary-transparent))]"
-                )}
-              >
-                <span>About</span>
-                <ChevronDown
-                  className={cn(
-                    "h-5 w-5 transition-transform duration-200",
-                    openSections["about"] ? "rotate-180 text-[hsl(var(--primary))]" : "",
-                    isParentSectionActive(navigationData.about) ? "text-[hsl(var(--primary))]" : "text-[hsl(var(--muted-foreground))]"
-                  )}
-                />
-              </button>
-              {openSections["about"] && (
-                <div className="mt-3 px-2 pb-2 space-y-1 bg-[hsl(var(--lighter-orange))] rounded-lg border border-[hsl(var(--border))] shadow-sm">
-                  {navigationData.about.map((item) => (
-                    <Link
-                      key={item.title}
-                      href={item.href}
-                      onClick={() => handleNavigation(item.href)}
-                      className={cn(
-                        "block px-6 py-3 text-sm transition-all duration-200 rounded-lg border-l-2 hover:shadow-sm",
-                        isCurrentPage(item.href)
-                          ? "text-[hsl(var(--primary))] bg-[hsl(var(--primary-transparent))] border-[hsl(var(--primary))]"
-                          : "text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary-transparent))] border-transparent hover:border-[hsl(var(--primary))/0.5]"
-                      )}
-                    >
-                      {item.title}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Learn Section */}
-            <div className="px-4">
-              <button
-                onClick={() => toggleSection("learn")}
-                className={cn(
-                  "flex items-center justify-between w-full px-6 py-4 text-left text-base font-semibold transition-all duration-200 rounded-lg shadow-sm hover:shadow-md border border-transparent hover:border-[hsl(var(--primary))/0.2]",
-                  isParentSectionActive(navigationData.learn)
-                    ? "text-[hsl(var(--primary))] bg-[hsl(var(--primary-transparent))] border-[hsl(var(--primary))/0.2]"
-                    : "text-[hsl(var(--secondary-foreground))] hover:text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary-transparent))]"
-                )}
-              >
-                <span>Learn</span>
-                <ChevronDown
-                  className={cn(
-                    "h-5 w-5 transition-transform duration-200",
-                    openSections["learn"] ? "rotate-180 text-[hsl(var(--primary))]" : "",
-                    isParentSectionActive(navigationData.learn) ? "text-[hsl(var(--primary))]" : "text-[hsl(var(--muted-foreground))]"
-                  )}
-                />
-              </button>
-              {openSections["learn"] && (
-                <div className="mt-3 px-2 pb-2 space-y-1 bg-[hsl(var(--lighter-orange))] rounded-lg border border-[hsl(var(--border))] shadow-sm">
-                  {navigationData.learn.map((item) => (
-                    <Link
-                      key={item.title}
-                      href={item.href}
-                      onClick={() => handleNavigation(item.href)}
-                      className={cn(
-                        "block px-6 py-3 text-sm transition-all duration-200 rounded-lg border-l-2 hover:shadow-sm",
-                        isCurrentPage(item.href)
-                          ? "text-[hsl(var(--primary))] bg-[hsl(var(--primary-transparent))] border-[hsl(var(--primary))]"
-                          : "text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary-transparent))] border-transparent hover:border-[hsl(var(--primary))/0.5]"
-                      )}
-                    >
-                      {item.title}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -238,7 +172,7 @@ export function MobileNav({ onNavigate }: MobileNavProps) {
           asChild
           className="w-full h-12 text-base font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-200 bg-[hsl(var(--primary))] text-[hsl(var(--text-white))] hover:bg-[hsl(var(--primary-hover))] transform hover:scale-[1.02] active:scale-[0.98]"
         >
-          <Link href="/contact" onClick={() => handleNavigation("/contact")}>
+          <Link href="/contact" onClick={handleNavigation}>
             Contact Us
           </Link>
         </SummitButton>

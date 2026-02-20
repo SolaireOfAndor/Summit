@@ -92,7 +92,7 @@ export function ServicesOverview() {
           <div className="relative">
             <div className="relative h-80 lg:h-96 rounded-2xl overflow-hidden shadow-2xl shadow-[hsl(var(--orange-shadow))]">
               <Image
-                src="/house-image/3.webp"
+                src="/57.webp"
                 alt="Summit SIL property - supported independent living"
                 fill
                 className="object-cover"

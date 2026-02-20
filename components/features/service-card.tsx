@@ -23,7 +23,7 @@ interface ServiceCardProps {
  *   icon={HomeIcon}
  *   title="Supported Independent Living"
  *   description="Support services to help you live independently."
- *   href="/services/sil"
+ *   href="/supported-accommodations/sil"
  * />
  * ```
  *

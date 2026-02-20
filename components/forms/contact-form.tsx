@@ -9,10 +9,9 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { toast } from "sonner"
 import { Alert, AlertDescription } from "@/components/ui/alert"
-import { AlertCircle, CheckCircle2, Settings, Zap, ToggleLeft, ToggleRight } from "lucide-react"
-import React from "react"
+import { AlertCircle, CheckCircle2, Settings, Zap, ToggleLeft, ToggleRight, Send, ArrowLeft } from "lucide-react"
+import React, { useRef, useCallback } from "react"
 
 // Unified form schema that handles both simple and detailed modes
 const formSchema = z.object({
@@ -54,7 +53,15 @@ const formSchema = z.object({
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [formStatus, setFormStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [errorMessage, setErrorMessage] = useState("")
   const [isSimpleMode, setIsSimpleMode] = useState(true)
+  const resultRef = useRef<HTMLDivElement>(null)
+
+  const scrollToResult = useCallback(() => {
+    setTimeout(() => {
+      resultRef.current?.scrollIntoView({ behavior: "smooth", block: "center" })
+    }, 100)
+  }, [])
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -106,11 +113,17 @@ export function ContactForm() {
     setFormStatus('idle')
   }
 
+  const handleSendAnother = () => {
+    setFormStatus('idle')
+    setErrorMessage("")
+    form.reset()
+  }
+
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true)
     setFormStatus('idle')
+    setErrorMessage("")
     
-    // Additional validation for simple mode
     if (isSimpleMode && values.message.length > 500) {
       form.setError("message", {
         type: "manual",
@@ -134,9 +147,7 @@ export function ContactForm() {
       }
 
       setFormStatus('success')
-      toast.success("Message sent successfully! We'll be in touch soon.", {
-        duration: 5000,
-      })
+      scrollToResult()
       form.reset({
         name: "",
         email: "",
@@ -154,12 +165,10 @@ export function ContactForm() {
         message: "",
       })
     } catch (error) {
+      const msg = error instanceof Error ? error.message : "Something went wrong. Please try again later."
       setFormStatus('error')
-      toast.error(
-        error instanceof Error
-          ? error.message
-          : "Something went wrong. Please try again later."
-      )
+      setErrorMessage(msg)
+      scrollToResult()
     } finally {
       setIsSubmitting(false)
     }
@@ -209,24 +218,30 @@ export function ContactForm() {
         </button>
       </div>
 
-      {formStatus === 'success' && (
-        <Alert className="bg-green-50 dark:bg-green-950/30 border-green-200 dark:border-green-800">
-          <CheckCircle2 className="h-4 w-4 text-green-600 dark:text-green-400" />
-          <AlertDescription className="text-green-700 dark:text-green-300">
-            Your message has been sent successfully. We'll get back to you soon.
-          </AlertDescription>
-        </Alert>
-      )}
-
-      {formStatus === 'error' && (
-        <Alert variant="destructive">
-          <AlertCircle className="h-4 w-4" />
-          <AlertDescription>
-            There was an error sending your message. Please try again.
-          </AlertDescription>
-        </Alert>
-      )}
-
+      {formStatus === 'success' ? (
+        <div ref={resultRef} className="flex flex-col items-center text-center py-10 px-6 space-y-6">
+          <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
+            <CheckCircle2 className="w-8 h-8 text-green-600" />
+          </div>
+          <div className="space-y-2">
+            <h3 className="text-2xl font-semibold text-[hsl(var(--heading))]">Message Sent!</h3>
+            <p className="text-[hsl(var(--body))] max-w-md">
+              Thank you for reaching out. We&apos;ve received your message and will get back to you as soon as possible.
+            </p>
+          </div>
+          <SummitButton
+            type="button"
+            variant="outline"
+            onClick={handleSendAnother}
+            className="mt-4"
+            aria-label="Send another message"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Send Another Message
+          </SummitButton>
+        </div>
+      ) : (
+      <>
       <Form {...form}>
         <form 
           onSubmit={form.handleSubmit(onSubmit)} 
@@ -574,11 +589,22 @@ export function ContactForm() {
               </>
             ) : (
               <>
+                <Send className="mr-2 h-4 w-4" />
                 {isSimpleMode ? "Send Quick Message" : "Send Detailed Message"}
-                {isSimpleMode && <Zap className="ml-2 h-4 w-4" />}
               </>
             )}
           </SummitButton>
+
+          {formStatus === 'error' && (
+            <div ref={resultRef}>
+              <Alert variant="destructive" className="animate-in fade-in slide-in-from-top-2 duration-300">
+                <AlertCircle className="h-4 w-4" />
+                <AlertDescription>
+                  {errorMessage || "There was an error sending your message. Please try again."}
+                </AlertDescription>
+              </Alert>
+            </div>
+          )}
 
           {isSimpleMode && (
             <div className="text-center">
@@ -596,6 +622,8 @@ export function ContactForm() {
           )}
         </form>
       </Form>
+      </>
+      )}
     </div>
   )
 }
