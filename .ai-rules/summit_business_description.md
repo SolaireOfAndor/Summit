@@ -1,39 +1,54 @@
 Business Profile: SummitSDA (Summit)
+
 1. Overview
-SummitSDA, commonly referred to as Summit, is a registered National Disability Insurance Scheme (NDIS) service provider operating primarily in Sydney with the capacity to extend its services throughout New South Wales (NSW). The organization is dedicated to delivering high-quality, participant-centered support, focusing on empowering individuals to achieve their goals and enhance their independence.
+SummitSDA, commonly referred to as Summit, is a registered National Disability Insurance Scheme (NDIS) service provider operating primarily in Sydney with the capacity to extend its services throughout New South Wales (NSW). The organisation positions itself primarily as a SIL (Supported Independent Living) provider, with a participant-first approach to delivering high-quality, individualised support for people with complex needs — including acquired brain injury (ABI), spinal cord injury, high-intensity care, and psychosocial support.
+
 2. Core Mission and Philosophy
-Summit's operational philosophy is rooted in providing services that are meticulously tailored to the unique needs and aspirations of each NDIS participant. The company emphasizes a collaborative approach, ensuring participants have full control over their care and life choices. A central tenet of Summit's mission is to not only meet but exceed industry standards, actively working to elevate the quality of care and support available within the NDIS sector. This is achieved through a commitment to creating a supportive atmosphere and delivering services of the highest caliber.
+Summit's mission centres on a participant-first model: finding the right home and the right support for each individual. The company emphasises collaborative care, ensuring participants have full control over their choices. Summit actively works to exceed industry standards, elevating the quality of care within the NDIS sector through staff education and a commitment to service excellence.
+
 3. Service Offerings
-SummitSDA provides a comprehensive suite of NDIS services designed to cater to a wide range of participant needs. These services are delivered with a focus on flexibility and individual benefit:
-*   **Accommodation Solutions:**
-    *   **Supported Independent Living (SIL):** Providing assistance and/or supervision of daily tasks to help participants live as independently as possible, either in their own home or a shared living environment.
-    *   **Specialist Disability Accommodation (SDA):** Offering housing designed for people with extreme functional impairment or very high support needs, enabling them to live more independently and receive necessary supports.
-    *   **Medium Term Accommodation (MTA):** Transitional housing for participants who need somewhere to live while waiting for their confirmed long-term housing solution (e.g., SDA or SIL vacancy).
-    *   **Short Term Accommodation (STA), including Respite:** Providing temporary supported accommodation away from a participant's usual home, offering a break for both the participant and their carers.
-    *   **General Housing Solutions:** Assisting participants in finding and securing appropriate and sustainable housing options, including both shared and individual accommodations.
+The website organises Summit's services into the following categories:
 
-*   **Personal Support & Daily Living:**
-    *   **Assistance with Daily Life:** Supporting participants with everyday tasks to enable them to live as autonomously as possible. This can include meal preparation, household tasks, and personal administration.
-    *   **Assistance with Self-Care:** Providing support with personal hygiene, grooming, dressing, and other self-care activities to maintain health and well-being.
-    *   **Home Care:** Delivering a range of support services within the participant's home environment, tailored to their specific needs.
+*   **Supported Accommodations** (`/supported-accommodations`):
+    *   **Supported Independent Living (SIL):** The core service. 24/7 rostered care and personalised daily support to help participants live independently. Specialises in ABI, spinal cord injury, high-intensity, and psychosocial support. Covers personal care, household tasks, community access, and skill development. SIL vacancies are listed at `/properties/sil-vacancies`.
+    *   **Specialist Disability Accommodation (SDA):** Purpose-built accessible housing for people with extreme functional impairment or very high support needs. Features include high physical support design, robust construction, and assistive technology. SDA vacancies are listed at `/properties/sda-vacancies`.
+    *   **Medium Term Accommodation (MTA):** Transitional housing for up to 90 days while participants wait for their confirmed long-term housing solution. Includes transition planning and emergency accommodation.
+    *   **Short Term Accommodation (STA):** Temporary supported accommodation including planned respite, emergency accommodation, and family support with flexible booking.
 
-*   **Access and Engagement:**
-    *   **Transport:** Facilitating access to the community, appointments, work, or social activities through safe and reliable transport solutions.
-    *   **Community Participation and Support:** Assisting participants to engage in community, social, and recreational activities, fostering social connections and skill development.
-    *   **Events and Participant-Focused Activities:** Organizing and facilitating events and activities that are driven by participant goals and interests, promoting engagement, learning, and enjoyment.
+*   **Drop-in Support** (`/drop-in-support`):
+    *   **Assistance with Daily Life:** Domestic help, meal preparation, shopping, household management, and community access — funded under NDIS Core Support.
+    *   **Assistance with Self-Care:** Personal hygiene, grooming, medication reminders, health appointments, exercise/mobility support, and emotional wellbeing — funded under NDIS Core Support.
 
-*   **Information and Guidance:**
-    *   **NDIS Education:** Providing clear and comprehensive information about the NDIS, helping participants and their families understand their plans, funding, and how to navigate the scheme effectively.
-    *   **Guidance and Planning:** Offering detailed in-person or online guidance to help participants understand their options, make informed decisions, and take full control of their care planning and implementation.
-Use code with caution.
-4. Commitment to Quality and Standards
-SummitSDA places significant emphasis on the quality of its services and the competency of its staff. The organization invests in:
-* Staff Education and Training: Ensuring all staff members are thoroughly educated and trained to meet and exceed the "gold standards" of care. This includes ongoing professional development.
-* Exceeding Expectations: The company actively strives to go beyond baseline requirements, focusing on creating an optimal environment of support and delivering superior service quality.
-* Industry Improvement: Summit aims to contribute positively to the NDIS sector by setting high benchmarks for service delivery and participant outcomes.
-5. Operational Approach
-* Individualization: Care and support are meticulously individualized to align with each participant's unique circumstances, preferences, and NDIS goals.
-* Participant Empowerment: Summit provides the tools, information, and support necessary for participants to exercise choice and control over their services and life decisions.
-* Geographic Reach: While based in Sydney, Summit possesses the capability and infrastructure to deliver services across the entirety of NSW, ensuring broader access to their support model.
-In Summary:
-SummitSDA (Summit) is an NDIS service provider committed to delivering a comprehensive range of high-quality, individualized supports. Their approach is characterized by a strong focus on participant empowerment, exceeding industry standards through diligent staff education and a commitment to service excellence. Operating in Sydney with NSW-wide capabilities, Summit aims to provide participants with the necessary tools and support to live fulfilling and independent lives, driven by their personal goals. 
+*   **Community Participation** (`/community-participation`):
+    An educational and informational page about community participation for people with disabilities. Covers activity types, NDIS support categories, barriers and solutions, and tips for building connections. This is primarily content-driven rather than a direct service offering, with a CTA directing to contact.
+
+*   **Learn** (`/learn`):
+    An educational hub for NDIS participants, families, and support coordinators:
+    *   **NDIS Funding Guide** — Budget categories, plan management, maximising funding (6 sub-pages)
+    *   **About SDA** — Design categories, eligibility, application process, rights (6 sub-pages)
+    *   **About SIL** — How SIL works, support levels, accessing support
+    *   **About MTA** — Transitional accommodation details
+    *   **About STA** — Respite, emergency support, booking (7 sub-pages)
+
+4. Properties
+Summit maintains a property listings system at `/properties` with individual property pages (`/properties/[slug]`) and SIL location pages (`/sil/[location]`). Properties are categorised by accommodation type (SIL/SDA) and include images, features, activities, and enquiry capabilities.
+
+5. Service Areas
+As listed in the site's structured data, Summit operates across:
+- Eastern Suburbs, Sydney
+- Sydney CBD
+- Manly / Northern Beaches
+- Parramatta / Western Sydney
+- Mascot / Inner South
+- Wollongong / Illawarra
+- Newcastle / Hunter
+- Central Coast, NSW
+
+6. Commitment to Quality and Standards
+Summit invests in staff education and training to meet and exceed the "gold standards" of care. The organisation focuses on exceeding baseline requirements and contributing positively to the NDIS sector through high benchmarks for service delivery and participant outcomes.
+
+7. Website Identity
+- **Primary branding:** "Summit | SIL Provider Sydney — Supported Independent Living NSW"
+- **Base URL:** https://summitsda.com.au
+- **Contact email:** Eliot@summitsda.com.au
+- **Key differentiator:** Participant-first approach — finding the right home and support for each individual

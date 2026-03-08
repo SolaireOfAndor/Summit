@@ -1,23 +1,41 @@
 {
-  "project": "eden",
+  "project": "summit",
+  "description": "SummitSDA — NDIS SIL provider website built with Next.js, TypeScript, TailwindCSS, Shadcn/Radix UI",
+  "base_url": "https://summitsda.com.au",
+
   "component_system": {
-    "version": "1.0.0",
+    "version": "2.0.0",
     "structure": {
       "directories": {
         "layout": "components/layout",
         "features": "components/features",
+        "features/accessibility": "components/features/accessibility",
         "common": "components/common",
         "forms": "components/forms",
         "sections": "components/sections",
         "navigation": "components/navigation",
-        "ui": "components/ui"
+        "navigation/nav-content": "components/navigation/nav-content",
+        "ui": "components/ui",
+        "templates": "components/templates"
       },
-      "registry": "components/component-registry.ts"
+      "contexts": "contexts",
+      "registry": "components/component-registry.ts",
+      "barrel_export": "components/index.ts"
     },
     "naming": {
       "files": "kebab-case.tsx",
       "components": "PascalCase",
-      "props_interfaces": "ComponentNameProps"
+      "props_interfaces": "ComponentNameProps",
+      "exceptions": [
+        "components/features/accessibility/ uses PascalCase filenames (AccessibilityIcon.tsx, DesktopAccessibilityBar.tsx, AccessibilityOptionsList.tsx)"
+      ]
+    },
+    "exports": {
+      "rule": "Named exports preferred. Avoid default exports.",
+      "exceptions": [
+        "components/sections/cta-section.tsx uses default export (re-exported as named in index.ts)",
+        "components/templates/component.tsx uses both named and default export (template file)"
+      ]
     },
     "documentation": {
       "required_tags": [
@@ -40,39 +58,150 @@
         "Section",
         "Navigation",
         "UI"
+      ],
+      "exceptions": [
+        "Shadcn/UI primitives in components/ui/ do not require JSDoc (third-party generated components)",
+        "Custom UI components like summit-button.tsx and section-separator.tsx DO require JSDoc"
       ]
     },
     "scripts": {
-      "check_jsdoc": "npm run jsdoc:check",
-      "add_jsdoc": "npm run jsdoc:add components/path/to/component.tsx",
-      "generate_docs": "npm run jsdoc:generate",
+      "jsdoc_check": "npm run jsdoc:check",
+      "jsdoc_add": "npm run jsdoc:add components/path/to/component.tsx",
+      "jsdoc_generate": "npm run jsdoc:generate",
       "check_imports": "node scripts/check-component-imports.js",
       "migrate_imports": "node scripts/migrate-component-imports.js --update",
       "cleanup_reexports": "node scripts/cleanup-component-reexports.js --force"
     },
     "import_rules": {
       "correct": [
-        "import { ComponentName } from \"@/components/category/component-name\""
+        "import { ComponentName } from \"@/components/category/component-name\"",
+        "import { ComponentName } from \"@/components/features/accessibility/AccessibilityIcon\""
       ],
       "incorrect": [
         "import ComponentName from \"@/components/component-name\"",
         "import { ComponentName } from \"@/components/component-name\""
       ]
     },
-    "component_structure": {
-      "template": "/**\n * @component ComponentName\n * @description Description\n * \n * @example\n * ```tsx\n * <ComponentName prop1=\"value\" />\n * ```\n * \n * @category Category\n * @usedIn Usage locations\n */\n\ninterface ComponentNameProps {\n  /** Prop description */\n  prop1: string;\n}\n\nexport function ComponentName({ prop1 }: ComponentNameProps) {\n  // Implementation\n}"
+    "component_template": {
+      "location": "components/templates/component.tsx",
+      "pattern": "export const ComponentName: React.FC<ComponentNameProps> with JSDoc"
     },
-    "registry_structure": {
-      "entry_template": "{\n  name: 'ComponentName',\n  path: 'components/category/component-name.tsx',\n  category: ComponentCategory.CATEGORY,\n  description: 'Description',\n  usedIn: ['Page1', 'Page2']\n}"
+    "registry": {
+      "file": "components/component-registry.ts",
+      "categories_enum": ["layout", "ui", "feature", "common", "form", "section", "navigation"],
+      "note": "Not all components are registered. The registry tracks ~18 core components. Shadcn/UI primitives and some newer components are exported via index.ts but not in the registry."
     }
   },
+
+  "contexts": {
+    "directory": "contexts/",
+    "providers": [
+      {
+        "name": "DarkModeProvider",
+        "file": "contexts/dark-mode-context.tsx",
+        "hook": "useDarkMode",
+        "description": "Dark mode state, toggle, and localStorage persistence"
+      },
+      {
+        "name": "ColorBlindModeProvider",
+        "file": "contexts/color-blind-context.tsx",
+        "hook": "useColorBlindMode",
+        "description": "Color-blind mode state, toggle, and localStorage persistence"
+      },
+      {
+        "name": "ReadableFontModeProvider",
+        "file": "contexts/readable-font-context.tsx",
+        "hook": "useReadableFontMode",
+        "description": "Readable font mode state, toggle, and localStorage persistence"
+      }
+    ],
+    "wrapping_order": "DarkModeProvider > ColorBlindModeProvider > ReadableFontModeProvider (in app/layout.tsx)"
+  },
+
+  "sitemap": {
+    "file": "app/sitemap.ts",
+    "robots": "app/robots.ts",
+    "base_url": "https://summitsda.com.au",
+    "rules": [
+      "MUST update app/sitemap.ts whenever a page is added, removed, or its route changes",
+      "MUST update LAST_UPDATED date in app/sitemap.ts to today's date when any page content changes",
+      "MUST add redirects in next.config.mjs when removing pages that were previously live"
+    ]
+  },
+
+  "routes": {
+    "static": [
+      "/",
+      "/about",
+      "/about/summit-vision",
+      "/about/about-summit",
+      "/about/feedback",
+      "/contact",
+      "/properties",
+      "/properties/sda-vacancies",
+      "/properties/sil-vacancies",
+      "/supported-accommodations",
+      "/supported-accommodations/sil",
+      "/supported-accommodations/sta",
+      "/supported-accommodations/mta",
+      "/supported-accommodations/sda",
+      "/drop-in-support",
+      "/drop-in-support/assistant-with-daily-life",
+      "/drop-in-support/assistant-with-self-care",
+      "/community-participation",
+      "/learn",
+      "/learn/funding",
+      "/learn/funding/budget-categories",
+      "/learn/funding/budget-maximization",
+      "/learn/funding/capacity-building",
+      "/learn/funding/capital-support",
+      "/learn/funding/core-support-guide",
+      "/learn/funding/plan-management",
+      "/learn/about-sda",
+      "/learn/about-sda/application-process",
+      "/learn/about-sda/design-categories-explained",
+      "/learn/about-sda/eligibility-requirements",
+      "/learn/about-sda/funding-and-costs",
+      "/learn/about-sda/housing-selection-guide",
+      "/learn/about-sda/rights-and-support",
+      "/learn/about-sil",
+      "/learn/about-sta",
+      "/learn/about-sta/accommodation-options",
+      "/learn/about-sta/booking-and-planning",
+      "/learn/about-sta/emergency-accommodation",
+      "/learn/about-sta/funding-and-costs",
+      "/learn/about-sta/respite-care",
+      "/learn/about-sta/rights-and-advocacy",
+      "/learn/about-sta/types-and-when-to-use",
+      "/learn/about-mta"
+    ],
+    "dynamic": [
+      "/properties/[slug]  — individual property pages from lib/properties.ts",
+      "/sil/[location]     — SIL location pages from lib/sil-locations.ts"
+    ]
+  },
+
+  "navigation": {
+    "file": "lib/navigation.ts",
+    "types": ["NavigationItem", "NavigationSubItem"],
+    "data_export": "navigationData",
+    "sections": ["about", "learn", "supportedAccommodations", "dropInSupport"],
+    "dropdown_components": {
+      "about": "components/navigation/nav-content/about-dropdown.tsx",
+      "learn": "components/navigation/nav-content/learn-dropdown.tsx",
+      "supportedAccommodations": "components/navigation/nav-content/supported-accommodations-dropdown.tsx",
+      "dropInSupport": "components/navigation/nav-content/drop-in-support-dropdown.tsx"
+    }
+  },
+
   "component_workflows": {
     "creation": [
       "Determine component category",
       "Create file in appropriate directory with kebab-case name",
-      "Implement component with PascalCase name",
-      "Add JSDoc documentation with required tags",
-      "Add entry to component registry",
+      "Implement component with PascalCase name and named export",
+      "Add JSDoc documentation with required tags (skip for shadcn/ui primitives)",
+      "Add entry to component registry if it is a core/custom component",
+      "Add re-export to components/index.ts",
       "Import using category path"
     ],
     "modification": [
@@ -85,13 +214,15 @@
       "Check if component is used with cleanup script",
       "Mark as deprecated in registry",
       "Add @deprecated JSDoc tag",
+      "Remove from components/index.ts",
       "Remove file after migration period"
     ]
   },
+
   "patterns": {
     "react": {
       "component_type": "functional",
-      "state_management": "hooks",
+      "state_management": "hooks + React Context (contexts/ directory)",
       "callback_naming": {
         "internal": "handleEventName",
         "props": "onEventName"
@@ -102,10 +233,25 @@
     "special_considerations": [
       "Mobile-first responsive design using Tailwind",
       "Accessibility compliance required",
-      "Theme awareness via ThemeProvider",
-      "Use Radix primitives where possible",
-      "Navigation uses navigationData from lib/navigation.ts",
-      "Forms use React Hook Form with Zod validation"
+      "Accessibility via DarkModeProvider, ColorBlindModeProvider, and ReadableFontModeProvider (contexts/ directory)",
+      "Accessibility UI via components/features/accessibility/ (icon, options list, desktop bar)",
+      "Use Radix primitives where possible (24 @radix-ui packages installed)",
+      "Shadcn/UI components in components/ui/ — do not modify generated code without reason",
+      "Navigation uses navigationData from lib/navigation.ts with dropdown components in nav-content/",
+      "Forms use React Hook Form with Zod validation (@hookform/resolvers)",
+      "Properties data from lib/properties.ts, SIL locations from lib/sil-locations.ts",
+      "No test suite exists — project does not have tests"
     ]
+  },
+
+  "tech_stack": {
+    "framework": "Next.js (App Router)",
+    "language": "TypeScript",
+    "styling": "TailwindCSS",
+    "ui_library": "Shadcn/UI + Radix UI primitives",
+    "forms": "React Hook Form + Zod",
+    "package_manager": "npm",
+    "deployment": "GitHub Pages (CNAME: summitsda.com.au)",
+    "pre_commit": "Husky + lint-staged (runs jsdoc:check on .tsx files)"
   }
-} 
+}

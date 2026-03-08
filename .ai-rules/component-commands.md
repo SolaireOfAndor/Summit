@@ -1,8 +1,24 @@
 # Component Commands Reference
 
-## Utility Scripts Usage
+## Development
+```bash
+# Start development server
+npm run dev
 
-### JSDoc Documentation
+# Production build
+npm run build
+
+# Start production server
+npm run start
+
+# Run linter
+npm run lint
+
+# TypeScript type checking
+npm run type-check
+```
+
+## JSDoc Documentation
 ```bash
 # Check all components for proper JSDoc documentation
 npm run jsdoc:check
@@ -17,7 +33,9 @@ npm run jsdoc:add components/category
 npm run jsdoc:generate
 ```
 
-### Component Import Migration
+Note: `jsdoc:check` also runs automatically via lint-staged on `.tsx` files during commits.
+
+## Component Import Migration
 ```bash
 # Check current import patterns (report only)
 node scripts/check-component-imports.js
@@ -38,36 +56,48 @@ node scripts/cleanup-component-reexports.js
 node scripts/cleanup-component-reexports.js --force
 ```
 
-## Component Creation Commands
-```bash
-# Create a new component file in the appropriate directory
-touch components/{category}/{component-name}.tsx
-
-# Update component registry
-# Edit components/component-registry.ts manually to add the new component
-
-# Verify component documentation
-npm run jsdoc:check
-```
-
-## Component Testing Commands
-```bash
-# Run component tests
-npm test
-
-# Run specific component test
-npm test -- -t "ComponentName"
-```
+## Component Creation Process
+1. Create the component file in the appropriate category directory:
+   ```bash
+   # Example: creating a new feature component
+   touch components/features/new-component.tsx
+   ```
+2. Implement the component with JSDoc, named export, and TypeScript props interface
+3. Add re-export to `components/index.ts`
+4. Add entry to `components/component-registry.ts` (for core custom components)
+5. Verify documentation:
+   ```bash
+   npm run jsdoc:check
+   ```
 
 ## Component Modification Process
 1. Edit the component file in its category directory
 2. Update JSDoc if functionality changes
-3. Update component registry if needed
-4. Run `npm run jsdoc:check` to verify documentation
-5. Run `npm run jsdoc:generate` to update documentation
+3. Update `components/component-registry.ts` if needed
+4. Update `components/index.ts` if exports change
+5. Verify documentation:
+   ```bash
+   npm run jsdoc:check
+   npm run jsdoc:generate
+   ```
 
 ## Component Removal Process
-1. Check if component is used: `node scripts/cleanup-component-reexports.js`
-2. Update component registry to mark as deprecated
-3. If still in use, add @deprecated tag to JSDoc
-4. If not used, remove file and registry entry 
+1. Check if component is used:
+   ```bash
+   node scripts/cleanup-component-reexports.js
+   ```
+2. Update `components/component-registry.ts` to mark as deprecated
+3. If still in use, add `@deprecated` tag to JSDoc
+4. If not used:
+   - Remove re-export from `components/index.ts`
+   - Remove entry from `components/component-registry.ts`
+   - Delete the component file
+
+## Other Utility Scripts
+```bash
+# Organize components into category directories
+node scripts/organize-components.js
+
+# Clean up backup files created by migration scripts
+node scripts/cleanup-backups.js
+```
