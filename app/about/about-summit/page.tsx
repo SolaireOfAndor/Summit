@@ -11,7 +11,6 @@ import {
   Home, 
   Users, 
   Heart, 
-  Shield, 
   CheckCircle2, 
   ArrowRight,
   UserCheck,
@@ -43,7 +42,7 @@ import {
 export const metadata: Metadata = {
   title: "About Summit | Summit - NDIS Accommodation & Support Services NSW",
   description: "Learn about Summit's mission to provide participant-centered NDIS support services including SIL, SDA, and comprehensive disability support across NSW. Empowering independence through quality care.",
-  keywords: "About Summit, Summit, NDIS provider, SIL, SDA, disability support, NSW accommodation, participant-centered care, independent living",
+  keywords: "About Summit, Summit, SIL, SDA, disability support, NSW accommodation, participant-centered care, independent living",
   openGraph: {
     title: "About Summit | Summit - NDIS Accommodation & Support Services",
     description: "Discover Summit's commitment to participant-centered NDIS support, quality accommodation, and empowering independence across NSW.",
@@ -183,11 +182,6 @@ const coreValues = [
 // Quality Commitment Features
 const qualityFeatures = [
   {
-    title: "NDIS Registered Provider",
-    description: "Fully registered and compliant with NDIS Quality and Safeguards Commission standards.",
-    icon: Shield
-  },
-  {
     title: "Experienced Team",
     description: "Dedicated professionals committed to delivering person-centered support with expertise and compassion.",
     icon: Users
@@ -209,7 +203,7 @@ export default function AboutSummitPage() {
     <>
       <PageHero
         title="About Summit"
-        description="Summit is a registered NDIS service provider dedicated to delivering participant-centered support and quality accommodation services across NSW. We empower individuals to achieve their goals and enhance their independence through personalized, high-quality care."
+        description="Summit is dedicated to delivering participant-centered support and quality accommodation services across NSW. We empower individuals to achieve their goals and enhance their independence through personalized, high-quality care."
         backgroundPattern="dots"
         alignment="left"
         className="bg-[hsl(var(--light-orange))]"

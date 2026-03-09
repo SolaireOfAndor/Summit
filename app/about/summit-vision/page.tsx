@@ -16,7 +16,6 @@ import {
   Target,
   UserCheck,
   Lightbulb,
-  Shield,
   HandHeart,
   Compass,
   Sparkles,
@@ -149,12 +148,6 @@ const processSteps = [
 ]
 
 const commitments = [
-  {
-    icon: Shield,
-    title: "NDIS Registered & Compliant",
-    description:
-      "Fully registered with the NDIS Quality and Safeguards Commission, meeting and exceeding all regulatory standards.",
-  },
   {
     icon: Heart,
     title: "Genuine Person-Centered Care",

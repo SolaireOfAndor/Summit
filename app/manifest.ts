@@ -4,7 +4,7 @@ const manifest = (): MetadataRoute.Manifest => ({
   name: "Summit — Supported Independent Living",
   short_name: "Summit SIL",
   description:
-    "Summit is a registered NDIS SIL provider delivering 24/7 Supported Independent Living across Sydney & NSW.",
+    "Summit delivers 24/7 Supported Independent Living across Sydney & NSW.",
   start_url: "/",
   display: "standalone",
   background_color: "#fffaf5",

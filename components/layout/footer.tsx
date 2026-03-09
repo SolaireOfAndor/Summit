@@ -172,7 +172,7 @@ export function Footer() {
 
       <div className="container mt-8 pt-8 border-t border-[hsl(var(--text-white))/0.1]">
         <div className="text-center text-sm text-[hsl(var(--text-white))/0.8]">
-          <p>Registered NDIS Provider | ABN 12 345 678 901</p>
+          <p>ABN 39 674 662 312</p>
           <p className="mt-2">&copy; {new Date().getFullYear()} SummitSDA. All rights reserved.</p>
         </div>
       </div>

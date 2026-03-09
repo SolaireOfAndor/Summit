@@ -8,7 +8,7 @@ import { SectionSeparator } from "@/components/ui/section-separator"
 
 export const metadata: Metadata = {
   title: "Summit | SIL Provider Sydney — Supported Independent Living NSW",
-  description: "Summit is a registered NDIS SIL provider delivering 24/7 Supported Independent Living across Sydney & NSW. Specialising in ABI, spinal cord injury & high-intensity care. Participant-first approach — we find the right home and support for you.",
+  description: "Summit delivers 24/7 Supported Independent Living across Sydney & NSW. Specialising in ABI, spinal cord injury & high-intensity care. Participant-first approach — we find the right home and support for you.",
   keywords: [
     "SIL provider Sydney",
     "Supported Independent Living NSW",
@@ -21,14 +21,13 @@ export const metadata: Metadata = {
     "SIL for acquired brain injury",
     "SIL spinal cord injury NSW",
     "high intensity SIL Sydney",
-    "NDIS registered provider Sydney",
     "disability support Sydney",
     "shared living SIL NSW",
     "SIL mental health Sydney",
   ],
   openGraph: {
     title: "Summit | SIL Provider Sydney — Supported Independent Living NSW",
-    description: "Summit is a registered NDIS SIL provider delivering 24/7 Supported Independent Living across Sydney & NSW. Specialising in ABI, spinal cord injury & high-intensity care.",
+    description: "Summit delivers 24/7 Supported Independent Living across Sydney & NSW. Specialising in ABI, spinal cord injury & high-intensity care.",
     type: "website",
     locale: "en_AU",
     siteName: "Summit",
@@ -36,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Summit | SIL Provider Sydney — Supported Independent Living NSW",
-    description: "Summit is a registered NDIS SIL provider delivering 24/7 Supported Independent Living across Sydney & NSW. Specialising in ABI, spinal cord injury & high-intensity care.",
+    description: "Summit delivers 24/7 Supported Independent Living across Sydney & NSW. Specialising in ABI, spinal cord injury & high-intensity care.",
   },
   robots: {
     index: true,

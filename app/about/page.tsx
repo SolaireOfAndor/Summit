@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   description:
     "Summit is a specialist NDIS Supported Independent Living (SIL) provider serving Sydney & NSW. With expertise in ABI, spinal cord injury & high-intensity care, we put participants first — finding the right home and delivering 24/7 personalised support.",
   keywords:
-    "about Summit, NDIS SIL provider, Supported Independent Living specialist, disability support organisation, participant-first approach, ABI care provider, NDIS registered Sydney, 24/7 SIL care NSW",
+    "about Summit, NDIS SIL provider, Supported Independent Living specialist, disability support organisation, participant-first approach, ABI care provider, 24/7 SIL care NSW",
   openGraph: {
     title: "About Summit | NDIS SIL Provider — Supported Independent Living Specialists",
     description:
@@ -235,7 +235,7 @@ export default function AboutPage() {
                 </h2>
                 <div className="space-y-4 text-[hsl(var(--body))] leading-relaxed">
                   <p>
-                    Summit is a registered NDIS service provider dedicated to delivering
+                    Summit is dedicated to delivering
                     participant-centred Supported Independent Living (SIL) across Sydney and New
                     South Wales. Our core expertise is the <strong className="text-[hsl(var(--heading))]">support</strong> — the personalised,
                     24/7 care that empowers people to live independently.
@@ -561,11 +561,6 @@ export default function AboutPage() {
                 </p>
                 <div className="space-y-4">
                   {[
-                    {
-                      icon: Shield,
-                      title: "NDIS Registered & Compliant",
-                      text: "Fully registered with the NDIS Quality and Safeguards Commission, meeting and exceeding all regulatory standards.",
-                    },
                     {
                       icon: Users,
                       title: "Experienced, Compassionate Team",

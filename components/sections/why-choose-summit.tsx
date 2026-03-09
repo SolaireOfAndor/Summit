@@ -75,11 +75,11 @@ export function WhyChooseSummit() {
                 id="why-choose-summit-title"
                 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[hsl(var(--heading))] mb-6"
               >
-                Excellence in NDIS Support
+                Excellence in Support
               </h2>
               <p className="text-lg text-[hsl(var(--body))] max-w-xl">
                 Our commitment to participant empowerment and quality excellence 
-                sets us apart as a trusted NDIS service provider.
+                sets us apart as a trusted service provider.
               </p>
             </div>
 
@@ -125,8 +125,8 @@ export function WhyChooseSummit() {
                   <p className="text-xs text-[hsl(var(--body))]">NSW-Wide Reach</p>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-[hsl(var(--primary))]">NDIS Registered</div>
-                  <p className="text-xs text-[hsl(var(--body))]">Quality Assured</p>
+                  <div className="text-2xl font-bold text-[hsl(var(--primary))]">Quality Assured</div>
+                  <p className="text-xs text-[hsl(var(--body))]">Participant-First</p>
                 </div>
               </div>
             </div>

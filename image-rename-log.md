@@ -310,8 +310,8 @@ This document records the SEO-optimized renaming of images in `public/` (webp) a
 | **Previous Name** | `21.webp` / `21.jpg` |
 | **New Name** | `group-of-adults-with-intellectual-disabilities-outdoors.webp` / `.jpg` |
 | **Description** | A group of happy adults with intellectual disabilities including Down syndrome posing together outdoors for a group photo in a park. |
-| **Times Used** | 0 |
-| **Used In** | Not currently used in the website. |
+| **Times Used** | 1 |
+| **Used In** | `app/community-participation/page.tsx` (section image — "What Community Participation Means") |
 
 ---
 
@@ -427,7 +427,7 @@ This document records the SEO-optimized renaming of images in `public/` (webp) a
 
 | # | Previous | New Name | Used | Locations |
 |---|---|---|---|---|
-| 21 | `21.webp` | `group-of-adults-with-intellectual-disabilities-outdoors.webp` | 0 | — |
+| 21 | `21.webp` | `group-of-adults-with-intellectual-disabilities-outdoors.webp` | 1 | community-participation |
 | 22 | `22.webp` | `boy-in-wheelchair-strong-arms-chalkboard-empowerment.webp` | 0 | — |
 | 23 | `23.webp` | `young-women-with-disabilities-smiling-together-outdoors.webp` | 0 | — |
 | 24 | `24.webp` | `wheelchair-on-grass-friends-socializing-background.webp` | 0 | — |
@@ -439,14 +439,14 @@ This document records the SEO-optimized renaming of images in `public/` (webp) a
 | 30 | `30.webp` | `person-wheelchair-arms-raised-mountain-sunrise.webp` | 0 | — |
 
 **Images 21–30 renamed:** 10 (webp + jpg = 20 files)
-**Code references updated:** 0
+**Code references updated:** 1
 
 ---
 
 ## Cumulative Totals
 
 **Total images renamed (1–30):** 30 (webp + jpg = 60 files)
-**Total code references updated (1–30):** 6 (across 5 files)
+**Total code references updated (1–30):** 7 (across 6 files)
 
 ---
 
@@ -1199,4 +1199,4 @@ This document records the SEO-optimized renaming of images in `public/` (webp) a
 ## Cumulative Totals
 
 **Total images renamed:** 81 (webp + jpg = 162 files)
-**Total code references updated:** 13 (across 8 files)
+**Total code references updated:** 14 (across 9 files)

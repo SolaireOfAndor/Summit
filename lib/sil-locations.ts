@@ -24,7 +24,7 @@ export const silLocations: SILLocation[] = [
       "Summit delivers personalised Supported Independent Living (SIL) with 24/7 rostered care across Sydney's Eastern Suburbs — from Bondi and Coogee to Randwick and Maroubra.",
     metaTitle: "SIL Provider Eastern Suburbs Sydney | Supported Independent Living — Summit",
     metaDescription:
-      "Summit provides 24/7 Supported Independent Living (SIL) in Sydney's Eastern Suburbs including Bondi, Coogee, Randwick & Maroubra. NDIS registered. Specialising in ABI, spinal cord injury & high-intensity care.",
+      "Summit provides 24/7 Supported Independent Living (SIL) in Sydney's Eastern Suburbs including Bondi, Coogee, Randwick & Maroubra. Specialising in ABI, spinal cord injury & high-intensity care.",
     nearbySuburbs: ["Bondi", "Coogee", "Randwick", "Maroubra", "Bronte", "Clovelly", "Kensington", "Kingsford"],
     landmarks:
       "Located near Bondi Beach, Coogee Beach, Randwick Racecourse, and the Prince of Wales Hospital — one of Sydney's leading rehabilitation centres.",
@@ -51,11 +51,6 @@ export const silLocations: SILLocation[] = [
           "We provide comprehensive 24/7 rostered SIL care tailored to each participant's Roster of Care (ROC). This includes personal care, household support, community access, skill development, and specialist support for acquired brain injury, spinal cord injury, physical disability, and psychosocial conditions.",
       },
       {
-        question: "Is Summit an NDIS registered SIL provider in the Eastern Suburbs?",
-        answer:
-          "Yes, Summit is a fully registered NDIS provider delivering Supported Independent Living (SIL) services across the Eastern Suburbs and greater Sydney. Our registration covers all SIL support categories.",
-      },
-      {
         question: "Can Summit provide SIL in my current home in the Eastern Suburbs?",
         answer:
           "Absolutely. Summit provides SIL in any suitable property — whether it's your current home, a rental, or a property we help you find. We are not limited to specific buildings. Our participant-first approach means we adapt to your living situation.",
@@ -71,7 +66,7 @@ export const silLocations: SILLocation[] = [
       "Summit provides personalised Supported Independent Living (SIL) with 24/7 rostered care in Sydney's CBD and surrounding inner-city suburbs.",
     metaTitle: "SIL Provider Sydney CBD | Supported Independent Living — Summit",
     metaDescription:
-      "Summit provides 24/7 Supported Independent Living (SIL) in Sydney CBD and inner city. NDIS registered provider specialising in ABI, spinal cord injury & high-intensity care. Contact us for SIL vacancies.",
+      "Summit provides 24/7 Supported Independent Living (SIL) in Sydney CBD and inner city. Specialising in ABI, spinal cord injury & high-intensity care. Contact us for SIL vacancies.",
     nearbySuburbs: ["Surry Hills", "Darlinghurst", "Pyrmont", "Ultimo", "Haymarket", "Chippendale", "Redfern", "Potts Point"],
     landmarks:
       "Central to Sydney's healthcare and rehabilitation networks including Royal Prince Alfred Hospital, St Vincent's Hospital, and multiple specialist clinics.",
@@ -113,7 +108,7 @@ export const silLocations: SILLocation[] = [
       "Summit delivers personalised Supported Independent Living (SIL) with 24/7 rostered care across Manly and Sydney's Northern Beaches — from Dee Why to Palm Beach.",
     metaTitle: "SIL Provider Manly & Northern Beaches | Supported Independent Living — Summit",
     metaDescription:
-      "Summit provides 24/7 Supported Independent Living (SIL) in Manly & Northern Beaches Sydney. NDIS registered. Specialist ABI, spinal cord injury & high-intensity SIL care. Participant-first approach.",
+      "Summit provides 24/7 Supported Independent Living (SIL) in Manly & Northern Beaches Sydney. Specialist ABI, spinal cord injury & high-intensity SIL care. Participant-first approach.",
     nearbySuburbs: ["Manly", "Dee Why", "Brookvale", "Freshwater", "Curl Curl", "Mona Vale", "Narrabeen", "Warriewood"],
     landmarks:
       "Situated along Sydney's stunning Northern Beaches coastline, near Northern Beaches Hospital and Manly community health services.",
@@ -155,7 +150,7 @@ export const silLocations: SILLocation[] = [
       "Summit provides personalised Supported Independent Living (SIL) with 24/7 rostered care across Parramatta and Greater Western Sydney.",
     metaTitle: "SIL Provider Parramatta & Western Sydney | Supported Independent Living — Summit",
     metaDescription:
-      "Summit provides 24/7 Supported Independent Living (SIL) in Parramatta & Western Sydney. NDIS registered provider. Specialist ABI, spinal cord injury & high-intensity care. SIL vacancies available.",
+      "Summit provides 24/7 Supported Independent Living (SIL) in Parramatta & Western Sydney. Specialist ABI, spinal cord injury & high-intensity care. SIL vacancies available.",
     nearbySuburbs: ["Parramatta", "Harris Park", "Granville", "Merrylands", "Westmead", "Toongabbie", "Blacktown", "Penrith"],
     landmarks:
       "Located near Westmead Hospital — one of Australia's largest hospital campuses — and Parramatta's growing healthcare precinct.",
@@ -197,7 +192,7 @@ export const silLocations: SILLocation[] = [
       "Summit delivers personalised Supported Independent Living (SIL) with 24/7 rostered care across Mascot, Rosebery, Botany, and Sydney's Inner South.",
     metaTitle: "SIL Provider Mascot & Inner South Sydney | Supported Independent Living — Summit",
     metaDescription:
-      "Summit provides 24/7 Supported Independent Living (SIL) in Mascot, Rosebery & Inner South Sydney. NDIS registered provider specialising in ABI, physical disability & high-intensity care.",
+      "Summit provides 24/7 Supported Independent Living (SIL) in Mascot, Rosebery & Inner South Sydney. Specialising in ABI, physical disability & high-intensity care.",
     nearbySuburbs: ["Mascot", "Rosebery", "Botany", "Alexandria", "Zetland", "Waterloo", "Green Square", "Eastlakes"],
     landmarks:
       "Near Sydney Airport, Green Square town centre, and with easy access to Prince of Wales Hospital and St Vincent's Hospital.",
@@ -234,7 +229,7 @@ export const silLocations: SILLocation[] = [
       "Summit provides personalised Supported Independent Living (SIL) with 24/7 rostered care across Wollongong and the Illawarra region.",
     metaTitle: "SIL Provider Wollongong & Illawarra | Supported Independent Living — Summit",
     metaDescription:
-      "Summit provides 24/7 Supported Independent Living (SIL) in Wollongong & Illawarra NSW. NDIS registered provider specialising in ABI, spinal cord injury & high-intensity SIL care. Contact us for availability.",
+      "Summit provides 24/7 Supported Independent Living (SIL) in Wollongong & Illawarra NSW. Specialising in ABI, spinal cord injury & high-intensity SIL care. Contact us for availability.",
     nearbySuburbs: ["Wollongong", "Corrimal", "Figtree", "Dapto", "Shellharbour", "Thirroul", "Bulli", "Fairy Meadow"],
     landmarks:
       "Near Wollongong Hospital, the University of Wollongong, and the scenic Illawarra coastline.",
@@ -271,7 +266,7 @@ export const silLocations: SILLocation[] = [
       "Summit delivers personalised Supported Independent Living (SIL) with 24/7 rostered care across Newcastle and the Hunter Valley.",
     metaTitle: "SIL Provider Newcastle & Hunter NSW | Supported Independent Living — Summit",
     metaDescription:
-      "Summit provides 24/7 Supported Independent Living (SIL) in Newcastle & Hunter NSW. NDIS registered provider. Specialist ABI, spinal cord injury & high-intensity care. Contact us for SIL availability.",
+      "Summit provides 24/7 Supported Independent Living (SIL) in Newcastle & Hunter NSW. Specialist ABI, spinal cord injury & high-intensity care. Contact us for SIL availability.",
     nearbySuburbs: ["Newcastle", "Charlestown", "Lambton", "Maitland", "Lake Macquarie", "Hamilton", "Merewether", "Cessnock"],
     landmarks:
       "Near John Hunter Hospital — a major tertiary hospital — Newcastle Beach, and the University of Newcastle.",
@@ -308,7 +303,7 @@ export const silLocations: SILLocation[] = [
       "Summit provides personalised Supported Independent Living (SIL) with 24/7 rostered care across the Central Coast from Gosford to Wyong.",
     metaTitle: "SIL Provider Central Coast NSW | Supported Independent Living — Summit",
     metaDescription:
-      "Summit provides 24/7 Supported Independent Living (SIL) on the Central Coast NSW including Gosford & Wyong. NDIS registered. Specialist ABI & high-intensity care. Participant-first approach.",
+      "Summit provides 24/7 Supported Independent Living (SIL) on the Central Coast NSW including Gosford & Wyong. Specialist ABI & high-intensity care. Participant-first approach.",
     nearbySuburbs: ["Gosford", "Wyong", "Terrigal", "Erina", "Woy Woy", "Tuggerah", "The Entrance", "Kariong"],
     landmarks:
       "Near Gosford Hospital, Central Coast Medical School, and the beautiful beaches and lakes of the region.",

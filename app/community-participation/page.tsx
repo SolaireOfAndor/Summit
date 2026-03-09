@@ -862,7 +862,7 @@ export default function CommunityParticipationPage() {
               <div className="relative">
                 <div className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="/png/3.webp"
+                    src="/group-of-adults-with-intellectual-disabilities-outdoors.webp"
                     alt="Diverse group of people with disabilities enjoying community activities together"
                     fill
                     className="object-cover"

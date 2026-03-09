@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     default: "Summit | SIL Provider Sydney — Supported Independent Living NSW",
     template: "%s | Summit"
   },
-  description: "Summit is a registered NDIS SIL provider delivering 24/7 Supported Independent Living across Sydney & NSW. Specialising in ABI, spinal cord injury & high-intensity care. Participant-first approach — we find the right home and support for you.",
+  description: "Summit delivers 24/7 Supported Independent Living across Sydney & NSW. Specialising in ABI, spinal cord injury & high-intensity care. Participant-first approach — we find the right home and support for you.",
   keywords: [
     "SIL provider Sydney",
     "Supported Independent Living NSW",
@@ -26,7 +26,6 @@ export const metadata: Metadata = {
     "24/7 SIL support Sydney",
     "SIL vacancies Sydney",
     "disability support Sydney",
-    "NDIS registered provider",
     "ABI support Sydney",
     "spinal cord injury SIL",
     "high intensity SIL NSW",
@@ -59,7 +58,7 @@ export const metadata: Metadata = {
     url: "https://summitsda.com.au",
     siteName: "Summit",
     title: "Summit | SIL Provider Sydney — Supported Independent Living NSW",
-    description: "Summit is a registered NDIS SIL provider delivering 24/7 Supported Independent Living across Sydney & NSW. Specialising in ABI, spinal cord injury & high-intensity care.",
+    description: "Summit delivers 24/7 Supported Independent Living across Sydney & NSW. Specialising in ABI, spinal cord injury & high-intensity care.",
     images: [
       {
         url: "/og-image.jpg",
@@ -72,7 +71,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Summit | SIL Provider Sydney — Supported Independent Living NSW",
-    description: "Summit is a registered NDIS SIL provider delivering 24/7 Supported Independent Living across Sydney & NSW. Specialising in ABI, spinal cord injury & high-intensity care.",
+    description: "Summit delivers 24/7 Supported Independent Living across Sydney & NSW. Specialising in ABI, spinal cord injury & high-intensity care.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -108,7 +107,7 @@ const structuredData = {
         "height": 100
       },
       "image": "https://summitsda.com.au/og-image.jpg",
-      "description": "Summit is a registered NDIS Supported Independent Living (SIL) provider delivering 24/7 personalised care across Sydney and NSW. Specialising in acquired brain injury, spinal cord injury, physical disability, and psychosocial support.",
+      "description": "Summit delivers 24/7 Supported Independent Living (SIL) and personalised care across Sydney and NSW. Specialising in acquired brain injury, spinal cord injury, physical disability, and psychosocial support.",
       "foundingDate": "2020",
       "priceRange": "NDIS Funded",
       "areaServed": [
@@ -174,7 +173,7 @@ const structuredData = {
       "@id": "https://summitsda.com.au/#website",
       "url": "https://summitsda.com.au",
       "name": "Summit — Supported Independent Living",
-      "description": "Summit is a registered NDIS SIL provider delivering 24/7 Supported Independent Living across Sydney and NSW. Participant-first approach to personalised disability support.",
+      "description": "Summit delivers 24/7 Supported Independent Living across Sydney and NSW. Participant-first approach to personalised disability support.",
       "publisher": {
         "@id": "https://summitsda.com.au/#organization"
       },

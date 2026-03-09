@@ -34,11 +34,11 @@ import {
 
 export const metadata: Metadata = {
   title: "Supported Independent Living (SIL) Sydney | 24/7 NDIS Care — Summit",
-  description: "Summit delivers personalised Supported Independent Living (SIL) with 24/7 rostered care across Sydney & NSW. Specialising in ABI, spinal cord injury, physical disability & psychosocial support. NDIS registered provider — your goals, your home, our support.",
-  keywords: "SIL provider Sydney, Supported Independent Living NSW, 24/7 SIL support, NDIS SIL provider, ABI SIL Sydney, spinal cord injury SIL, high intensity SIL, psychosocial SIL, shared living Sydney, participant-centred care, NDIS registered provider, disability support Sydney",
+  description: "Summit delivers personalised Supported Independent Living (SIL) with 24/7 rostered care across Sydney & NSW. Specialising in ABI, spinal cord injury, physical disability & psychosocial support. Your goals, your home, our support.",
+  keywords: "SIL provider Sydney, Supported Independent Living NSW, 24/7 SIL support, NDIS SIL provider, ABI SIL Sydney, spinal cord injury SIL, high intensity SIL, psychosocial SIL, shared living Sydney, participant-centred care, disability support Sydney",
   openGraph: {
     title: "Supported Independent Living (SIL) Sydney | 24/7 NDIS Care — Summit",
-    description: "Summit delivers personalised 24/7 Supported Independent Living (SIL) across Sydney & NSW. Specialising in ABI, spinal cord injury & high-intensity care. NDIS registered.",
+    description: "Summit delivers personalised 24/7 Supported Independent Living (SIL) across Sydney & NSW. Specialising in ABI, spinal cord injury & high-intensity care.",
     type: "website",
     images: [
       {
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
 const silFeatures = [
   {
     title: "Personal Care Support",
-    description: "Assistance with daily personal care activities including hygiene, medication management, and health monitoring — delivered by trained, NDIS registered support workers.",
+    description: "Assistance with daily personal care activities including hygiene, medication management, and health monitoring — delivered by trained support workers.",
     icon: Heart,
     category: "Daily Living"
   },
@@ -205,7 +205,7 @@ export default function SILPage() {
               </h2>
               <p className="text-[hsl(var(--body))] text-lg leading-relaxed">
                 Supported Independent Living (SIL) is an NDIS-funded support that helps you live as independently 
-                as possible with 24/7 rostered care tailored to your needs. As a registered NDIS provider, Summit 
+                as possible with 24/7 rostered care tailored to your needs. Summit 
                 delivers person-centred SIL across Sydney and NSW — specialising in acquired brain injury (ABI), 
                 spinal cord injury, physical disability, intellectual disability, and psychosocial support. 
                 Our participant-first approach means we find the right home for you, whether that&apos;s a shared 
@@ -413,7 +413,7 @@ export default function SILPage() {
               Your Journey to Independent Living
             </h2>
             <p className="text-[hsl(var(--body))] text-lg leading-relaxed max-w-3xl mx-auto">
-              Starting your SIL journey with Summit is straightforward. Our NDIS registered team guides 
+              Starting your SIL journey with Summit is straightforward. Our team guides 
               you through every step to ensure you feel comfortable and confident in your new supported 
               living arrangement.
             </p>
