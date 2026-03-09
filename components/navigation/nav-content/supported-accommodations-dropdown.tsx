@@ -11,8 +11,8 @@ interface SupportedAccommodationsDropdownProps {
 }
 
 const accommodationImages = {
-  "SIL": "/62.webp",
-  "STA": "/9.webp", 
+  "SIL": "/woman-wheelchair-caregiver-support-modern-kitchen.webp",
+  "STA": "/caregiver-supporting-elderly-man-wheelchair-autumn.webp", 
   "MTA": "/house-image/3.webp",
   "SDA": "/house-image/4.webp"
 }

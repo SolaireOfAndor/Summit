@@ -11,9 +11,9 @@ interface AboutDropdownProps {
 }
 
 const aboutImages = {
-  "Summit Vision": "/4.webp",
-  "About SummitSDA": "/18.webp",
-  "Feedback/Complaints": "/16.webp"
+  "Summit Vision": "/inclusive-community-group-holding-hands-park.webp",
+  "About SummitSDA": "/team-collaborating-with-wheelchair-colleague-computer.webp",
+  "Feedback/Complaints": "/woman-high-fiving-man-in-wheelchair-office.webp"
 }
 
 const aboutIcons = {

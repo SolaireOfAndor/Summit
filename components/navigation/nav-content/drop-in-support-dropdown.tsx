@@ -11,9 +11,9 @@ interface DropInSupportDropdownProps {
 }
 
 const supportImages = {
-  "Assistance with Daily Life": "/70.webp",
+  "Assistance with Daily Life": "/seniors-caregiver-playing-dominoes-common-room.webp",
   "Assistance with Self Care": "/nurse-walking-with-senior-patient-wheelchair.webp",
-  "Community Participation": "/45.webp"
+  "Community Participation": "/joyful-woman-wheelchair-pushed-man-outdoors.webp"
 }
 
 const supportIcons = {

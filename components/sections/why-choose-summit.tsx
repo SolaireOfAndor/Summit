@@ -107,7 +107,7 @@ export function WhyChooseSummit() {
           <div className="relative">
             <div className="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl shadow-[hsl(var(--orange-shadow))]">
               <Image
-                src="/4.webp"
+                src="/inclusive-community-group-holding-hands-park.webp"
                 alt="Inclusive community circle with wheelchair user raising hands together in a park"
                 fill
                 className="object-cover"

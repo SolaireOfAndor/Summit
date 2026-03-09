@@ -452,9 +452,6 @@ export default function AboutSummitPage() {
         primaryButtonLink="/contact"
         secondaryButtonText="Learn About Our Services"
         secondaryButtonLink="/learn"
-        imageSrc="/png/support-1120755_1920.jpg"
-        mobileImageSrc="/png/support-1120755_1920.jpg"
-        imageAlt="Summit support worker helping participant with daily living activities"
       />
     </>
   )

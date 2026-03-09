@@ -74,7 +74,6 @@ import {
   Award,
   Trophy,
   Medal,
-  Celebrate,
   PartyPopper,
   Smile,
   Laugh,
@@ -109,15 +108,12 @@ import {
   Tv,
   Radio,
   Printer,
-  Scanner,
   Camera as CameraIcon,
   Webcam,
-  Microphone,
   Volume2,
   VolumeX,
   Play,
   Pause,
-  Stop,
   SkipBack,
   SkipForward,
   Repeat,
@@ -727,7 +723,7 @@ export default function CommunityParticipationPage() {
       <PageHero
         title="Community Participation for People with Disabilities"
         description="Discover how to build meaningful connections, participate in inclusive activities, and thrive in your community. Your guide to social inclusion, accessible activities, and NDIS support for community participation."
-        backgroundPattern="circles"
+        backgroundPattern="dots"
         alignment="center"
         className="bg-gradient-to-br from-[hsl(var(--background))] via-[hsl(var(--light-orange))] to-[hsl(var(--lighter-orange))]"
         breadcrumbs={[
@@ -1421,9 +1417,6 @@ export default function CommunityParticipationPage() {
         primaryButtonLink="/contact"
         secondaryButtonText="Explore Our Services"
         secondaryButtonLink="/properties"
-        imageSrc="/png/4.webp"
-        mobileImageSrc="/png/3.webp"
-        imageAlt="Person with disability participating in community activities with friends"
         footerText="Looking for more information about community participation? Contact us"
         footerLinkText="to learn more"
         footerLinkHref="/contact"

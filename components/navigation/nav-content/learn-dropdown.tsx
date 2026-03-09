@@ -11,7 +11,7 @@ interface LearnDropdownProps {
 }
 
 const learnImages = {
-  "NDIS Funding": "/13.webp",
+  "NDIS Funding": "/young-woman-wheelchair-browsing-library-books.webp",
   "About SIL": "/house-image/5.webp",
   "About STA": "/house-image/6.webp",
   "About MTA": "/house-image/7.webp",

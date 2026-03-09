@@ -249,7 +249,7 @@ export default function SummitVisionPage() {
               </div>
               <div className="relative">
                 <Image
-                  src="/59.webp"
+                  src="/caregiver-assisting-elderly-man-walking-cane-park.webp"
                   alt="Summit's participant-first approach to disability support and independent living"
                   width={600}
                   height={450}

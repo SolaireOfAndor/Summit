@@ -270,7 +270,7 @@ export default function AboutPage() {
               </div>
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/63.webp"
+                  src="/woman-wheelchair-smelling-wildflowers-field.webp"
                   alt="Summit support team working with a participant in a supported independent living home"
                   fill
                   className="object-cover"
@@ -536,7 +536,7 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/69.webp"
+                  src="/woman-wheelchair-smiling-park-sunny-outdoors.webp"
                   alt="Summit's quality care approach — supporting participants with compassion and professionalism"
                   fill
                   className="object-cover"
@@ -665,9 +665,6 @@ export default function AboutPage() {
         primaryButtonLink="/contact"
         secondaryButtonText="Browse SIL Vacancies"
         secondaryButtonLink="/properties/sil-vacancies"
-        imageSrc="/png/1.webp"
-        mobileImageSrc="/png/2.webp"
-        imageAlt="Summit staff providing supportive care to a participant"
         footerText="Want to learn more about Supported Independent Living?"
         footerLinkText="Explore SIL Services"
         footerLinkHref="/supported-accommodations/sil"
